@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="QXKHomePageBrandTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay4-IA-fRQ">
+                        <rect key="frame" x="125" y="0.0" width="125" height="107"/>
+                        <state key="normal" title="Button" image="panini">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hz-cq-acG">
+                        <rect key="frame" x="250" y="0.0" width="125" height="107"/>
+                        <state key="normal" title="Button" image="futera">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLi-DV-mAN">
+                        <rect key="frame" x="0.0" y="107" width="125" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="VeN-4l-sHt"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="topps-button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvZ-4l-01C">
+                        <rect key="frame" x="125" y="107" width="125" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="7Re-Fm-gCp"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="panini-button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sop-0m-KU0">
+                        <rect key="frame" x="250" y="107" width="125" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="TTF-DF-fv0"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="futera-button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9D-CR-5Ng">
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="107"/>
+                        <state key="normal" title="Button" image="topps">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="height" secondItem="r9D-CR-5Ng" secondAttribute="height" id="06I-hL-czg"/>
+                    <constraint firstItem="SvZ-4l-01C" firstAttribute="top" secondItem="ay4-IA-fRQ" secondAttribute="bottom" id="0pS-dl-QxI"/>
+                    <constraint firstItem="ay4-IA-fRQ" firstAttribute="leading" secondItem="r9D-CR-5Ng" secondAttribute="trailing" id="2sP-yC-U27"/>
+                    <constraint firstItem="BLi-DV-mAN" firstAttribute="width" secondItem="sop-0m-KU0" secondAttribute="width" id="5cd-JN-gpA"/>
+                    <constraint firstAttribute="bottom" secondItem="SvZ-4l-01C" secondAttribute="bottom" id="Aez-gk-bkG"/>
+                    <constraint firstItem="sop-0m-KU0" firstAttribute="top" secondItem="0hz-cq-acG" secondAttribute="bottom" id="BIg-Ja-HLc"/>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="width" secondItem="r9D-CR-5Ng" secondAttribute="width" id="EoE-0I-ODZ"/>
+                    <constraint firstItem="r9D-CR-5Ng" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KBF-jd-u63"/>
+                    <constraint firstItem="BLi-DV-mAN" firstAttribute="top" secondItem="r9D-CR-5Ng" secondAttribute="bottom" id="NS2-Yf-za8"/>
+                    <constraint firstAttribute="bottom" secondItem="sop-0m-KU0" secondAttribute="bottom" id="NXl-R1-Qr3"/>
+                    <constraint firstItem="SvZ-4l-01C" firstAttribute="leading" secondItem="BLi-DV-mAN" secondAttribute="trailing" id="Pqd-pS-EAq"/>
+                    <constraint firstItem="BLi-DV-mAN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PsW-ee-ZDy"/>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="width" secondItem="ay4-IA-fRQ" secondAttribute="width" id="QN0-S6-Uuv"/>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="leading" secondItem="ay4-IA-fRQ" secondAttribute="trailing" id="SkW-ju-oCp"/>
+                    <constraint firstItem="ay4-IA-fRQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VUL-Ht-fuR"/>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="height" secondItem="ay4-IA-fRQ" secondAttribute="height" id="aXX-Qa-nvG"/>
+                    <constraint firstItem="r9D-CR-5Ng" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dy2-fh-1gz"/>
+                    <constraint firstAttribute="right" secondItem="0hz-cq-acG" secondAttribute="right" id="e28-BX-NOl"/>
+                    <constraint firstItem="BLi-DV-mAN" firstAttribute="height" secondItem="sop-0m-KU0" secondAttribute="height" id="eRE-mG-Pnb"/>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fiq-ef-F4N"/>
+                    <constraint firstAttribute="bottom" secondItem="BLi-DV-mAN" secondAttribute="bottom" id="iW4-t3-PpF"/>
+                    <constraint firstItem="0hz-cq-acG" firstAttribute="leading" secondItem="ay4-IA-fRQ" secondAttribute="trailing" id="kX8-QH-yxa"/>
+                    <constraint firstAttribute="trailing" secondItem="sop-0m-KU0" secondAttribute="trailing" id="keZ-uB-3O4"/>
+                    <constraint firstItem="ay4-IA-fRQ" firstAttribute="leading" secondItem="r9D-CR-5Ng" secondAttribute="trailing" id="pJO-cY-Ovj"/>
+                    <constraint firstItem="BLi-DV-mAN" firstAttribute="height" secondItem="SvZ-4l-01C" secondAttribute="height" id="stu-cY-E9u"/>
+                    <constraint firstItem="sop-0m-KU0" firstAttribute="leading" secondItem="SvZ-4l-01C" secondAttribute="trailing" id="w89-Xk-E9N"/>
+                    <constraint firstItem="BLi-DV-mAN" firstAttribute="width" secondItem="SvZ-4l-01C" secondAttribute="width" id="ylb-QP-U6T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="463.5" y="284"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="futera" width="250" height="200"/>
+        <image name="futera-button" width="250" height="50"/>
+        <image name="panini" width="250" height="200"/>
+        <image name="panini-button" width="250" height="50"/>
+        <image name="topps" width="250" height="200"/>
+        <image name="topps-button" width="250" height="50"/>
+    </resources>
+</document>

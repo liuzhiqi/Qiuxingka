@@ -7,6 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BB2CDCC189AD22001B786B2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2AB34187E28EAC4BD2C53B /* libPods.a */; };
+		F260491D1B2E130400F8A71B /* QXKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F260491B1B2E130400F8A71B /* QXKLoginViewController.m */; };
+		F260491E1B2E130400F8A71B /* QXKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F260491C1B2E130400F8A71B /* QXKLoginViewController.xib */; };
+		F26049221B2E199C00F8A71B /* QXKRegister1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26049201B2E199C00F8A71B /* QXKRegister1ViewController.m */; };
+		F26049231B2E199C00F8A71B /* QXKRegister1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F26049211B2E199C00F8A71B /* QXKRegister1ViewController.xib */; };
+		F26049271B2E19C600F8A71B /* QXKRegister2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26049251B2E19C600F8A71B /* QXKRegister2ViewController.m */; };
+		F26049281B2E19C600F8A71B /* QXKRegister2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F26049261B2E19C600F8A71B /* QXKRegister2ViewController.xib */; };
+		F260492C1B2E19DA00F8A71B /* QXKRegister3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F260492A1B2E19DA00F8A71B /* QXKRegister3ViewController.m */; };
+		F260492D1B2E19DA00F8A71B /* QXKRegister3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F260492B1B2E19DA00F8A71B /* QXKRegister3ViewController.xib */; };
+		F26049311B2E1A0C00F8A71B /* QXKResetPassword1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F260492F1B2E1A0C00F8A71B /* QXKResetPassword1ViewController.m */; };
+		F26049321B2E1A0C00F8A71B /* QXKResetPassword1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F26049301B2E1A0C00F8A71B /* QXKResetPassword1ViewController.xib */; };
+		F26049361B2E1A2300F8A71B /* QXKResetPassword3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26049341B2E1A2300F8A71B /* QXKResetPassword3ViewController.m */; };
+		F26049371B2E1A2300F8A71B /* QXKResetPassword3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F26049351B2E1A2300F8A71B /* QXKResetPassword3ViewController.xib */; };
+		F260493B1B2E1A3300F8A71B /* QXKResetPassword2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26049391B2E1A3300F8A71B /* QXKResetPassword2ViewController.m */; };
+		F260493C1B2E1A3300F8A71B /* QXKResetPassword2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F260493A1B2E1A3300F8A71B /* QXKResetPassword2ViewController.xib */; };
+		F26049401B2E1B7800F8A71B /* QXKHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F260493E1B2E1B7800F8A71B /* QXKHomePageViewController.m */; };
+		F26049461B2E1C8F00F8A71B /* QXKUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F26049451B2E1C8F00F8A71B /* QXKUserInfo.m */; };
+		F260494B1B2E1F8600F8A71B /* LMComBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = F260494A1B2E1F8600F8A71B /* LMComBoxView.m */; };
+		F26049801B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F260497F1B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.m */; };
+		F29221881B4AF78100F51522 /* HMBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221871B4AF78100F51522 /* HMBannerView.m */; };
+		F292218E1B4AFE6B00F51522 /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = F292218D1B4AFE6B00F51522 /* NSData+GIF.m */; };
+		F29221931B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221911B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.m */; };
+		F29221941B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221921B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.xib */; };
+		F29221981B4B080E00F51522 /* QXKHomePageBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221961B4B080E00F51522 /* QXKHomePageBrandTableViewCell.m */; };
+		F29221991B4B080E00F51522 /* QXKHomePageBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221971B4B080E00F51522 /* QXKHomePageBrandTableViewCell.xib */; };
+		F292219D1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F292219B1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.m */; };
+		F292219E1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F292219C1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.xib */; };
+		F29221A31B4C1D4000F51522 /* QXKSellUploadPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221A11B4C1D4000F51522 /* QXKSellUploadPhotoViewController.m */; };
+		F29221A41B4C1D4000F51522 /* QXKSellUploadPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221A21B4C1D4000F51522 /* QXKSellUploadPhotoViewController.xib */; };
+		F29221A81B4C246D00F51522 /* QXKSellCardInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221A61B4C246D00F51522 /* QXKSellCardInfoViewController.m */; };
+		F29221A91B4C246D00F51522 /* QXKSellCardInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221A71B4C246D00F51522 /* QXKSellCardInfoViewController.xib */; };
+		F29221AD1B4C286B00F51522 /* QXKSellOtherInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221AB1B4C286B00F51522 /* QXKSellOtherInfoViewController.m */; };
+		F29221AE1B4C286B00F51522 /* QXKSellOtherInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221AC1B4C286B00F51522 /* QXKSellOtherInfoViewController.xib */; };
+		F29221B11B4C352800F51522 /* QXKSellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221B01B4C352800F51522 /* QXKSellViewController.m */; };
+		F29221C71B4C483700F51522 /* AGImagePickerController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221B41B4C483700F51522 /* AGImagePickerController+Helper.m */; };
+		F29221C81B4C483700F51522 /* AGImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F29221B51B4C483700F51522 /* AGImagePickerController.bundle */; };
+		F29221C91B4C483700F51522 /* AGImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221B71B4C483700F51522 /* AGImagePickerController.m */; };
+		F29221CA1B4C483700F51522 /* AGImagePreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221BA1B4C483700F51522 /* AGImagePreviewController.m */; };
+		F29221CB1B4C483700F51522 /* AGIPCAlbumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221BC1B4C483700F51522 /* AGIPCAlbumsController.m */; };
+		F29221CC1B4C483700F51522 /* AGIPCAssetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221BE1B4C483700F51522 /* AGIPCAssetsController.m */; };
+		F29221CD1B4C483700F51522 /* AGIPCGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221C01B4C483700F51522 /* AGIPCGridCell.m */; };
+		F29221CE1B4C483700F51522 /* AGIPCGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221C21B4C483700F51522 /* AGIPCGridItem.m */; };
+		F29221CF1B4C483700F51522 /* AGIPCToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221C41B4C483700F51522 /* AGIPCToolbarItem.m */; };
+		F29221D01B4C483700F51522 /* ALAsset+AGIPC.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221C61B4C483700F51522 /* ALAsset+AGIPC.m */; };
+		F29221D51B4C6D4B00F51522 /* AssetsPickerChecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F29221D21B4C6D4B00F51522 /* AssetsPickerChecked@2x.png */; };
+		F29221D61B4C6D4B00F51522 /* MSImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221D41B4C6D4B00F51522 /* MSImagePickerController.m */; };
+		F29221DA1B4D9FE900F51522 /* QXKWikiMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221D81B4D9FE900F51522 /* QXKWikiMainViewController.m */; };
+		F29221E01B4DA1CD00F51522 /* QXKWikiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221DE1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.m */; };
+		F29221E11B4DA1CD00F51522 /* QXKWikiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221DF1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.xib */; };
+		F29221E41B4DB3BD00F51522 /* QXKWikiSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221E31B4DB3BD00F51522 /* QXKWikiSearchBar.m */; };
+		F29221E61B4DB3D600F51522 /* QXKWikiSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221E51B4DB3D600F51522 /* QXKWikiSearchBar.xib */; };
+		F29221F41B4ECC1800F51522 /* QXKWikiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221F21B4ECC1800F51522 /* QXKWikiDetailViewController.m */; };
+		F29221F51B4ECC1800F51522 /* QXKWikiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221F31B4ECC1800F51522 /* QXKWikiDetailViewController.xib */; };
+		F29221F91B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221F71B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.m */; };
+		F29221FA1B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221F81B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.xib */; };
+		F29221FE1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29221FC1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.m */; };
+		F29221FF1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29221FD1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.xib */; };
+		F29222031B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F29222011B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.m */; };
+		F29222041B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29222021B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.xib */; };
+		F29222081B4EE84D00F51522 /* QXKWikiEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29222061B4EE84D00F51522 /* QXKWikiEditViewController.m */; };
+		F29222091B4EE84D00F51522 /* QXKWikiEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29222071B4EE84D00F51522 /* QXKWikiEditViewController.xib */; };
 		F2B220861B2D224900ED737F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B220851B2D224900ED737F /* main.m */; };
 		F2B220891B2D224900ED737F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B220881B2D224900ED737F /* AppDelegate.m */; };
 		F2B2208C1B2D224900ED737F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B2208B1B2D224900ED737F /* ViewController.m */; };
@@ -14,6 +75,7 @@
 		F2B220911B2D224900ED737F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B220901B2D224900ED737F /* Images.xcassets */; };
 		F2B220941B2D224900ED737F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B220921B2D224900ED737F /* LaunchScreen.xib */; };
 		F2B220A01B2D224900ED737F /* QiuxingkaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B2209F1B2D224900ED737F /* QiuxingkaTests.m */; };
+		F2B53D011B306B760031C654 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B53D001B306B760031C654 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +89,109 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C2AB34187E28EAC4BD2C53B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		641EE001719C84C15D48028F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DEEC0147CE0DB4FE79976123 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F260491A1B2E130400F8A71B /* QXKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKLoginViewController.h; sourceTree = "<group>"; };
+		F260491B1B2E130400F8A71B /* QXKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKLoginViewController.m; sourceTree = "<group>"; };
+		F260491C1B2E130400F8A71B /* QXKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKLoginViewController.xib; sourceTree = "<group>"; };
+		F260491F1B2E199C00F8A71B /* QXKRegister1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKRegister1ViewController.h; sourceTree = "<group>"; };
+		F26049201B2E199C00F8A71B /* QXKRegister1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKRegister1ViewController.m; sourceTree = "<group>"; };
+		F26049211B2E199C00F8A71B /* QXKRegister1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKRegister1ViewController.xib; sourceTree = "<group>"; };
+		F26049241B2E19C600F8A71B /* QXKRegister2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKRegister2ViewController.h; sourceTree = "<group>"; };
+		F26049251B2E19C600F8A71B /* QXKRegister2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKRegister2ViewController.m; sourceTree = "<group>"; };
+		F26049261B2E19C600F8A71B /* QXKRegister2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKRegister2ViewController.xib; sourceTree = "<group>"; };
+		F26049291B2E19DA00F8A71B /* QXKRegister3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKRegister3ViewController.h; sourceTree = "<group>"; };
+		F260492A1B2E19DA00F8A71B /* QXKRegister3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKRegister3ViewController.m; sourceTree = "<group>"; };
+		F260492B1B2E19DA00F8A71B /* QXKRegister3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKRegister3ViewController.xib; sourceTree = "<group>"; };
+		F260492E1B2E1A0C00F8A71B /* QXKResetPassword1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKResetPassword1ViewController.h; sourceTree = "<group>"; };
+		F260492F1B2E1A0C00F8A71B /* QXKResetPassword1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKResetPassword1ViewController.m; sourceTree = "<group>"; };
+		F26049301B2E1A0C00F8A71B /* QXKResetPassword1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKResetPassword1ViewController.xib; sourceTree = "<group>"; };
+		F26049331B2E1A2300F8A71B /* QXKResetPassword3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKResetPassword3ViewController.h; sourceTree = "<group>"; };
+		F26049341B2E1A2300F8A71B /* QXKResetPassword3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKResetPassword3ViewController.m; sourceTree = "<group>"; };
+		F26049351B2E1A2300F8A71B /* QXKResetPassword3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKResetPassword3ViewController.xib; sourceTree = "<group>"; };
+		F26049381B2E1A3300F8A71B /* QXKResetPassword2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKResetPassword2ViewController.h; sourceTree = "<group>"; };
+		F26049391B2E1A3300F8A71B /* QXKResetPassword2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKResetPassword2ViewController.m; sourceTree = "<group>"; };
+		F260493A1B2E1A3300F8A71B /* QXKResetPassword2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKResetPassword2ViewController.xib; sourceTree = "<group>"; };
+		F260493D1B2E1B7800F8A71B /* QXKHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKHomePageViewController.h; sourceTree = "<group>"; };
+		F260493E1B2E1B7800F8A71B /* QXKHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKHomePageViewController.m; sourceTree = "<group>"; };
+		F26049441B2E1C8F00F8A71B /* QXKUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKUserInfo.h; sourceTree = "<group>"; };
+		F26049451B2E1C8F00F8A71B /* QXKUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKUserInfo.m; sourceTree = "<group>"; };
+		F26049491B2E1F8600F8A71B /* LMComBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMComBoxView.h; path = tools/LMComBoxView.h; sourceTree = "<group>"; };
+		F260494A1B2E1F8600F8A71B /* LMComBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMComBoxView.m; path = tools/LMComBoxView.m; sourceTree = "<group>"; };
+		F260497E1B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMContainsLMComboxScrollView.h; sourceTree = "<group>"; };
+		F260497F1B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMContainsLMComboxScrollView.m; sourceTree = "<group>"; };
+		F26049811B2F5C2700F8A71B /* QXKGeneral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QXKGeneral.h; sourceTree = "<group>"; };
+		F29221861B4AF78100F51522 /* HMBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBannerView.h; sourceTree = "<group>"; };
+		F29221871B4AF78100F51522 /* HMBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBannerView.m; sourceTree = "<group>"; };
+		F292218C1B4AFE6B00F51522 /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
+		F292218D1B4AFE6B00F51522 /* NSData+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GIF.m"; sourceTree = "<group>"; };
+		F29221901B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKMHomePageCardTypeTableViewCell.h; sourceTree = "<group>"; };
+		F29221911B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKMHomePageCardTypeTableViewCell.m; sourceTree = "<group>"; };
+		F29221921B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKMHomePageCardTypeTableViewCell.xib; sourceTree = "<group>"; };
+		F29221951B4B080E00F51522 /* QXKHomePageBrandTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKHomePageBrandTableViewCell.h; sourceTree = "<group>"; };
+		F29221961B4B080E00F51522 /* QXKHomePageBrandTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKHomePageBrandTableViewCell.m; sourceTree = "<group>"; };
+		F29221971B4B080E00F51522 /* QXKHomePageBrandTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKHomePageBrandTableViewCell.xib; sourceTree = "<group>"; };
+		F292219A1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKHomePageNewsTableViewCell.h; sourceTree = "<group>"; };
+		F292219B1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKHomePageNewsTableViewCell.m; sourceTree = "<group>"; };
+		F292219C1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKHomePageNewsTableViewCell.xib; sourceTree = "<group>"; };
+		F29221A01B4C1D4000F51522 /* QXKSellUploadPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKSellUploadPhotoViewController.h; sourceTree = "<group>"; };
+		F29221A11B4C1D4000F51522 /* QXKSellUploadPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKSellUploadPhotoViewController.m; sourceTree = "<group>"; };
+		F29221A21B4C1D4000F51522 /* QXKSellUploadPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKSellUploadPhotoViewController.xib; sourceTree = "<group>"; };
+		F29221A51B4C246D00F51522 /* QXKSellCardInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKSellCardInfoViewController.h; sourceTree = "<group>"; };
+		F29221A61B4C246D00F51522 /* QXKSellCardInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKSellCardInfoViewController.m; sourceTree = "<group>"; };
+		F29221A71B4C246D00F51522 /* QXKSellCardInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKSellCardInfoViewController.xib; sourceTree = "<group>"; };
+		F29221AA1B4C286B00F51522 /* QXKSellOtherInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKSellOtherInfoViewController.h; sourceTree = "<group>"; };
+		F29221AB1B4C286B00F51522 /* QXKSellOtherInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKSellOtherInfoViewController.m; sourceTree = "<group>"; };
+		F29221AC1B4C286B00F51522 /* QXKSellOtherInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKSellOtherInfoViewController.xib; sourceTree = "<group>"; };
+		F29221AF1B4C352800F51522 /* QXKSellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKSellViewController.h; sourceTree = "<group>"; };
+		F29221B01B4C352800F51522 /* QXKSellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKSellViewController.m; sourceTree = "<group>"; };
+		F29221B31B4C483700F51522 /* AGImagePickerController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGImagePickerController+Helper.h"; sourceTree = "<group>"; };
+		F29221B41B4C483700F51522 /* AGImagePickerController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGImagePickerController+Helper.m"; sourceTree = "<group>"; };
+		F29221B51B4C483700F51522 /* AGImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AGImagePickerController.bundle; sourceTree = "<group>"; };
+		F29221B61B4C483700F51522 /* AGImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePickerController.h; sourceTree = "<group>"; };
+		F29221B71B4C483700F51522 /* AGImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGImagePickerController.m; sourceTree = "<group>"; };
+		F29221B81B4C483700F51522 /* AGImagePickerControllerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePickerControllerDefines.h; sourceTree = "<group>"; };
+		F29221B91B4C483700F51522 /* AGImagePreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImagePreviewController.h; sourceTree = "<group>"; };
+		F29221BA1B4C483700F51522 /* AGImagePreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGImagePreviewController.m; sourceTree = "<group>"; };
+		F29221BB1B4C483700F51522 /* AGIPCAlbumsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCAlbumsController.h; sourceTree = "<group>"; };
+		F29221BC1B4C483700F51522 /* AGIPCAlbumsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCAlbumsController.m; sourceTree = "<group>"; };
+		F29221BD1B4C483700F51522 /* AGIPCAssetsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCAssetsController.h; sourceTree = "<group>"; };
+		F29221BE1B4C483700F51522 /* AGIPCAssetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCAssetsController.m; sourceTree = "<group>"; };
+		F29221BF1B4C483700F51522 /* AGIPCGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCGridCell.h; sourceTree = "<group>"; };
+		F29221C01B4C483700F51522 /* AGIPCGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCGridCell.m; sourceTree = "<group>"; };
+		F29221C11B4C483700F51522 /* AGIPCGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCGridItem.h; sourceTree = "<group>"; };
+		F29221C21B4C483700F51522 /* AGIPCGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCGridItem.m; sourceTree = "<group>"; };
+		F29221C31B4C483700F51522 /* AGIPCToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGIPCToolbarItem.h; sourceTree = "<group>"; };
+		F29221C41B4C483700F51522 /* AGIPCToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGIPCToolbarItem.m; sourceTree = "<group>"; };
+		F29221C51B4C483700F51522 /* ALAsset+AGIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+AGIPC.h"; sourceTree = "<group>"; };
+		F29221C61B4C483700F51522 /* ALAsset+AGIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+AGIPC.m"; sourceTree = "<group>"; };
+		F29221D21B4C6D4B00F51522 /* AssetsPickerChecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AssetsPickerChecked@2x.png"; sourceTree = "<group>"; };
+		F29221D31B4C6D4B00F51522 /* MSImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSImagePickerController.h; sourceTree = "<group>"; };
+		F29221D41B4C6D4B00F51522 /* MSImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSImagePickerController.m; sourceTree = "<group>"; };
+		F29221D71B4D9FE900F51522 /* QXKWikiMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiMainViewController.h; sourceTree = "<group>"; };
+		F29221D81B4D9FE900F51522 /* QXKWikiMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiMainViewController.m; sourceTree = "<group>"; };
+		F29221DD1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiCollectionViewCell.h; sourceTree = "<group>"; };
+		F29221DE1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiCollectionViewCell.m; sourceTree = "<group>"; };
+		F29221DF1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiCollectionViewCell.xib; sourceTree = "<group>"; };
+		F29221E21B4DB3BD00F51522 /* QXKWikiSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiSearchBar.h; sourceTree = "<group>"; };
+		F29221E31B4DB3BD00F51522 /* QXKWikiSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiSearchBar.m; sourceTree = "<group>"; };
+		F29221E51B4DB3D600F51522 /* QXKWikiSearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiSearchBar.xib; sourceTree = "<group>"; };
+		F29221F11B4ECC1800F51522 /* QXKWikiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiDetailViewController.h; sourceTree = "<group>"; };
+		F29221F21B4ECC1800F51522 /* QXKWikiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiDetailViewController.m; sourceTree = "<group>"; };
+		F29221F31B4ECC1800F51522 /* QXKWikiDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiDetailViewController.xib; sourceTree = "<group>"; };
+		F29221F61B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiDetailCardInfoTableViewCell.h; sourceTree = "<group>"; };
+		F29221F71B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiDetailCardInfoTableViewCell.m; sourceTree = "<group>"; };
+		F29221F81B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiDetailCardInfoTableViewCell.xib; sourceTree = "<group>"; };
+		F29221FB1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiDetailCardDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		F29221FC1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiDetailCardDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		F29221FD1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiDetailCardDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		F29222001B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiDetailPriceTableViewCell.h; sourceTree = "<group>"; };
+		F29222011B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiDetailPriceTableViewCell.m; sourceTree = "<group>"; };
+		F29222021B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiDetailPriceTableViewCell.xib; sourceTree = "<group>"; };
+		F29222051B4EE84D00F51522 /* QXKWikiEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKWikiEditViewController.h; sourceTree = "<group>"; };
+		F29222061B4EE84D00F51522 /* QXKWikiEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKWikiEditViewController.m; sourceTree = "<group>"; };
+		F29222071B4EE84D00F51522 /* QXKWikiEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKWikiEditViewController.xib; sourceTree = "<group>"; };
 		F2B220801B2D224900ED737F /* Qiuxingka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qiuxingka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B220841B2D224900ED737F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B220851B2D224900ED737F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +205,8 @@
 		F2B220991B2D224900ED737F /* QiuxingkaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiuxingkaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B2209E1B2D224900ED737F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B2209F1B2D224900ED737F /* QiuxingkaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiuxingkaTests.m; sourceTree = "<group>"; };
+		F2B53CFF1B306B760031C654 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F2B53D001B306B760031C654 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB2CDCC189AD22001B786B2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +228,178 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4CFE4D63AFD7766A0BF9E5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C2AB34187E28EAC4BD2C53B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD40A6C45A0B631A842428AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEEC0147CE0DB4FE79976123 /* Pods.debug.xcconfig */,
+				641EE001719C84C15D48028F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F26049421B2E1B8200F8A71B /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				F292218F1B4B05F400F51522 /* view */,
+				F260493D1B2E1B7800F8A71B /* QXKHomePageViewController.h */,
+				F260493E1B2E1B7800F8A71B /* QXKHomePageViewController.m */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
+		F26049431B2E1C4200F8A71B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F26049441B2E1C8F00F8A71B /* QXKUserInfo.h */,
+				F26049451B2E1C8F00F8A71B /* QXKUserInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F26049471B2E1F7300F8A71B /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				F29221B21B4C483700F51522 /* AGImagePickerController */,
+				F29221D11B4C6D4B00F51522 /* MSImagePicker */,
+				F292218C1B4AFE6B00F51522 /* NSData+GIF.h */,
+				F292218D1B4AFE6B00F51522 /* NSData+GIF.m */,
+				F29221861B4AF78100F51522 /* HMBannerView.h */,
+				F29221871B4AF78100F51522 /* HMBannerView.m */,
+				F26049491B2E1F8600F8A71B /* LMComBoxView.h */,
+				F260494A1B2E1F8600F8A71B /* LMComBoxView.m */,
+				F260497E1B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.h */,
+				F260497F1B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.m */,
+				F2B53CFF1B306B760031C654 /* MBProgressHUD.h */,
+				F2B53D001B306B760031C654 /* MBProgressHUD.m */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		F29221851B4AF73000F51522 /* wiki */ = {
+			isa = PBXGroup;
+			children = (
+				F29221DC1B4DA19E00F51522 /* view */,
+				F29221D71B4D9FE900F51522 /* QXKWikiMainViewController.h */,
+				F29221D81B4D9FE900F51522 /* QXKWikiMainViewController.m */,
+				F29221F11B4ECC1800F51522 /* QXKWikiDetailViewController.h */,
+				F29221F21B4ECC1800F51522 /* QXKWikiDetailViewController.m */,
+				F29221F31B4ECC1800F51522 /* QXKWikiDetailViewController.xib */,
+				F29222051B4EE84D00F51522 /* QXKWikiEditViewController.h */,
+				F29222061B4EE84D00F51522 /* QXKWikiEditViewController.m */,
+				F29222071B4EE84D00F51522 /* QXKWikiEditViewController.xib */,
+			);
+			name = wiki;
+			sourceTree = "<group>";
+		};
+		F292218F1B4B05F400F51522 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F29221901B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.h */,
+				F29221911B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.m */,
+				F29221921B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.xib */,
+				F29221951B4B080E00F51522 /* QXKHomePageBrandTableViewCell.h */,
+				F29221961B4B080E00F51522 /* QXKHomePageBrandTableViewCell.m */,
+				F29221971B4B080E00F51522 /* QXKHomePageBrandTableViewCell.xib */,
+				F292219A1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.h */,
+				F292219B1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.m */,
+				F292219C1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		F292219F1B4C1C9100F51522 /* SellCard */ = {
+			isa = PBXGroup;
+			children = (
+				F29221A01B4C1D4000F51522 /* QXKSellUploadPhotoViewController.h */,
+				F29221A11B4C1D4000F51522 /* QXKSellUploadPhotoViewController.m */,
+				F29221A21B4C1D4000F51522 /* QXKSellUploadPhotoViewController.xib */,
+				F29221A51B4C246D00F51522 /* QXKSellCardInfoViewController.h */,
+				F29221A61B4C246D00F51522 /* QXKSellCardInfoViewController.m */,
+				F29221A71B4C246D00F51522 /* QXKSellCardInfoViewController.xib */,
+				F29221AA1B4C286B00F51522 /* QXKSellOtherInfoViewController.h */,
+				F29221AB1B4C286B00F51522 /* QXKSellOtherInfoViewController.m */,
+				F29221AC1B4C286B00F51522 /* QXKSellOtherInfoViewController.xib */,
+				F29221AF1B4C352800F51522 /* QXKSellViewController.h */,
+				F29221B01B4C352800F51522 /* QXKSellViewController.m */,
+			);
+			name = SellCard;
+			sourceTree = "<group>";
+		};
+		F29221B21B4C483700F51522 /* AGImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				F29221B31B4C483700F51522 /* AGImagePickerController+Helper.h */,
+				F29221B41B4C483700F51522 /* AGImagePickerController+Helper.m */,
+				F29221B51B4C483700F51522 /* AGImagePickerController.bundle */,
+				F29221B61B4C483700F51522 /* AGImagePickerController.h */,
+				F29221B71B4C483700F51522 /* AGImagePickerController.m */,
+				F29221B81B4C483700F51522 /* AGImagePickerControllerDefines.h */,
+				F29221B91B4C483700F51522 /* AGImagePreviewController.h */,
+				F29221BA1B4C483700F51522 /* AGImagePreviewController.m */,
+				F29221BB1B4C483700F51522 /* AGIPCAlbumsController.h */,
+				F29221BC1B4C483700F51522 /* AGIPCAlbumsController.m */,
+				F29221BD1B4C483700F51522 /* AGIPCAssetsController.h */,
+				F29221BE1B4C483700F51522 /* AGIPCAssetsController.m */,
+				F29221BF1B4C483700F51522 /* AGIPCGridCell.h */,
+				F29221C01B4C483700F51522 /* AGIPCGridCell.m */,
+				F29221C11B4C483700F51522 /* AGIPCGridItem.h */,
+				F29221C21B4C483700F51522 /* AGIPCGridItem.m */,
+				F29221C31B4C483700F51522 /* AGIPCToolbarItem.h */,
+				F29221C41B4C483700F51522 /* AGIPCToolbarItem.m */,
+				F29221C51B4C483700F51522 /* ALAsset+AGIPC.h */,
+				F29221C61B4C483700F51522 /* ALAsset+AGIPC.m */,
+			);
+			path = AGImagePickerController;
+			sourceTree = "<group>";
+		};
+		F29221D11B4C6D4B00F51522 /* MSImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F29221D21B4C6D4B00F51522 /* AssetsPickerChecked@2x.png */,
+				F29221D31B4C6D4B00F51522 /* MSImagePickerController.h */,
+				F29221D41B4C6D4B00F51522 /* MSImagePickerController.m */,
+			);
+			path = MSImagePicker;
+			sourceTree = "<group>";
+		};
+		F29221DC1B4DA19E00F51522 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F29221DD1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.h */,
+				F29221DE1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.m */,
+				F29221DF1B4DA1CD00F51522 /* QXKWikiCollectionViewCell.xib */,
+				F29221E21B4DB3BD00F51522 /* QXKWikiSearchBar.h */,
+				F29221E31B4DB3BD00F51522 /* QXKWikiSearchBar.m */,
+				F29221E51B4DB3D600F51522 /* QXKWikiSearchBar.xib */,
+				F29221F61B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.h */,
+				F29221F71B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.m */,
+				F29221F81B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.xib */,
+				F29221FB1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.h */,
+				F29221FC1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.m */,
+				F29221FD1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.xib */,
+				F29222001B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.h */,
+				F29222011B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.m */,
+				F29222021B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		F2B220771B2D224900ED737F = {
 			isa = PBXGroup;
 			children = (
 				F2B220821B2D224900ED737F /* Qiuxingka */,
 				F2B2209C1B2D224900ED737F /* QiuxingkaTests */,
 				F2B220811B2D224900ED737F /* Products */,
+				BD40A6C45A0B631A842428AA /* Pods */,
+				A4CFE4D63AFD7766A0BF9E5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +415,14 @@
 		F2B220821B2D224900ED737F /* Qiuxingka */ = {
 			isa = PBXGroup;
 			children = (
+				F26049471B2E1F7300F8A71B /* tools */,
+				F26049431B2E1C4200F8A71B /* Model */,
+				F29221851B4AF73000F51522 /* wiki */,
+				F292219F1B4C1C9100F51522 /* SellCard */,
+				F26049421B2E1B8200F8A71B /* HomePage */,
+				F2B220A91B2D225600ED737F /* Login&register */,
 				F2B220871B2D224900ED737F /* AppDelegate.h */,
+				F26049811B2F5C2700F8A71B /* QXKGeneral.h */,
 				F2B220881B2D224900ED737F /* AppDelegate.m */,
 				F2B2208A1B2D224900ED737F /* ViewController.h */,
 				F2B2208B1B2D224900ED737F /* ViewController.m */,
@@ -119,6 +460,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F2B220A91B2D225600ED737F /* Login&register */ = {
+			isa = PBXGroup;
+			children = (
+				F260491A1B2E130400F8A71B /* QXKLoginViewController.h */,
+				F260491B1B2E130400F8A71B /* QXKLoginViewController.m */,
+				F260491C1B2E130400F8A71B /* QXKLoginViewController.xib */,
+				F260491F1B2E199C00F8A71B /* QXKRegister1ViewController.h */,
+				F26049201B2E199C00F8A71B /* QXKRegister1ViewController.m */,
+				F26049211B2E199C00F8A71B /* QXKRegister1ViewController.xib */,
+				F26049241B2E19C600F8A71B /* QXKRegister2ViewController.h */,
+				F26049251B2E19C600F8A71B /* QXKRegister2ViewController.m */,
+				F26049261B2E19C600F8A71B /* QXKRegister2ViewController.xib */,
+				F26049291B2E19DA00F8A71B /* QXKRegister3ViewController.h */,
+				F260492A1B2E19DA00F8A71B /* QXKRegister3ViewController.m */,
+				F260492B1B2E19DA00F8A71B /* QXKRegister3ViewController.xib */,
+				F260492E1B2E1A0C00F8A71B /* QXKResetPassword1ViewController.h */,
+				F260492F1B2E1A0C00F8A71B /* QXKResetPassword1ViewController.m */,
+				F26049301B2E1A0C00F8A71B /* QXKResetPassword1ViewController.xib */,
+				F26049381B2E1A3300F8A71B /* QXKResetPassword2ViewController.h */,
+				F26049391B2E1A3300F8A71B /* QXKResetPassword2ViewController.m */,
+				F260493A1B2E1A3300F8A71B /* QXKResetPassword2ViewController.xib */,
+				F26049331B2E1A2300F8A71B /* QXKResetPassword3ViewController.h */,
+				F26049341B2E1A2300F8A71B /* QXKResetPassword3ViewController.m */,
+				F26049351B2E1A2300F8A71B /* QXKResetPassword3ViewController.xib */,
+			);
+			name = "Login&register";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +495,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2B220A31B2D224900ED737F /* Build configuration list for PBXNativeTarget "Qiuxingka" */;
 			buildPhases = (
+				913BAE4C802B5D7CC677ED4A /* Check Pods Manifest.lock */,
 				F2B2207C1B2D224900ED737F /* Sources */,
 				F2B2207D1B2D224900ED737F /* Frameworks */,
 				F2B2207E1B2D224900ED737F /* Resources */,
+				8DFA757D911237A322FF60F1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +570,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26049231B2E199C00F8A71B /* QXKRegister1ViewController.xib in Resources */,
+				F29221FA1B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.xib in Resources */,
+				F29221FF1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.xib in Resources */,
 				F2B2208F1B2D224900ED737F /* Main.storyboard in Resources */,
+				F29221E11B4DA1CD00F51522 /* QXKWikiCollectionViewCell.xib in Resources */,
+				F260492D1B2E19DA00F8A71B /* QXKRegister3ViewController.xib in Resources */,
+				F29221C81B4C483700F51522 /* AGImagePickerController.bundle in Resources */,
+				F29221A41B4C1D4000F51522 /* QXKSellUploadPhotoViewController.xib in Resources */,
+				F29221AE1B4C286B00F51522 /* QXKSellOtherInfoViewController.xib in Resources */,
+				F29222091B4EE84D00F51522 /* QXKWikiEditViewController.xib in Resources */,
+				F260493C1B2E1A3300F8A71B /* QXKResetPassword2ViewController.xib in Resources */,
 				F2B220941B2D224900ED737F /* LaunchScreen.xib in Resources */,
+				F26049281B2E19C600F8A71B /* QXKRegister2ViewController.xib in Resources */,
+				F29221A91B4C246D00F51522 /* QXKSellCardInfoViewController.xib in Resources */,
+				F29221941B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.xib in Resources */,
+				F29221E61B4DB3D600F51522 /* QXKWikiSearchBar.xib in Resources */,
+				F26049371B2E1A2300F8A71B /* QXKResetPassword3ViewController.xib in Resources */,
 				F2B220911B2D224900ED737F /* Images.xcassets in Resources */,
+				F29221D51B4C6D4B00F51522 /* AssetsPickerChecked@2x.png in Resources */,
+				F29221F51B4ECC1800F51522 /* QXKWikiDetailViewController.xib in Resources */,
+				F26049321B2E1A0C00F8A71B /* QXKResetPassword1ViewController.xib in Resources */,
+				F292219E1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.xib in Resources */,
+				F29222041B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.xib in Resources */,
+				F29221991B4B080E00F51522 /* QXKHomePageBrandTableViewCell.xib in Resources */,
+				F260491E1B2E130400F8A71B /* QXKLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +607,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DFA757D911237A322FF60F1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		913BAE4C802B5D7CC677ED4A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F2B2207C1B2D224900ED737F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29221AD1B4C286B00F51522 /* QXKSellOtherInfoViewController.m in Sources */,
+				F29221E01B4DA1CD00F51522 /* QXKWikiCollectionViewCell.m in Sources */,
+				F29221DA1B4D9FE900F51522 /* QXKWikiMainViewController.m in Sources */,
+				F26049401B2E1B7800F8A71B /* QXKHomePageViewController.m in Sources */,
+				F260494B1B2E1F8600F8A71B /* LMComBoxView.m in Sources */,
+				F29221C91B4C483700F51522 /* AGImagePickerController.m in Sources */,
 				F2B2208C1B2D224900ED737F /* ViewController.m in Sources */,
+				F292219D1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.m in Sources */,
+				F29221B11B4C352800F51522 /* QXKSellViewController.m in Sources */,
+				F29222031B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.m in Sources */,
+				F26049271B2E19C600F8A71B /* QXKRegister2ViewController.m in Sources */,
+				F26049461B2E1C8F00F8A71B /* QXKUserInfo.m in Sources */,
+				F26049311B2E1A0C00F8A71B /* QXKResetPassword1ViewController.m in Sources */,
+				F29221E41B4DB3BD00F51522 /* QXKWikiSearchBar.m in Sources */,
+				F29221931B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.m in Sources */,
+				F29221CC1B4C483700F51522 /* AGIPCAssetsController.m in Sources */,
 				F2B220891B2D224900ED737F /* AppDelegate.m in Sources */,
+				F29222081B4EE84D00F51522 /* QXKWikiEditViewController.m in Sources */,
+				F29221D01B4C483700F51522 /* ALAsset+AGIPC.m in Sources */,
+				F2B53D011B306B760031C654 /* MBProgressHUD.m in Sources */,
+				F260492C1B2E19DA00F8A71B /* QXKRegister3ViewController.m in Sources */,
+				F260493B1B2E1A3300F8A71B /* QXKResetPassword2ViewController.m in Sources */,
+				F29221CA1B4C483700F51522 /* AGImagePreviewController.m in Sources */,
+				F29221C71B4C483700F51522 /* AGImagePickerController+Helper.m in Sources */,
 				F2B220861B2D224900ED737F /* main.m in Sources */,
+				F29221CF1B4C483700F51522 /* AGIPCToolbarItem.m in Sources */,
+				F29221A81B4C246D00F51522 /* QXKSellCardInfoViewController.m in Sources */,
+				F26049801B2F5A1B00F8A71B /* LMContainsLMComboxScrollView.m in Sources */,
+				F26049361B2E1A2300F8A71B /* QXKResetPassword3ViewController.m in Sources */,
+				F29221CD1B4C483700F51522 /* AGIPCGridCell.m in Sources */,
+				F29221D61B4C6D4B00F51522 /* MSImagePickerController.m in Sources */,
+				F26049221B2E199C00F8A71B /* QXKRegister1ViewController.m in Sources */,
+				F29221F41B4ECC1800F51522 /* QXKWikiDetailViewController.m in Sources */,
+				F292218E1B4AFE6B00F51522 /* NSData+GIF.m in Sources */,
+				F29221981B4B080E00F51522 /* QXKHomePageBrandTableViewCell.m in Sources */,
+				F29221F91B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.m in Sources */,
+				F29221FE1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.m in Sources */,
+				F260491D1B2E130400F8A71B /* QXKLoginViewController.m in Sources */,
+				F29221CE1B4C483700F51522 /* AGIPCGridItem.m in Sources */,
+				F29221A31B4C1D4000F51522 /* QXKSellUploadPhotoViewController.m in Sources */,
+				F29221CB1B4C483700F51522 /* AGIPCAlbumsController.m in Sources */,
+				F29221881B4AF78100F51522 /* HMBannerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +812,7 @@
 		};
 		F2B220A41B2D224900ED737F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEEC0147CE0DB4FE79976123 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Qiuxingka/Info.plist;
@@ -357,6 +823,7 @@
 		};
 		F2B220A51B2D224900ED737F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 641EE001719C84C15D48028F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Qiuxingka/Info.plist;
@@ -367,6 +834,7 @@
 		};
 		F2B220A71B2D224900ED737F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEEC0147CE0DB4FE79976123 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -386,6 +854,7 @@
 		};
 		F2B220A81B2D224900ED737F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 641EE001719C84C15D48028F /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -418,6 +887,7 @@
 				F2B220A51B2D224900ED737F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2B220A61B2D224900ED737F /* Build configuration list for PBXNativeTarget "QiuxingkaTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +896,7 @@
 				F2B220A81B2D224900ED737F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QXKMHomePageCardTypeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF9-we-p8I">
+                        <rect key="frame" x="22" y="10" width="84" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aF9-we-p8I" secondAttribute="height" multiplier="1:1" id="k0b-f0-pPH"/>
+                        </constraints>
+                        <state key="normal" image="篮球卡">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gf-yw-VGU">
+                        <rect key="frame" x="146" y="10" width="83" height="84"/>
+                        <state key="normal" image="足球卡">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="足球卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwA-PP-VoU">
+                        <rect key="frame" x="41" y="94" width="45" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="篮球卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOt-WL-UEm">
+                        <rect key="frame" x="165" y="94" width="45" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-RI-eSH">
+                        <rect key="frame" x="289" y="94" width="45" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-Lj-wtn">
+                        <rect key="frame" x="269" y="10" width="84" height="84"/>
+                        <state key="normal" image="其他卡">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="width" secondItem="NJG-Lj-wtn" secondAttribute="width" id="1I9-Yg-3OR"/>
+                    <constraint firstItem="NJG-Lj-wtn" firstAttribute="leading" secondItem="3gf-yw-VGU" secondAttribute="trailing" constant="40" id="63h-4h-b8e"/>
+                    <constraint firstAttribute="trailing" secondItem="NJG-Lj-wtn" secondAttribute="trailing" constant="22" id="DVM-HR-lWX"/>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="height" secondItem="3gf-yw-VGU" secondAttribute="height" id="DuM-BB-1Qs"/>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="centerX" secondItem="fwA-PP-VoU" secondAttribute="centerX" id="ElP-GN-pRq"/>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="width" secondItem="3gf-yw-VGU" secondAttribute="width" id="FB6-3P-5Ze"/>
+                    <constraint firstItem="3gf-yw-VGU" firstAttribute="leading" secondItem="aF9-we-p8I" secondAttribute="trailing" constant="40" id="I2r-L7-730"/>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="IMF-4e-6lc"/>
+                    <constraint firstItem="aCh-RI-eSH" firstAttribute="centerY" secondItem="XOt-WL-UEm" secondAttribute="centerY" id="MsU-S6-ri7"/>
+                    <constraint firstItem="fwA-PP-VoU" firstAttribute="top" secondItem="aF9-we-p8I" secondAttribute="bottom" id="PHA-wk-tIC"/>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="Te7-SH-Fig"/>
+                    <constraint firstItem="aF9-we-p8I" firstAttribute="height" secondItem="NJG-Lj-wtn" secondAttribute="height" id="YaZ-TW-myl"/>
+                    <constraint firstItem="3gf-yw-VGU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Z8S-2a-lSi"/>
+                    <constraint firstItem="XOt-WL-UEm" firstAttribute="centerX" secondItem="3gf-yw-VGU" secondAttribute="centerX" id="cVs-Pa-ObU"/>
+                    <constraint firstItem="aCh-RI-eSH" firstAttribute="centerX" secondItem="NJG-Lj-wtn" secondAttribute="centerX" id="oSY-Zp-8q2"/>
+                    <constraint firstItem="aCh-RI-eSH" firstAttribute="centerY" secondItem="fwA-PP-VoU" secondAttribute="centerY" id="v3x-iW-DYW"/>
+                    <constraint firstItem="NJG-Lj-wtn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="z6v-vC-vpu"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="其他卡" width="161" height="161"/>
+        <image name="篮球卡" width="161" height="161"/>
+        <image name="足球卡" width="161" height="161"/>
+    </resources>
+</document>
