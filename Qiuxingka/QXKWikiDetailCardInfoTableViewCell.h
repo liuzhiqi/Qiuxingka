@@ -15,11 +15,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelSubtitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelType;
 @property (weak, nonatomic) IBOutlet UILabel *labelFactory;
-@property (weak, nonatomic) IBOutlet UILabel *series;
+@property (weak, nonatomic) IBOutlet UILabel *labelSeries;
 @property (weak, nonatomic) IBOutlet UILabel *labelCardNumber;
 @property (weak, nonatomic) IBOutlet UILabel *labelRareLevel;
 
 
+-(void)setCellDataWithTItle:(NSString*)title subtitle:(NSString*)subtitle cardType:(NSString*)cardType factory:(NSString*)factory cardNumber:(NSString*)cardNumber series:(NSString*)series rareLevel:(NSString*)rareLevel imagePic:(NSString*)picUrl;
 
 
 

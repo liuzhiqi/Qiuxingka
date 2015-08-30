@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface QXKRegister3ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textFieldNickName;
+
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPassword2;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldID;
 
 @end

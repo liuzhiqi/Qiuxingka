@@ -52,19 +52,19 @@
 - (id)initWithFrame:(CGRect)frame scrollDirection:(BannerViewScrollDirection)direction images:(NSArray *)images
 {
     self = [super initWithFrame:frame];
-
+    
     if(self)
     {
         self.imagesArray = [[NSArray alloc] initWithArray:images];
-
+        
         self.scrollDirection = direction;
-
+        
         totalPage = imagesArray.count;
         totalCount = totalPage;
         // 显示的是图片数组里的第一张图片
         // 和数组是+1关系
         curPage = 1;
-
+        
         scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         scrollView.backgroundColor = [UIColor clearColor];
         scrollView.showsHorizontalScrollIndicator = NO;
@@ -79,22 +79,22 @@
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3,
                                                 scrollView.frame.size.height);
         }
-        // 在垂直方向滚动 
+        // 在垂直方向滚动
         else if(scrollDirection == ScrollDirectionPortait)
         {
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width,
                                                 scrollView.frame.size.height * 3);
         }
-
+        
         for (NSInteger i = 0; i < 3; i++)
         {
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:scrollView.bounds];
             imageView.userInteractionEnabled = YES;
             imageView.tag = Banner_StartTag+i;
-
+            
             UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
             [imageView addGestureRecognizer:singleTap];
-
+            
             // 水平滚动
             if(scrollDirection == ScrollDirectionLandscape)
             {
@@ -108,16 +108,83 @@
             
             [scrollView addSubview:imageView];
         }
-
+        
         self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(5, frame.size.height-15, 60, 15)];
         self.pageControl.numberOfPages = self.imagesArray.count;
         [self addSubview:self.pageControl];
-
+        
         self.pageControl.currentPage = 0;
         //[self refreshScrollView];
     }
-    
     return self;
+
+
+}
+
+- (void)setBannerWithScrollDirection:(BannerViewScrollDirection)direction images:(NSArray *)images
+{
+    
+        self.imagesArray = [[NSArray alloc] initWithArray:images];
+        
+        self.scrollDirection = direction;
+        
+        totalPage = imagesArray.count;
+        totalCount = totalPage;
+        // 显示的是图片数组里的第一张图片
+        // 和数组是+1关系
+        curPage = 1;
+        
+        scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        scrollView.backgroundColor = [UIColor clearColor];
+        scrollView.showsHorizontalScrollIndicator = NO;
+        scrollView.showsVerticalScrollIndicator = NO;
+        scrollView.pagingEnabled = YES;
+        scrollView.delegate = self;
+        [self addSubview:scrollView];
+        
+        // 在水平方向滚动
+        if(scrollDirection == ScrollDirectionLandscape)
+        {
+            scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3,
+                                                scrollView.frame.size.height);
+        }
+        // 在垂直方向滚动
+        else if(scrollDirection == ScrollDirectionPortait)
+        {
+            scrollView.contentSize = CGSizeMake(scrollView.frame.size.width,
+                                                scrollView.frame.size.height * 3);
+        }
+        
+        for (NSInteger i = 0; i < 3; i++)
+        {
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:scrollView.bounds];
+            imageView.userInteractionEnabled = YES;
+            imageView.tag = Banner_StartTag+i;
+            
+            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+            [imageView addGestureRecognizer:singleTap];
+            
+            // 水平滚动
+            if(scrollDirection == ScrollDirectionLandscape)
+            {
+                imageView.frame = CGRectOffset(imageView.frame, scrollView.frame.size.width * i, 0);
+            }
+            // 垂直滚动
+            else if(scrollDirection == ScrollDirectionPortait)
+            {
+                imageView.frame = CGRectOffset(imageView.frame, 0, scrollView.frame.size.height * i);
+            }
+            
+            [scrollView addSubview:imageView];
+        }
+        
+        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(5, self.frame.size.height-15, 60, 15)];
+        self.pageControl.numberOfPages = self.imagesArray.count;
+        [self addSubview:self.pageControl];
+        
+        self.pageControl.currentPage = 0;
+        //[self refreshScrollView];
+
 }
 
 - (void)reloadBannerWithData:(NSArray *)images
@@ -238,10 +305,10 @@
                     curPage = 1;
                     [self refreshScrollView];
                     
-                    if ([self.delegate respondsToSelector:@selector(imageCachedDidFinish:)])
-                    {
-                        [self.delegate imageCachedDidFinish:self];
-                    }
+//                    if ([self.delegate respondsToSelector:@selector(imageCachedDidFinish:)])
+//                    {
+//                        [self.delegate imageCachedDidFinish:self];
+//                    }
                 }
 
             }];

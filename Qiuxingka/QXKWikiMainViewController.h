@@ -11,5 +11,5 @@
 @interface QXKWikiMainViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionMain;
 @property (weak, nonatomic) IBOutlet UIView *viewSearchHead;
-
+@property(strong,nonatomic)NSMutableArray *arrayCardInfo;
 @end

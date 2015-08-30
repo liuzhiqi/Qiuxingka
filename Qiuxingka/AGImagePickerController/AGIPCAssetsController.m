@@ -427,7 +427,7 @@
             // Display supports up to select several photos at the same time, springox(20131220)
             NSInteger maxNumber = _imagePickerController.maximumNumberOfPhotosToBeSelected;
             if (0 < maxNumber) {
-                self.navigationController.navigationBar.topItem.prompt = [NSString stringWithFormat:@"(%d/%d)", [AGIPCGridItem numberOfSelections], maxNumber];
+                self.navigationController.navigationBar.topItem.prompt = [NSString stringWithFormat:@"(%lu/%d)", (unsigned long)[AGIPCGridItem numberOfSelections], maxNumber];
             } else {
                 self.navigationController.navigationBar.topItem.prompt = [NSString stringWithFormat:@"(%d/%d)", [AGIPCGridItem numberOfSelections], self.assets.count];
             }

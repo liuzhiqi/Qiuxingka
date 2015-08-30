@@ -20,33 +20,16 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Pingpp (2.0.5):
-    - Pingpp/Alipay (= 2.0.5)
-    - Pingpp/Bfb (= 2.0.5)
-    - Pingpp/Core (= 2.0.5)
-    - Pingpp/UnionPay (= 2.0.5)
-    - Pingpp/Wx (= 2.0.5)
-  - Pingpp/Alipay (2.0.5):
-    - Pingpp/Core
-  - Pingpp/Bfb (2.0.5):
-    - Pingpp/Core
-  - Pingpp/Core (2.0.5)
-  - Pingpp/UnionPay (2.0.5):
-    - Pingpp/Core
-  - Pingpp/Wx (2.0.5):
-    - Pingpp/Core
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - Pingpp (~> 2.0.5)
   - SDWebImage (~> 3.7)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  Pingpp: 85fe5b5421c3c774deaa38943cbbff8dbe82c76c
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

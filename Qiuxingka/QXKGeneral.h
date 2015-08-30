@@ -9,12 +9,16 @@
 #ifndef Qiuxingka_QXKGeneral_h
 #define Qiuxingka_QXKGeneral_h
 
-
-#define QXKURL @"http://115.28.60.156:3000"
-
+#define NO_NETWORK_CONNECTION 1
+#define QXKURL @"http://121.40.55.207:3000"
+#define QXKGreenDark colorWithRed:97.0/255 green:147.0/255  blue:52.0/255  alpha:1
+#define QXKGreenLight colorWithRed:128.0/255 green:185.0/255  blue:91.0/255  alpha:1
+#define QXKLightLightGray colorWithRed:222/255.0 green:222/255.0  blue:222/255.0  alpha:1
 
 #import "QXKUserInfo.h"
 #import "MBProgressHUD.h"   
+#import "AFNetworking.h"
+#import <UIImageView+WebCache.h>
 
 @interface MBProgressHUD (selfDesign)
 
@@ -75,10 +79,9 @@
 
 
 
-
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#import "AFNetworking.h"
+
 //#import "MBProgressHUD.h"
 //
 #endif

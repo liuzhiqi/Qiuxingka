@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface QXKWikiCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewProfile;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labelSubtitle;
+
+
+-(void)setCellDataWithTitle:(NSString*)title subtitle:(NSString*)subtitle url:(NSString*)url;
+
+
 
 @end

@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet LMComBoxView *comBoxCardTyoe;
 
 @property (weak, nonatomic) IBOutlet LMComBoxView *comBoxCadBrand;
-
+@property(strong,nonatomic) NSArray* arrayImages;
 
 
 @end

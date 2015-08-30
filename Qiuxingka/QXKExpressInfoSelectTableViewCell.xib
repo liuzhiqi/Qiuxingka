@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="KGk-i7-Jjw" customClass="QXKExpressInfoSelectTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运单号：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmW-jg-yEz">
+                        <rect key="frame" x="30" y="78" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ad-xf-cQt" customClass="LMComBoxView">
+                        <rect key="frame" x="110" y="34" width="100" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="4pa-Qx-8Z3"/>
+                            <constraint firstAttribute="height" constant="30" id="H7H-Y8-E6I"/>
+                            <constraint firstAttribute="width" constant="100" id="Z0l-F3-x6Q"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4pa-Qx-8Z3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJz-8V-Dew">
+                        <rect key="frame" x="103" y="74" width="179" height="30"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="c6C-9c-rXd"/>
+                            <constraint firstAttribute="width" constant="100" id="rNo-fv-1FC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rNo-fv-1FC"/>
+                            </mask>
+                        </variation>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物流公司" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R14-bu-ODt">
+                        <rect key="frame" x="30" y="38" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="vXL-tJ-Udp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="2ad-xf-cQt" secondAttribute="centerX" id="0qi-f6-Hvv"/>
+                    <constraint firstAttribute="centerY" secondItem="LJz-8V-Dew" secondAttribute="centerY" id="3pg-RK-pih"/>
+                    <constraint firstItem="UmW-jg-yEz" firstAttribute="centerY" secondItem="LJz-8V-Dew" secondAttribute="centerY" id="IKJ-ph-OJT"/>
+                    <constraint firstItem="UmW-jg-yEz" firstAttribute="height" secondItem="LJz-8V-Dew" secondAttribute="height" id="LQk-pA-H3r"/>
+                    <constraint firstItem="R14-bu-ODt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="gaS-nm-dk8"/>
+                    <constraint firstItem="R14-bu-ODt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="lK2-Qd-ICu"/>
+                    <constraint firstItem="R14-bu-ODt" firstAttribute="centerY" secondItem="2ad-xf-cQt" secondAttribute="centerY" id="mq0-3c-bSF"/>
+                    <constraint firstItem="UmW-jg-yEz" firstAttribute="leading" secondItem="R14-bu-ODt" secondAttribute="leading" id="mqO-Jf-nNW"/>
+                    <constraint firstItem="2ad-xf-cQt" firstAttribute="leading" secondItem="R14-bu-ODt" secondAttribute="trailing" constant="10" id="nUZ-d6-8Ry"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="LJz-8V-Dew" secondAttribute="trailing" constant="30" id="oOm-pp-lSE"/>
+                    <constraint firstItem="LJz-8V-Dew" firstAttribute="leading" secondItem="UmW-jg-yEz" secondAttribute="trailing" constant="5" id="osv-Dl-goF"/>
+                    <constraint firstAttribute="centerY" secondItem="UmW-jg-yEz" secondAttribute="centerY" id="rPA-Tp-SMF"/>
+                    <constraint firstItem="UmW-jg-yEz" firstAttribute="height" secondItem="R14-bu-ODt" secondAttribute="height" id="ucJ-9m-G8P"/>
+                    <constraint firstItem="UmW-jg-yEz" firstAttribute="top" secondItem="R14-bu-ODt" secondAttribute="bottom" constant="20" id="yfV-Dv-vnC"/>
+                    <constraint firstItem="R14-bu-ODt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="zTe-xA-Miz"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="lK2-Qd-ICu"/>
+                        <exclude reference="LQk-pA-H3r"/>
+                        <exclude reference="rPA-Tp-SMF"/>
+                        <exclude reference="0qi-f6-Hvv"/>
+                        <exclude reference="3pg-RK-pih"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="comBoxView" destination="2ad-xf-cQt" id="ONf-ll-xH8"/>
+            </connections>
+            <point key="canvasLocation" x="419" y="203"/>
+        </tableViewCell>
+    </objects>
+</document>

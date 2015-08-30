@@ -12,9 +12,10 @@
 
 
 @property (weak, nonatomic) IBOutlet UILabel *labelDescription;
-
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
-
+@property(assign,nonatomic) NSInteger cellHeight;
+@property (weak, nonatomic) IBOutlet UIView *viewBG;
+@property (weak, nonatomic) IBOutlet UIButton *buttonEdit;
 
 -(void)setCellWithDiscription:(NSString* )description name:(NSString*)name;
 

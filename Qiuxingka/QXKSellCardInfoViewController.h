@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textViewMycard;
 @property (weak, nonatomic) IBOutlet UITextView *textViewChange;
 @property(assign,nonatomic) BOOL needChange;
+@property(strong,nonatomic) NSArray* arrayImages;
+
 @end

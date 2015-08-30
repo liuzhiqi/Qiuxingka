@@ -69,6 +69,7 @@
 
 - (IBAction)btnPushNext:(id)sender {
     QXKSellOtherInfoViewController *pushView=[[QXKSellOtherInfoViewController alloc]init];
+    pushView.arrayImages=self.selectedPhotos;
     [self.navigationController pushViewController:pushView animated:YES];
     
 }

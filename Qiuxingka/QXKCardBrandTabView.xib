@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QXKCardBrandTabView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-h3-R7o">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.50196078431372548" green="0.72549019607843135" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Topps">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPushTab:" destination="iN0-l3-epB" eventType="touchUpInside" id="tcu-vu-ci6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjm-cg-WHm">
+                    <rect key="frame" x="150" y="0.0" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.50196078431372548" green="0.72549019607843135" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Panini">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPushTab:" destination="iN0-l3-epB" eventType="touchUpInside" id="jgY-WG-nmQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boo-1z-s1b">
+                    <rect key="frame" x="450" y="0.0" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.50196078431372548" green="0.72549019607843135" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="其他品牌">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPushTab:" destination="iN0-l3-epB" eventType="touchUpInside" id="YWe-Us-vhU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THp-Fb-Ewk">
+                    <rect key="frame" x="300" y="0.0" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.50196078431372548" green="0.72549019607843135" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Futera">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPushTab:" destination="iN0-l3-epB" eventType="touchUpInside" id="KBL-1d-c9B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="THp-Fb-Ewk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Df-bV-4U4"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="width" secondItem="Boo-1z-s1b" secondAttribute="width" id="3H1-2u-BnT"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="width" secondItem="Okq-h3-R7o" secondAttribute="width" id="7Zl-RZ-XWc"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="height" secondItem="THp-Fb-Ewk" secondAttribute="height" id="8uX-eS-110"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="height" secondItem="Boo-1z-s1b" secondAttribute="height" id="CGl-Gb-uG1"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="leading" secondItem="Okq-h3-R7o" secondAttribute="trailing" id="E3P-Jy-Ek9"/>
+                <constraint firstItem="THp-Fb-Ewk" firstAttribute="leading" secondItem="mjm-cg-WHm" secondAttribute="trailing" id="HqR-F5-Lfp"/>
+                <constraint firstItem="Okq-h3-R7o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Icq-3r-4T5"/>
+                <constraint firstAttribute="bottom" secondItem="Okq-h3-R7o" secondAttribute="bottom" id="Iqb-od-CO2"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="width" secondItem="THp-Fb-Ewk" secondAttribute="width" id="MQh-oY-b49"/>
+                <constraint firstAttribute="trailing" secondItem="Boo-1z-s1b" secondAttribute="trailing" id="QzJ-9I-QOo"/>
+                <constraint firstItem="Boo-1z-s1b" firstAttribute="leading" secondItem="THp-Fb-Ewk" secondAttribute="trailing" id="T3w-Yw-gzE"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="height" secondItem="Okq-h3-R7o" secondAttribute="height" id="TD1-2J-NaC"/>
+                <constraint firstAttribute="bottom" secondItem="Boo-1z-s1b" secondAttribute="bottom" id="VmJ-nE-jAF"/>
+                <constraint firstItem="Boo-1z-s1b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gI9-fc-jxb"/>
+                <constraint firstAttribute="bottom" secondItem="THp-Fb-Ewk" secondAttribute="bottom" id="gcn-cs-UBR"/>
+                <constraint firstItem="Okq-h3-R7o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iiU-Kc-7Wh"/>
+                <constraint firstItem="mjm-cg-WHm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qQV-g1-uZg"/>
+                <constraint firstAttribute="bottom" secondItem="mjm-cg-WHm" secondAttribute="bottom" id="zCu-ho-YpL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="buttonsBrand" destination="Okq-h3-R7o" id="q61-5J-jXW"/>
+                <outletCollection property="buttonsBrand" destination="mjm-cg-WHm" id="Znh-ET-ymo"/>
+                <outletCollection property="buttonsBrand" destination="THp-Fb-Ewk" id="f1W-2r-nio"/>
+                <outletCollection property="buttonsBrand" destination="Boo-1z-s1b" id="Djk-ww-3BQ"/>
+            </connections>
+        </view>
+    </objects>
+</document>

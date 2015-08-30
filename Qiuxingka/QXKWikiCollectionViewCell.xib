@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,10 +9,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="QXKWikiCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="172" height="225"/>
+            <rect key="frame" x="0.0" y="0.0" width="172" height="256"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="172" height="225"/>
+                <rect key="frame" x="0.0" y="0.0" width="172" height="256"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OL2-sh-xU4">
                         <rect key="frame" x="10" y="10" width="152" height="152"/>
@@ -39,7 +39,7 @@
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="European Cup Limited" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjA-3B-pzN">
-                        <rect key="frame" x="10" y="186" width="125" height="31"/>
+                        <rect key="frame" x="10" y="186" width="152" height="62"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.70588235294117652" green="0.70588235294117652" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,6 +53,7 @@
                 <constraint firstItem="OL2-sh-xU4" firstAttribute="leading" secondItem="Rzb-DS-fRU" secondAttribute="leading" id="Dr7-Dz-ks5"/>
                 <constraint firstItem="Rzb-DS-fRU" firstAttribute="centerY" secondItem="AmO-Ks-50A" secondAttribute="centerY" id="VLT-nj-L2U"/>
                 <constraint firstItem="OL2-sh-xU4" firstAttribute="trailing" secondItem="AmO-Ks-50A" secondAttribute="trailing" id="YZr-AP-byK"/>
+                <constraint firstItem="OL2-sh-xU4" firstAttribute="trailing" secondItem="sjA-3B-pzN" secondAttribute="trailing" id="Zlc-Pw-BdM"/>
                 <constraint firstItem="AmO-Ks-50A" firstAttribute="leading" secondItem="Rzb-DS-fRU" secondAttribute="trailing" constant="2" id="bhy-fS-naX"/>
                 <constraint firstItem="sjA-3B-pzN" firstAttribute="top" secondItem="Rzb-DS-fRU" secondAttribute="bottom" id="dnc-2z-Jx7"/>
                 <constraint firstAttribute="trailing" secondItem="OL2-sh-xU4" secondAttribute="trailing" constant="10" id="esq-xe-AAV"/>
@@ -60,11 +61,16 @@
                 <constraint firstItem="AmO-Ks-50A" firstAttribute="top" secondItem="OL2-sh-xU4" secondAttribute="bottom" constant="3" id="wQ2-p9-mU7"/>
                 <constraint firstItem="sjA-3B-pzN" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" id="xjt-Ax-HJl"/>
             </constraints>
-            <size key="customSize" width="-38" height="146"/>
-            <point key="canvasLocation" x="339" y="224.5"/>
+            <size key="customSize" width="-38" height="177"/>
+            <connections>
+                <outlet property="imageViewProfile" destination="OL2-sh-xU4" id="fqn-9K-18c"/>
+                <outlet property="labelSubtitle" destination="sjA-3B-pzN" id="bRC-Qh-SxB"/>
+                <outlet property="labelTitle" destination="Rzb-DS-fRU" id="bvU-eI-EdL"/>
+            </connections>
+            <point key="canvasLocation" x="339" y="240"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="收藏" width="26" height="25"/>
+        <image name="收藏" width="40" height="40"/>
     </resources>
 </document>

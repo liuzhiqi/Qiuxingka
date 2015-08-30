@@ -7,6 +7,7 @@
 //
 
 #import "QXKHomePageBrandTableViewCell.h"
+#import "QXKCardListViewController.h"
 
 @implementation QXKHomePageBrandTableViewCell
 
@@ -19,5 +20,30 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)btnPushSelectBrand:(id)sender {
+    
+    UIButton* btn=sender;
+    QXKCardListViewController *pushView=[[QXKCardListViewController alloc]init];
+    pushView.typeView=-1;
+    pushView.typeBrand=btn.tag;
+    
+    id object = self;
+    while (![object isKindOfClass:[UIViewController class]] &&
+           
+           object != nil) {
+        
+        object = [object nextResponder];
+        
+    }
+    
+    UIViewController *uc=(UIViewController*)object;
+    [uc.navigationController pushViewController:pushView animated:YES];
+
+    
+}
+
+
+
+
 
 @end

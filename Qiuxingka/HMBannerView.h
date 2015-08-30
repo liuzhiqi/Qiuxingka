@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, BannerViewPageStyle)
 
 - (id)initWithFrame:(CGRect)frame scrollDirection:(BannerViewScrollDirection)direction images:(NSArray *)images;
 
+- (void)setBannerWithScrollDirection:(BannerViewScrollDirection)direction images:(NSArray *)images;
 - (void)reloadBannerWithData:(NSArray *)images;
 
 - (void)startDownloadImage;

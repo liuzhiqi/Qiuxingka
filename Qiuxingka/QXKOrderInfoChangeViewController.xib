@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QXKOrderInfoChangeViewController">
+            <connections>
+                <outlet property="btn1" destination="wx7-je-KYQ" id="JzT-p7-hqA"/>
+                <outlet property="btn2" destination="Tad-gk-vRU" id="WI8-xW-git"/>
+                <outlet property="btn3" destination="0ag-El-MgS" id="gqX-2j-lGH"/>
+                <outlet property="tableViewMain" destination="E13-49-nlb" id="ffN-ka-z8h"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="E13-49-nlb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="uth-Fh-WZp"/>
+                        <outlet property="delegate" destination="-1" id="nvH-dA-12p"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tad-gk-vRU">
+                    <rect key="frame" x="124" y="528" width="72" height="30"/>
+                    <color key="backgroundColor" red="0.4431372549" green="0.66274509800000003" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn2Push:" destination="-1" eventType="touchUpInside" id="i0E-i0-mTB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ag-El-MgS">
+                    <rect key="frame" x="218" y="528" width="72" height="30"/>
+                    <color key="backgroundColor" red="0.4431372549" green="0.66274509800000003" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn3Push:" destination="-1" eventType="touchUpInside" id="tES-vA-J7H"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx7-je-KYQ">
+                    <rect key="frame" x="30" y="528" width="72" height="30"/>
+                    <color key="backgroundColor" red="0.4431372549" green="0.66274509800000003" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btn1Push:" destination="-1" eventType="touchUpInside" id="1zI-Jb-7Yv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="centerY" secondItem="Tad-gk-vRU" secondAttribute="centerY" id="2Qe-d1-LXG"/>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="height" secondItem="wx7-je-KYQ" secondAttribute="height" id="4Kp-mH-qO4"/>
+                <constraint firstAttribute="bottom" secondItem="wx7-je-KYQ" secondAttribute="bottom" constant="20" id="4lG-CM-fVx"/>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="width" secondItem="Tad-gk-vRU" secondAttribute="width" id="8n9-RJ-6CN"/>
+                <constraint firstItem="wx7-je-KYQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="AUe-25-pgH"/>
+                <constraint firstAttribute="bottom" secondItem="E13-49-nlb" secondAttribute="bottom" id="Afl-Kr-6YP"/>
+                <constraint firstAttribute="trailing" secondItem="E13-49-nlb" secondAttribute="trailing" id="EJ2-fn-JLm"/>
+                <constraint firstItem="Tad-gk-vRU" firstAttribute="leading" secondItem="wx7-je-KYQ" secondAttribute="trailing" constant="22" id="Fbf-4q-UzI"/>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="width" secondItem="wx7-je-KYQ" secondAttribute="width" id="Kad-z4-zC8"/>
+                <constraint firstAttribute="bottom" secondItem="wx7-je-KYQ" secondAttribute="bottom" constant="10" id="Mvz-mu-YDC"/>
+                <constraint firstAttribute="bottom" secondItem="Tad-gk-vRU" secondAttribute="bottom" constant="20" id="OJj-jE-Tyk"/>
+                <constraint firstAttribute="trailing" secondItem="0ag-El-MgS" secondAttribute="trailing" constant="30" id="R0T-pb-8Uu"/>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="leading" secondItem="Tad-gk-vRU" secondAttribute="trailing" constant="22" id="ceL-Jh-AN8"/>
+                <constraint firstItem="E13-49-nlb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lrf-4y-TBI"/>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="centerY" secondItem="wx7-je-KYQ" secondAttribute="centerY" id="seG-6O-Ip2"/>
+                <constraint firstAttribute="bottom" secondItem="0ag-El-MgS" secondAttribute="bottom" constant="20" id="uOP-x8-AI9"/>
+                <constraint firstItem="E13-49-nlb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ubt-Yu-4nL"/>
+                <constraint firstItem="0ag-El-MgS" firstAttribute="height" secondItem="Tad-gk-vRU" secondAttribute="height" id="x8O-o2-cHf"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4lG-CM-fVx"/>
+                    <exclude reference="OJj-jE-Tyk"/>
+                    <exclude reference="uOP-x8-AI9"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

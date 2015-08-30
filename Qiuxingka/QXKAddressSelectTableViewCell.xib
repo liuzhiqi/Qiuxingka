@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="QXKAddressSelectTableViewCell">
+            <rect key="frame" x="0.0" y="-1" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxb-by-y6d">
+                        <rect key="frame" x="20" y="5" width="280" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人：坨坨" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-oL-ief">
+                                <rect key="frame" x="15" y="20" width="84" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13291111111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-ea-aAt">
+                                <rect key="frame" x="151" y="20" width="88" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：浙江省杭州市西湖区三墩镇浙江大学紫金港校区蒙民伟楼308" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOo-ZI-pHj">
+                                <rect key="frame" x="15" y="41" width="224" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um6-Bk-VPU">
+                                <rect key="frame" x="250" y="42" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Um6-Bk-VPU" secondAttribute="height" multiplier="1:1" id="K8q-FI-JW8"/>
+                                    <constraint firstAttribute="height" constant="15" id="yS3-k9-5JU"/>
+                                </constraints>
+                                <state key="normal" image="未选中">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="选中"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KOo-ZI-pHj" firstAttribute="top" secondItem="fPy-ea-aAt" secondAttribute="bottom" constant="4" id="75x-Lo-WU0"/>
+                            <constraint firstItem="Um6-Bk-VPU" firstAttribute="leading" secondItem="KOo-ZI-pHj" secondAttribute="trailing" constant="11" id="DLh-8P-aCP"/>
+                            <constraint firstItem="KOo-ZI-pHj" firstAttribute="leading" secondItem="BXp-oL-ief" secondAttribute="leading" id="Lnx-la-Ubj"/>
+                            <constraint firstAttribute="centerY" secondItem="Um6-Bk-VPU" secondAttribute="centerY" id="NAe-tk-ezp"/>
+                            <constraint firstItem="BXp-oL-ief" firstAttribute="leading" secondItem="Jxb-by-y6d" secondAttribute="leading" constant="15" id="c1y-qH-vk9"/>
+                            <constraint firstAttribute="trailing" secondItem="Um6-Bk-VPU" secondAttribute="trailing" constant="15" id="kw4-5C-O2O"/>
+                            <constraint firstItem="BXp-oL-ief" firstAttribute="top" secondItem="Jxb-by-y6d" secondAttribute="top" constant="20" id="pOC-Ua-kJM"/>
+                            <constraint firstItem="fPy-ea-aAt" firstAttribute="top" secondItem="BXp-oL-ief" secondAttribute="top" id="suh-G1-nXo"/>
+                            <constraint firstItem="KOo-ZI-pHj" firstAttribute="trailing" secondItem="fPy-ea-aAt" secondAttribute="trailing" id="tqP-qv-8eQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Jxb-by-y6d" secondAttribute="bottom" constant="5" id="1Lc-el-NKd"/>
+                    <constraint firstItem="Jxb-by-y6d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="AhT-GE-nhM"/>
+                    <constraint firstItem="Jxb-by-y6d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="brR-6A-no4"/>
+                    <constraint firstAttribute="trailing" secondItem="Jxb-by-y6d" secondAttribute="trailing" constant="20" id="cqJ-Yx-bgw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonIsSelected" destination="Um6-Bk-VPU" id="7zM-YJ-Aci"/>
+                <outlet property="labelAddress" destination="KOo-ZI-pHj" id="x5g-jV-Xrl"/>
+                <outlet property="labelName" destination="BXp-oL-ief" id="Uos-o3-0AV"/>
+                <outlet property="labelNumber" destination="fPy-ea-aAt" id="PWg-lI-4Sp"/>
+                <outlet property="viewBackgrand" destination="Jxb-by-y6d" id="Px9-fI-pG6"/>
+            </connections>
+            <point key="canvasLocation" x="464" y="252"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="未选中" width="23" height="23"/>
+        <image name="选中" width="23" height="23"/>
+    </resources>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QXKCardListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dsr-T5-toL">
+                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dsr-T5-toL" secondAttribute="height" multiplier="1:1" id="Raf-Ef-3QP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMG-vR-57Y">
+                        <rect key="frame" x="125" y="10" width="155" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4p-Bv-7Qd">
+                        <rect key="frame" x="125" y="30" width="155" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umn-J6-Dzd">
+                        <rect key="frame" x="125" y="72" width="124" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPU-bg-ZTI">
+                        <rect key="frame" x="285" y="10" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="VPU-bg-ZTI" secondAttribute="height" multiplier="1:1" id="dta-45-5RG"/>
+                            <constraint firstAttribute="width" constant="25" id="jbo-ah-Hpp"/>
+                        </constraints>
+                        <state key="normal" image="收藏">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可换卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVe-ha-vOR">
+                        <rect key="frame" x="259" y="89" width="51" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="TkC-CN-C3Y"/>
+                            <constraint firstAttribute="height" constant="20.5" id="leV-E9-LWp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.38039215686274508" green="0.55686274509803924" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-E2-OCJ">
+                        <rect key="frame" x="125" y="95" width="124" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="VPU-bg-ZTI" secondAttribute="trailing" constant="10" id="3RO-me-W0O"/>
+                    <constraint firstItem="dsr-T5-toL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4nR-cs-8UR"/>
+                    <constraint firstItem="gVe-ha-vOR" firstAttribute="trailing" secondItem="VPU-bg-ZTI" secondAttribute="trailing" id="8Vi-bo-u9G"/>
+                    <constraint firstItem="p4p-Bv-7Qd" firstAttribute="top" secondItem="yMG-vR-57Y" secondAttribute="bottom" constant="2" id="Cwn-H1-FnL"/>
+                    <constraint firstItem="Njp-E2-OCJ" firstAttribute="leading" secondItem="umn-J6-Dzd" secondAttribute="leading" id="MJS-Ch-cGh"/>
+                    <constraint firstItem="Njp-E2-OCJ" firstAttribute="bottom" secondItem="dsr-T5-toL" secondAttribute="bottom" id="MmK-lg-dO9"/>
+                    <constraint firstItem="Njp-E2-OCJ" firstAttribute="trailing" secondItem="umn-J6-Dzd" secondAttribute="trailing" id="TI0-Kv-fkz"/>
+                    <constraint firstItem="Njp-E2-OCJ" firstAttribute="leading" secondItem="yMG-vR-57Y" secondAttribute="leading" id="XJB-xI-Skc"/>
+                    <constraint firstItem="yMG-vR-57Y" firstAttribute="leading" secondItem="dsr-T5-toL" secondAttribute="trailing" constant="15" id="add-HA-IfC"/>
+                    <constraint firstItem="Njp-E2-OCJ" firstAttribute="top" secondItem="umn-J6-Dzd" secondAttribute="bottom" constant="5" id="aj1-9R-ZUi"/>
+                    <constraint firstItem="dsr-T5-toL" firstAttribute="bottom" secondItem="gVe-ha-vOR" secondAttribute="bottom" id="i9Y-pP-9k0"/>
+                    <constraint firstItem="dsr-T5-toL" firstAttribute="top" secondItem="VPU-bg-ZTI" secondAttribute="top" id="jEg-O5-stS"/>
+                    <constraint firstItem="p4p-Bv-7Qd" firstAttribute="trailing" secondItem="yMG-vR-57Y" secondAttribute="trailing" id="kED-ze-IHZ"/>
+                    <constraint firstItem="umn-J6-Dzd" firstAttribute="trailing" secondItem="Njp-E2-OCJ" secondAttribute="trailing" id="mcC-jW-kk0"/>
+                    <constraint firstItem="VPU-bg-ZTI" firstAttribute="leading" secondItem="yMG-vR-57Y" secondAttribute="trailing" constant="5" id="o88-av-7Kl"/>
+                    <constraint firstItem="gVe-ha-vOR" firstAttribute="leading" secondItem="Njp-E2-OCJ" secondAttribute="trailing" constant="10" id="s7Z-Uc-DAB"/>
+                    <constraint firstItem="dsr-T5-toL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="t0i-MR-Q7n"/>
+                    <constraint firstAttribute="bottom" secondItem="dsr-T5-toL" secondAttribute="bottom" constant="10" id="wQA-4u-r13"/>
+                    <constraint firstItem="Njp-E2-OCJ" firstAttribute="leading" secondItem="p4p-Bv-7Qd" secondAttribute="leading" id="y41-yA-rgs"/>
+                    <constraint firstItem="dsr-T5-toL" firstAttribute="top" secondItem="yMG-vR-57Y" secondAttribute="top" id="zTV-ch-fSM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonCollection" destination="VPU-bg-ZTI" id="BRR-fE-Azk"/>
+                <outlet property="imageViewCardImg" destination="dsr-T5-toL" id="gC7-Ru-hu6"/>
+                <outlet property="labelCanChange" destination="gVe-ha-vOR" id="C2f-Hj-q6G"/>
+                <outlet property="labelCardDescripTion" destination="p4p-Bv-7Qd" id="NTG-TV-yKa"/>
+                <outlet property="labelCardName" destination="yMG-vR-57Y" id="zUO-1T-fFk"/>
+                <outlet property="labelCardPrice" destination="umn-J6-Dzd" id="kWA-2a-au1"/>
+                <outlet property="labelCardSeller" destination="Njp-E2-OCJ" id="Rhs-bF-grB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="收藏" width="40" height="40"/>
+    </resources>
+</document>

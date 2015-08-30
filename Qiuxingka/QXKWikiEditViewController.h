@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface QXKWikiEditViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *textViewEdit;
 
 @end

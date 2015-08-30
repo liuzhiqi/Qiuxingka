@@ -95,7 +95,35 @@
     ////    //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain; charset=utf-8"];
     //    //    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     //
-    
+//    
+//    
+//    [manager GET:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+//        
+//        NSError* error;
+//        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+//                                                            options:kNilOptions
+//                                                              error:&error];
+//        if ([dic objectForKey:@"sucess"]!=nil)
+//        {
+//            [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+//            QXKRegister2ViewController* pushVuew=[[QXKRegister2ViewController alloc]init];
+//            [self.navigationController pushViewController:pushVuew animated:YES];
+//        }
+//        else{
+//            
+//            [MBProgressHUD showHubWithTitle:[dic objectForKey:@"error"] type:0 target:self];
+//            
+//            
+//        }
+//
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//        NSLog ( @"operation: %@" , operation. responseString );
+//        
+//        NSLog(@"Error: %@", error);
+//
+//    }];
     
     [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -104,7 +132,7 @@
         NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
                                                             options:kNilOptions
                                                               error:&error];
-        if ([dic objectForKey:@"sucess"]!=nil)
+        if ([dic objectForKey:@"success"]!=nil)
         {
             [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
             QXKRegister2ViewController* pushVuew=[[QXKRegister2ViewController alloc]init];
@@ -126,13 +154,11 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
+//    
+//    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+//    QXKRegister2ViewController* pushVuew=[[QXKRegister2ViewController alloc]init];
+//    [self.navigationController pushViewController:pushVuew animated:YES];
+
     
     
 }

@@ -7,9 +7,9 @@
 //
 
 #import "QXKMHomePageCardTypeTableViewCell.h"
-
+#import "QXKCardListViewController.h"
+#import "QXKGeneral.h"
 @implementation QXKMHomePageCardTypeTableViewCell
-
 - (void)awakeFromNib {
     // Initialization code
 }
@@ -19,5 +19,29 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)btnPushSelcet:(id)sender {
+    UIButton* btn=sender;
+    QXKCardListViewController *pushView=[[QXKCardListViewController alloc]init];
+    pushView.typeView=btn.tag;
+    pushView.typeBrand=-1;
+    
+    id object = self;
+    while (![object isKindOfClass:[UIViewController class]] &&
+           
+           object != nil) {
+        
+        object = [object nextResponder];
+        
+    }
+    
+    UIViewController *uc=(UIViewController*)object;
+    [uc.navigationController pushViewController:pushView animated:YES];
+    
+
+    
+}
+
+
+
 
 @end

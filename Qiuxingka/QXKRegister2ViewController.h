@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface QXKRegister2ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 @end

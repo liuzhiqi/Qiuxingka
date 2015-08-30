@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QXKSearchFilterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zfd-kx-iU1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Zfd-kx-iU1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="L0m-60-r4K"/>
+                <constraint firstAttribute="bottom" secondItem="Zfd-kx-iU1" secondAttribute="bottom" id="ZFU-0N-z1C"/>
+                <constraint firstItem="Zfd-kx-iU1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zvp-sc-8MK"/>
+                <constraint firstAttribute="trailing" secondItem="Zfd-kx-iU1" secondAttribute="trailing" id="zq1-2w-w6F"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableViewMain" destination="Zfd-kx-iU1" id="Cfr-aT-F08"/>
+            </connections>
+        </view>
+    </objects>
+</document>

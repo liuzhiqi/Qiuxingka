@@ -11,5 +11,5 @@
 @interface QXKWikiDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
-
+@property(strong,nonatomic) NSMutableDictionary* dicInfo;
 @end

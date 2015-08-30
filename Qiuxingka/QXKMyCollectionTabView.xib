@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QXKMyCollectionTabView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-lp-NK6">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                    <state key="normal" title="卡片">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTC-TA-mnu">
+                    <rect key="frame" x="300" y="0.0" width="300" height="30"/>
+                    <state key="normal" title="百科">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1Xy-lp-NK6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Zl-bd-vpG"/>
+                <constraint firstItem="DTC-TA-mnu" firstAttribute="leading" secondItem="1Xy-lp-NK6" secondAttribute="trailing" id="GKF-Dq-mED"/>
+                <constraint firstAttribute="trailing" secondItem="DTC-TA-mnu" secondAttribute="trailing" id="NS7-zp-L4X"/>
+                <constraint firstItem="DTC-TA-mnu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P9j-Mi-Ohs"/>
+                <constraint firstItem="1Xy-lp-NK6" firstAttribute="width" secondItem="DTC-TA-mnu" secondAttribute="width" id="QTp-w5-nyu"/>
+                <constraint firstAttribute="bottom" secondItem="DTC-TA-mnu" secondAttribute="bottom" id="dDA-yE-5WO"/>
+                <constraint firstItem="1Xy-lp-NK6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eXj-Xs-Xop"/>
+                <constraint firstItem="1Xy-lp-NK6" firstAttribute="height" secondItem="DTC-TA-mnu" secondAttribute="height" id="hoL-J7-yX4"/>
+                <constraint firstAttribute="bottom" secondItem="1Xy-lp-NK6" secondAttribute="bottom" id="z3h-hX-4HF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

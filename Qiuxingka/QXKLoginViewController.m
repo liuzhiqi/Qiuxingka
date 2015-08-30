@@ -9,6 +9,7 @@
 #import "QXKLoginViewController.h"
 #import "QXKRegister1ViewController.h"
 #import "QXKResetPassword1ViewController.h"
+#import "QXKGeneral.h"
 @interface QXKLoginViewController ()
 
 @end
@@ -40,6 +41,66 @@
 
 #pragma mark - Event
 - (IBAction)btnPushLogin:(id)sender {
+    
+    
+    
+    
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/login"];
+    
+    NSDictionary *parameters = @{@"username":self.textFieldAccount.text,@"password":self.textFieldPassword.text};
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+
+    
+    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                            options:kNilOptions
+                                                              error:&error];
+        if ([dic objectForKey:@"userid"]!=nil)
+        {
+            
+            QXKUserInfo* userInfo=  [QXKUserInfo shareUserInfo];
+            userInfo.userId=[dic objectForKey:@"userid"];
+            
+            [userInfo loadUserInfo];
+            [MBProgressHUD showHubWithTitle:@"登陆成功" type:1 target:self];
+           
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        else{
+            
+            [MBProgressHUD showHubWithTitle:[dic objectForKey:@"error"] type:0 target:self];
+            
+            
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog ( @"operation: %@" , operation. responseString );
+        
+        NSLog(@"Error: %@", error);
+    }];
+    //
+    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
+    //    [self.navigationController pushViewController:pushVuew animated:YES];
+    //
+
+    
+    
+    
+    
+    
     
 }
 

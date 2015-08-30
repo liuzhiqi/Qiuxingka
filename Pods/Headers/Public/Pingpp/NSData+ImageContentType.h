@@ -1,1 +1,0 @@
-../../../Pingpp/lib/Channels/Bfb/Dependencies/SDWebImage/NSData+ImageContentType.h

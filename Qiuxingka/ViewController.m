@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()<UITabBarControllerDelegate>
+#import "QXKCardListAfterSearchViewController.h"
+#import "QXKMessageButton.h"
+@interface ViewController ()<UITabBarControllerDelegate,UISearchBarDelegate>
 {
     UISearchBar* searchBar;
     
@@ -30,9 +31,21 @@
     
     
     searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(20, 20, 180, 44)];
+    searchBar.delegate=self;
+    self.navigationController.navigationBar.tintColor=[UIColor whiteColor];
     
-    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:124.0/255 green:177/255.0 blue:41/255.0 alpha:100];
-    UIButton *btn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     [UIColor whiteColor], UITextAttributeTextColor,
+                                                                     [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                                                     [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
+                                                                     nil]];
+    //设定返回按钮
+    self.navigationItem.backBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@""  style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:97.0/255 green:147.0/255.0 blue:52.0/255.0 alpha:100];
+    
+    
+    QXKMessageButton *btn=[[QXKMessageButton alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
     [btn setImage:[UIImage imageNamed:@"消息图标"] forState:UIControlStateNormal];
     //    [btn setImage:[UIImage imageNamed:@"收藏 有阴影按下"] forState:UIControlStateHighlighted];
     UIBarButtonItem *btnItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
@@ -82,6 +95,18 @@
     
     
 }
+-(void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar{
+    NSLog(@"searchBarResultsListButtonClicked");
+}
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    NSLog(@"searchBarTextDidEndEditing");
 
+}
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    NSLog(@"searchBarSearchButtonClicked");
+    QXKCardListAfterSearchViewController*pushView=[[QXKCardListAfterSearchViewController alloc]init];
+    
+    [self.navigationController pushViewController:pushView animated:YES];
+}
 
 @end

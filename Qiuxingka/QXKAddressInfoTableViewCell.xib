@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="QXKAddressInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：浙江省杭州市西湖区三墩镇浙江大学紫金港校区蒙民伟楼308" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO3-XF-eyu">
+                        <rect key="frame" x="30" y="40" width="260" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13291111111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLa-BI-HNs">
+                        <rect key="frame" x="202" y="15" width="88" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人：坨坨" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTX-cl-WxI">
+                        <rect key="frame" x="30" y="15" width="84" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DO3-XF-eyu" firstAttribute="top" secondItem="fLa-BI-HNs" secondAttribute="bottom" constant="8" id="1uf-3j-7N5"/>
+                    <constraint firstItem="uTX-cl-WxI" firstAttribute="centerY" secondItem="fLa-BI-HNs" secondAttribute="centerY" id="7NU-34-wiV"/>
+                    <constraint firstAttribute="trailing" secondItem="fLa-BI-HNs" secondAttribute="trailing" constant="30" id="KMw-HJ-Evh"/>
+                    <constraint firstItem="fLa-BI-HNs" firstAttribute="trailing" secondItem="DO3-XF-eyu" secondAttribute="trailing" id="R3J-PF-v3K"/>
+                    <constraint firstItem="uTX-cl-WxI" firstAttribute="leading" secondItem="DO3-XF-eyu" secondAttribute="leading" id="aVZ-bS-jfG"/>
+                    <constraint firstItem="uTX-cl-WxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="eg8-xk-yiF"/>
+                    <constraint firstItem="uTX-cl-WxI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="hRz-nG-5cq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelAddress" destination="DO3-XF-eyu" id="jYO-IK-KmF"/>
+                <outlet property="labelName" destination="uTX-cl-WxI" id="RBX-Mv-mim"/>
+                <outlet property="labelNumber" destination="fLa-BI-HNs" id="U0X-Bx-N3L"/>
+            </connections>
+            <point key="canvasLocation" x="464" y="257"/>
+        </tableViewCell>
+    </objects>
+</document>

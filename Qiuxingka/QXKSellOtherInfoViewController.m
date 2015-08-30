@@ -97,10 +97,8 @@
     if (isInitCombox) {
         return;
     }
-    
     CGRect frame= self.comBoxCardTyoe.frame;
-    
-    NSLog(@"%d,%d",frame.size.height,frame.size.width);
+    NSLog(@"%f,%d",frame.size.height,frame.size.width);
     
     [self.comBoxCadBrand defaultSettings];
     
@@ -139,9 +137,9 @@
     
 }
 - (IBAction)btnPushNext:(id)sender {
-    QXKSellCardInfoViewController           *pushView=[[QXKSellCardInfoViewController alloc]init];
+    QXKSellCardInfoViewController *pushView=[[QXKSellCardInfoViewController alloc]init];
     pushView.needChange=needChange;
-    
+    pushView.arrayImages= self.arrayImages;
     [self.navigationController pushViewController:pushView animated:YES  ];
     
 }

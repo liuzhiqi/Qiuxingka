@@ -11,6 +11,8 @@
 #import "HMBannerView.h"
 #import "QXKHomePageBrandTableViewCell.h"
 #import "QXKMHomePageCardTypeTableViewCell.h"
+const float ratioBannerHW=0.6;
+const float ratioCellSection0=0.36667;
 @interface QXKHomePageViewController ()<UITableViewDataSource,UITableViewDelegate,HMBannerViewDelegate>
 {
     NSMutableArray *arratBanner;
@@ -37,7 +39,7 @@
     {
         
         CGRect frame=[UIScreen mainScreen].applicationFrame;
-        self.bannerView = [[HMBannerView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 225) scrollDirection:ScrollDirectionLandscape images:arratBanner];
+        self.bannerView = [[HMBannerView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.width*ratioBannerHW) scrollDirection:ScrollDirectionLandscape images:arratBanner];
         
         [self.bannerView setRollingDelayTime:4.0];
         [self.bannerView setDelegate:self];
@@ -100,7 +102,9 @@
 }
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
-        return 136;
+        CGRect frame=[UIScreen mainScreen].applicationFrame;
+
+        return frame.size.width*ratioCellSection0;
     }
     return 105;
     
@@ -120,6 +124,9 @@
 
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    if (section==2) {
+//        <#statements#>
+//    }
     CGRect frame=[UIScreen mainScreen].applicationFrame;
 //    self.bannerView = [[HMBannerView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 225) scrollDirection:ScrollDirectionLandscape images:arratBanner];
     

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QXKWikiSearchBar : UIView
+@protocol QXKWikiSearchBarDelegate ;
+@interface QXKWikiSearchBar : UIView<UISearchBarDelegate>
+{
+    BOOL isShow;
+}
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property(weak,nonatomic)id<QXKWikiSearchBarDelegate> delegate;
+@end
+@protocol QXKWikiSearchBarDelegate <NSObject>
+
+-(void)wikiSearchBar:(QXKWikiSearchBar*)searchBar willShow:(BOOL)isShow;
 
 @end

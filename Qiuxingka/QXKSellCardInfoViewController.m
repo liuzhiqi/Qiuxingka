@@ -100,16 +100,9 @@
             [self textViewClearPlaceHolder:textView];
             isShowplaceHolderMycard=NO;
         }
-        
-        
-        
-        
         [UIView beginAnimations:@"animation" context:nil];
         [UIView setAnimationDuration:0.5f];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-        
-        
-        
         
         
         CGRect frame=self.view.frame;

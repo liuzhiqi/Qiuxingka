@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -15,13 +15,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="市场参考价" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnk-OQ-xTb">
-                        <rect key="frame" x="28" y="28" width="75" height="13"/>
+                        <rect key="frame" x="20" y="28" width="75" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEa-EU-1UU">
-                        <rect key="frame" x="123" y="26" width="39" height="18"/>
+                        <rect key="frame" x="115" y="26" width="39" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.48627450980392156" green="0.69411764705882351" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                     <constraint firstAttribute="trailing" secondItem="mSd-La-rAK" secondAttribute="trailing" constant="20" id="ZQ4-Gz-POT"/>
                     <constraint firstItem="cEa-EU-1UU" firstAttribute="leading" secondItem="jnk-OQ-xTb" secondAttribute="trailing" constant="20" id="ghF-d8-RQU"/>
                     <constraint firstItem="cEa-EU-1UU" firstAttribute="centerY" secondItem="Mej-J1-brd" secondAttribute="centerY" id="lMH-ID-o8C"/>
-                    <constraint firstItem="jnk-OQ-xTb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="nRf-oJ-hdF"/>
+                    <constraint firstItem="jnk-OQ-xTb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nRf-oJ-hdF"/>
                     <constraint firstItem="jnk-OQ-xTb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="pwM-oF-dtt"/>
                     <constraint firstItem="cEa-EU-1UU" firstAttribute="centerY" secondItem="jnk-OQ-xTb" secondAttribute="centerY" id="xj9-k9-USc"/>
                 </constraints>
