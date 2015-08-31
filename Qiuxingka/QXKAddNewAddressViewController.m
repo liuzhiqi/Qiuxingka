@@ -7,8 +7,8 @@
 //
 
 #import "QXKAddNewAddressViewController.h"   
-
-#define placeHolderAddress @"描述我的卡片"
+#import "QXKGeneral.h"
+#define placeHolderAddress @"添加详细地址"
 
 
 
@@ -17,6 +17,11 @@
     NSArray* arrayTextField;
     UITextView * textViewAddress;
     UILabel* labelAddress;
+    NSString* strName;
+    NSString* strPhone;
+    NSString* strCode;
+    NSString* strAddressDetial;
+    NSArray* arrArea;
     bool isShowplaceHolder;
 //    bool isShowedPicker;
 }
@@ -30,6 +35,12 @@
     self.automaticallyAdjustsScrollViewInsets=YES;
     self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
     self.navigationController.navigationBar.opaque=YES;
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+    
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    
     CGRect frameScreen=[UIScreen mainScreen].applicationFrame;
     arrayPlaceHolder=[NSArray arrayWithObjects:@"收货人姓名",@"手机号码",@"邮政编码", nil];
     arrayTextField=[NSArray arrayWithObjects:[[UITextField alloc]initWithFrame:CGRectMake(25, 0, frameScreen.size.width-50, 44)], [[UITextField alloc]initWithFrame:CGRectMake(25, 0, frameScreen.size.width-50, 44)], [[UITextField alloc]initWithFrame:CGRectMake(25, 0, frameScreen.size.width-50, 44)], nil];
@@ -50,6 +61,7 @@
     
     textViewAddress=[[UITextView alloc]initWithFrame:CGRectMake(25, 0, frameScreen.size.width-50, 88)];
     textViewAddress.delegate=self;
+    textViewAddress.tag=4;
     isShowplaceHolder=YES;
     
 //    isShowedPicker=NO;
@@ -64,7 +76,99 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)done{
+    for (UITextField*textField in arrayTextField) {
 
+        
+        [textField resignFirstResponder];
+    }
+    [textViewAddress resignFirstResponder];
+    
+    
+    
+    if ([strName isEqual:@""]){
+        [MBProgressHUD showHubWithTitle:@"请填写收件人姓名" type:0 deleController:self];
+        return;
+    }
+    if ([strPhone isEqual:@""]){
+        [MBProgressHUD showHubWithTitle:@"请填写收件人联系方式" type:0 deleController:self];
+        return;
+    }
+    if (strCode.length!=6){
+        [MBProgressHUD showHubWithTitle:@"请填写六位邮政编码" type:0 deleController:self];
+        return;
+    }
+    if ([strAddressDetial isEqual:@""]){
+        [MBProgressHUD showHubWithTitle:@"请填写收件人详细地址" type:0 deleController:self];
+        return;
+    }
+    
+    if ([labelAddress.text isEqual:@""]){
+        [MBProgressHUD showHubWithTitle:@"请选择收件人地址" type:0 deleController:self];
+        return;
+    }
+    
+    
+
+    
+    QXKUserInfo* usrInfo=[QXKUserInfo shareUserInfo];
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/order/addNewAddr"];
+    
+    NSString*userid=usrInfo.userId ;
+    NSDictionary *parameters;
+    
+    parameters = @{@"userid":userid,@"province":arrArea[0],@"city":arrArea[1],@"district":arrArea[2],@"postcode":strCode,@"address":strAddressDetial,@"telephone":strPhone,@"consignee":strName};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                       options:kNilOptions
+                                                         error:&error];
+        if ([dic objectForKey:@"success"]!=nil) {
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        //        countCurrentPage--;
+        //        self.tableViewMain.pullLastRefreshDate = [NSDate date];
+        //        self.tableViewMain.pullTableIsRefreshing = NO;
+        //        self.tableViewMain.pullTableIsLoadingMore = NO;
+        NSLog ( @"operation: %@" , operation. responseString );
+        
+        NSLog(@"Error: %@", error);
+    }];
+    //
+    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
+    //    [self.navigationController pushViewController:pushVuew animated:YES];
+    //
+    
+    
+    
+
+    
+    
+    
+    
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.1f;
 }
@@ -114,6 +218,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==3) {
+        for (UITextField*textField in arrayTextField) {
+            
+            
+            [textField resignFirstResponder];
+        }
+        
         if (self.areaPicker.hidden) {
             self.areaPicker.hidden=NO;
         }
@@ -159,8 +269,23 @@
 //-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
 //   }
 
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+        return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField.tag==0) {
+        strName=textField.text;
+    }
+    if (textField.tag==1) {
+        strPhone=textField.text;
+    }
+    if (textField.tag==2) {
+        strCode=textField.text;
+    }
+    
 
-
+}
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{
 
@@ -177,14 +302,12 @@
         CGRect frame=self.view.frame;
         self.view.frame=CGRectMake(frame.origin.x, frame.origin.y-150, frame.size.width, frame.size.height   );
         [UIView commitAnimations];
-        
-
     
     
 }
 -(void)textViewDidEndEditing:(UITextView *)textView{
     
-
+    
         [UIView beginAnimations:@"animation" context:nil];
         [UIView setAnimationDuration:0.5f];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
@@ -197,13 +320,14 @@
         
         
         if (textView.text.length!=0) {
+             strAddressDetial=textView.text;
             return;
         }
         
         isShowplaceHolder=YES;
         [self textView:textView setPlaceHolder:placeHolderAddress];
-        
     
+
     
     
     
@@ -214,7 +338,10 @@
 
 -(void)QYCityAreaPicker:(QYCityAreaPicker *)picker selectArea:(NSString *)area{
     labelAddress.text=area;
+    arrArea = [area componentsSeparatedByString:@","];
+
     
+
 }
 
 

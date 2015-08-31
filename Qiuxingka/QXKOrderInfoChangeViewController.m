@@ -229,16 +229,58 @@
     
 }
 - (IBAction)btn1Push:(id)sender {
-    
+    if (self.typeController==13) {
+        
+        UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"延迟收货" message:@"是否确认延迟收获？(默认延迟一周)" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag=1;
+        [alertView show];
+        
+    }
+
 }
 - (IBAction)btn2Push:(id)sender {
-    
+    if (self.typeController==11) {
+
+        UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"取消订单" message:@"确认取消订单后将无法更改，是否确认取消" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag=1;
+//        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
+        [alertView show];
+
+        
+        
+        
+    }
 }
 - (IBAction)btn3Push:(id)sender {
     if (self.typeController==1) {
         QXKExpressInfoSelectViewController* pushView=[[QXKExpressInfoSelectViewController alloc]init];
         [self.navigationController pushViewController:pushView animated:YES];
     }
+    
+    if (self.typeController==11) {
+        UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认付款" message:[NSString stringWithFormat:@"您的订单总价为%@元，是否确认付款\n如需修改运费请与卖家联系", [NSNumber numberWithInt:14]] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag=1;
+        //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
+        [alertView show];
+    }
+    
+    if (self.typeController==12) {
+        UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"申请退款" message: @"是否确认申请退款？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag=1;
+        //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
+        [alertView show];
+    }
+    
+    if (self.typeController==13) {
+        
+        UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认收货" message:@"确认收货后，您的付款将被打到卖家账户中\n是否确认？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag=1;
+        [alertView show];
+        
+    }
+    
+    
+    
 }
 
 

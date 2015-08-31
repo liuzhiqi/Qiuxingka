@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QXKIdentifyViewController">
+            <connections>
+                <outlet property="imageViewBack" destination="5SK-UW-WDs" id="dI7-w2-oEu"/>
+                <outlet property="imageViewFront" destination="KQc-rm-FuC" id="IGR-Go-g8F"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2I-cx-Par">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Tnh-BB-8JZ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击上传身份证正面" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-f2-dyw">
+                    <rect key="frame" x="84" y="74" width="153" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击上传身份证背面" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRi-HH-LM0">
+                    <rect key="frame" x="84" y="295" width="153" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5SK-UW-WDs">
+                    <rect key="frame" x="80" y="325" width="160" height="160"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQc-rm-FuC">
+                    <rect key="frame" x="80" y="105" width="160" height="160"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="Nij-wL-fDc"/>
+                        <constraint firstAttribute="width" secondItem="KQc-rm-FuC" secondAttribute="height" multiplier="1:1" id="xTR-NW-JxK"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssr-C3-xvk">
+                    <rect key="frame" x="80" y="105" width="160" height="160"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPuthAdd:" destination="-1" eventType="touchUpInside" id="FYz-ax-oNW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi2-E5-lq8">
+                    <rect key="frame" x="80" y="325" width="160" height="160"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPuthAdd:" destination="-1" eventType="touchUpInside" id="3PF-Sc-pZ6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="leading" secondItem="ssr-C3-xvk" secondAttribute="leading" id="3mN-vH-w7j"/>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="height" secondItem="5SK-UW-WDs" secondAttribute="height" id="Dae-iO-JDJ"/>
+                <constraint firstAttribute="centerX" secondItem="WNb-f2-dyw" secondAttribute="centerX" id="Fdf-Sf-8eR"/>
+                <constraint firstItem="IRi-HH-LM0" firstAttribute="top" secondItem="KQc-rm-FuC" secondAttribute="bottom" constant="30" id="Idm-EH-XQS"/>
+                <constraint firstAttribute="trailing" secondItem="X2I-cx-Par" secondAttribute="trailing" id="JSZ-bp-0cL"/>
+                <constraint firstAttribute="centerX" secondItem="KQc-rm-FuC" secondAttribute="centerX" id="OPF-VW-kat"/>
+                <constraint firstItem="X2I-cx-Par" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Sy7-Hh-THa"/>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="trailing" secondItem="ssr-C3-xvk" secondAttribute="trailing" id="WwG-9f-c8H"/>
+                <constraint firstItem="5SK-UW-WDs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="XCt-35-VRf"/>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="top" secondItem="WNb-f2-dyw" secondAttribute="bottom" constant="10" id="aV3-42-dGt"/>
+                <constraint firstItem="5SK-UW-WDs" firstAttribute="top" secondItem="IRi-HH-LM0" secondAttribute="bottom" constant="10" id="acM-vj-wku"/>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="top" secondItem="ssr-C3-xvk" secondAttribute="top" id="dpI-7O-ZIa"/>
+                <constraint firstItem="mi2-E5-lq8" firstAttribute="leading" secondItem="5SK-UW-WDs" secondAttribute="leading" id="emn-Ps-Pxc"/>
+                <constraint firstItem="mi2-E5-lq8" firstAttribute="bottom" secondItem="5SK-UW-WDs" secondAttribute="bottom" id="h1S-yo-i4J"/>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="bottom" secondItem="ssr-C3-xvk" secondAttribute="bottom" id="hRq-uh-PRx"/>
+                <constraint firstItem="X2I-cx-Par" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k7m-x7-tPc"/>
+                <constraint firstItem="WNb-f2-dyw" firstAttribute="top" secondItem="X2I-cx-Par" secondAttribute="bottom" constant="44" id="lau-6l-1Jo"/>
+                <constraint firstItem="mi2-E5-lq8" firstAttribute="trailing" secondItem="5SK-UW-WDs" secondAttribute="trailing" id="luK-8u-LbQ"/>
+                <constraint firstItem="mi2-E5-lq8" firstAttribute="top" secondItem="5SK-UW-WDs" secondAttribute="top" id="mpe-D9-xMe"/>
+                <constraint firstItem="KQc-rm-FuC" firstAttribute="width" secondItem="5SK-UW-WDs" secondAttribute="width" id="nYY-6r-oDb"/>
+                <constraint firstAttribute="trailing" secondItem="5SK-UW-WDs" secondAttribute="trailing" constant="44" id="qXx-JG-aWr"/>
+                <constraint firstAttribute="centerX" secondItem="5SK-UW-WDs" secondAttribute="centerX" id="r0q-aK-T7Y"/>
+                <constraint firstAttribute="centerX" secondItem="IRi-HH-LM0" secondAttribute="centerX" id="w2u-jk-nu2"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XCt-35-VRf"/>
+                    <exclude reference="qXx-JG-aWr"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

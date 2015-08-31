@@ -9,7 +9,7 @@
 #ifndef Qiuxingka_QXKGeneral_h
 #define Qiuxingka_QXKGeneral_h
 
-#define NO_NETWORK_CONNECTION 1
+//#define NO_NETWORK_CONNECTION 1
 #define QXKURL @"http://121.40.55.207:3000"
 #define QXKGreenDark colorWithRed:97.0/255 green:147.0/255  blue:52.0/255  alpha:1
 #define QXKGreenLight colorWithRed:128.0/255 green:185.0/255  blue:91.0/255  alpha:1

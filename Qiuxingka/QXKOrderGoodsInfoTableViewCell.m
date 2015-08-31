@@ -7,7 +7,7 @@
 //
 
 #import "QXKOrderGoodsInfoTableViewCell.h"
-
+#import "QXKGeneral.h"
 @implementation QXKOrderGoodsInfoTableViewCell
 
 - (void)awakeFromNib {
@@ -28,7 +28,10 @@
     self.labelNum.text=[NSString stringWithFormat:@"x%@",Number];
     self.labelDescription.text=Description;
     self.labelPrice.text=[NSString stringWithFormat:@"¥%@",Number];
-    
+   
+    NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
+    imgUrl=[imgUrl stringByAppendingString:ProfileURL];
+    [self.imageViewCardProfile sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
     
     
     

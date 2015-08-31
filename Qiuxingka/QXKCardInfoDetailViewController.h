@@ -14,4 +14,5 @@
 @property(strong,nonatomic)NSMutableArray *arrayCommand;
 @property(strong,nonatomic)NSDictionary *dicPreInfo;
 @property(strong,nonatomic)NSDictionary *dicDetail;
+@property(strong,nonatomic)NSDictionary *dicSellerInfo;
 @end

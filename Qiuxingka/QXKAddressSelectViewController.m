@@ -38,8 +38,8 @@
     btn.backgroundColor=[UIColor QXKGreenDark];
     
     self.arrayAddress=[[NSMutableArray alloc]init];
-    NSDictionary* dic=[[NSDictionary alloc]init];
-    [self.arrayAddress addObject:dic];
+//    NSDictionary* dic=[[NSDictionary alloc]init];
+//    [self.arrayAddress addObject:dic];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -48,6 +48,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [self loadAddressList];
+}
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.1f;
 }
@@ -61,6 +66,7 @@
     return self.arrayAddress.count;
 }
 
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView  {
     return 1;
 }
@@ -68,7 +74,8 @@
     QXKAddressSelectTableViewCell* cell=[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKAddressSelectTableViewCell"];
     
     BOOL isSelect=indexPath.row==selectId;
-    [cell setCellDataWithName:@"tuotuo酱" Number:@"13291876886" Address:@"浙江省杭州市西湖区三墩镇浙江大学紫金港校区蒙民伟楼308室" isSelected:isSelect];
+    NSDictionary*dic=self.arrayAddress[indexPath.row];
+    [cell setCellDataWithName:[dic objectForKey:@"consigee"] Number:[dic objectForKey:@"telephone"] Address:[NSString stringWithFormat:@"%@%@%@ %@",[dic objectForKey:@"province"],[dic objectForKey:@"city"],[dic objectForKey:@"district"],[dic objectForKey:@"address"]] isSelected:isSelect];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
     
@@ -85,6 +92,73 @@
     [self.navigationController pushViewController:pushView animated:YES];
     
     
+}
+-(void)loadAddressList{
+    
+    QXKUserInfo* usrInfo=[QXKUserInfo shareUserInfo];
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/order/queryAddrList"];
+    
+    NSString*userid=usrInfo.userId ;
+    NSDictionary *parameters;
+    
+    parameters = @{@"userid":userid};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                            options:kNilOptions
+                                                              error:&error];
+        if ([dic count]!=0)
+        {
+
+            [self.arrayAddress addObjectsFromArray:dic];
+
+        }
+       
+        [self.tableViewMain reloadData];
+        
+        
+        
+        
+        
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        //        countCurrentPage--;
+        //        self.tableViewMain.pullLastRefreshDate = [NSDate date];
+        //        self.tableViewMain.pullTableIsRefreshing = NO;
+        //        self.tableViewMain.pullTableIsLoadingMore = NO;
+        NSLog ( @"operation: %@" , operation. responseString );
+        
+        NSLog(@"Error: %@", error);
+    }];
+    //
+    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
+    //    [self.navigationController pushViewController:pushVuew animated:YES];
+    //
+    
+    
+}
+- (IBAction)btnPushFinish:(id)sender {
+    
+    
+    NSDictionary* dic= self.arrayAddress[selectId];
+    
+    
+    [self.delegate addressSelectWithName:[dic objectForKey:@"consigee"] phone:[dic objectForKey:@"telephone"] address:[NSString stringWithFormat:@"%@%@%@ %@",[dic objectForKey:@"province"],[dic objectForKey:@"city"],[dic objectForKey:@"district"],[dic objectForKey:@"address"]] addressId:[dic objectForKey:@"addr_id"]];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 /*
 #pragma mark - Navigation

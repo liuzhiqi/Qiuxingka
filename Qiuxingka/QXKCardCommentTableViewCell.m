@@ -7,7 +7,7 @@
 //
 
 #import "QXKCardCommentTableViewCell.h"
-
+#import "QXKGeneral.h"
 @implementation QXKCardCommentTableViewCell
 
 - (void)awakeFromNib {
@@ -29,6 +29,14 @@
     
     CGSize sizeLabel=[self.labelComment sizeThatFits:CGSizeMake(frameScreen.size.width-2*40,CGFLOAT_MAX)];
     self.heightCell+=sizeLabel.height;
+    
+    NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
+    imgUrl=[imgUrl stringByAppendingString:ProfileUrl];
+    [self.imageViewProfile sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"卖家"]];
+    
+    
+    
+
     
     
 }

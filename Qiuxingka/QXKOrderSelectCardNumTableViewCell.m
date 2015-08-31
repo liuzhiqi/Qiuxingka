@@ -29,7 +29,10 @@
     }
     self.numOfCard--;
     self.textField.text=[NSString   stringWithFormat:@"%ld",self.numOfCard];
-
+    [self.delegate orderSelectCardNumTableViewCellWithNum:self.numOfCard];
+    
+    
+    
 }
 - (IBAction)btnPushAdd:(id)sender {
     
@@ -39,6 +42,7 @@
     self.numOfCard++;
     
     self.textField.text=[NSString   stringWithFormat:@"%ld",self.numOfCard];
+    [self.delegate orderSelectCardNumTableViewCellWithNum:self.numOfCard];
 }
 
 

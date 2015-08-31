@@ -359,7 +359,7 @@ const NSInteger myCardSellCap=10;
         
         pushView.strState=@"待发货";
         pushView.typeController=12;
-        [pushView setBtnT1:@"" BtnT2:@"" BtnT3:@""];
+        [pushView setBtnT1:@"" BtnT2:@"" BtnT3:@"申请退款"];
     }
     if (tableType==2) {
         
@@ -371,7 +371,7 @@ const NSInteger myCardSellCap=10;
     if (tableType==3) {
         
         pushView.strState=@"交易关闭";
-        pushView.typeController=13;
+        pushView.typeController=14;
         [pushView setBtnT1:@"" BtnT2:@"" BtnT3:@""];
     }
     

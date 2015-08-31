@@ -69,8 +69,11 @@ const float QXKCardInfoTableViewCellBannerRatio =2.5;
         NSDictionary *bannerDic = [NSDictionary dictionaryWithObjectsAndKeys:imgUrl, @"img_url", nil];
         [self.arratBanner addObject:bannerDic];
     }
-    
-    [self.imageViewSellerProfile sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"卖家"]];
+    NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
+    if(SellerProfile!=nil){
+        imgUrl=[imgUrl stringByAppendingString:SellerProfile];
+    }
+    [self.imageViewSellerProfile sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"卖家"]];
     
     
     [self loadDataBanner];

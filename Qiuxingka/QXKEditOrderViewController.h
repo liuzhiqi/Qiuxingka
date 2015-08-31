@@ -10,5 +10,7 @@
 
 @interface QXKEditOrderViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
-
+@property(strong,nonatomic)NSDictionary *dicPreInfo;
+@property(strong,nonatomic)NSDictionary *dicDetail;
+@property(strong,nonatomic)NSDictionary *dicSellerInfo;
 @end

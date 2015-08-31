@@ -84,8 +84,7 @@
     //tableView init
     self.tableViewMain.delegate=self;
     self.tableViewMain.dataSource=self;
-    self.tableViewMain.pullDelegate=self;
-    
+
     [self.tableViewMain registerNib:[UINib nibWithNibName:@"QXKCardListTableViewCell" bundle:nil] forCellReuseIdentifier:@"QXKCardListTableViewCell"];
     UIImage* img= [UIImage imageNamed:@"blackArrow"];
     self.tableViewMain.pullArrowImage = img;
@@ -97,7 +96,8 @@
         [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
     }
     self.tableViewMain.pullLastRefreshDate=nil;
-
+    self.tableViewMain.pullDelegate=self;
+    
     
     
     
@@ -156,8 +156,6 @@
     NSString*brand;
     NSString*category;
     
-    
-    
     NSDictionary *parameters;
     NSArray* arrBrand= @[@"topps",@"panini",@"Futera",@"其他品牌"];
     NSArray* arrCategory=  @[@"足球卡",@"篮球卡",@"其他卡"];
@@ -175,26 +173,8 @@
     }
     
     
-    
-    
-//    if (self.typeBrand==-1) {
-//
-//        parameters = @{@"category":category ,@"brand": brand ,@"offset":[NSNumber numberWithInteger:countCurrentPage] ,@"capacity": @"10" ,@"order": @"1" ,@"longitude":@"0",@"latitude":@"0"};
-//        
-//        
-//    }else{
-    
-         parameters = @{@"category":category ,@"brand": brand ,@"offset": [NSNumber numberWithInteger:countCurrentPage] ,@"capacity": @"10" ,@"order": @"1" ,@"longitude":@"0",@"latitude":@"0"};
-        
-//    }
-//    parameters = @{@"cond": @"" ,@"category":category  ,@"brand": brand ,@"offset": @"0" ,@"capacity": @"10" ,@"order": @"1" ,@"longitude":@"0",@"latitude":@"0"};
-    
-    
-    
-    
-    
-    
-    
+    parameters = @{@"category":category ,@"brand": brand ,@"offset": [NSNumber numberWithInteger:countCurrentPage] ,@"capacity": @"10" ,@"order": @"1" ,@"longitude":@"0",@"latitude":@"0"};
+
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     
@@ -217,12 +197,7 @@
                                                              error:&error];
             
             [self.arrayCardInfo addObjectsFromArray:dic];
-//        }
-//        else{
-//            
-//            [MBProgressHUD showHubWithTitle:@"拉取信息出错" type:0 target:self];
-            
-            
+         
         }
         else{
             
@@ -237,12 +212,6 @@
         [self.tableViewMain reloadData];
         
         
-        
-        
-        
-        
-        
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
          countCurrentPage--;
@@ -253,18 +222,7 @@
         
         NSLog(@"Error: %@", error);
     }];
-    //
-    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
-    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
-    //    [self.navigationController pushViewController:pushVuew animated:YES];
-    //
-    
-    
 
-    
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -299,10 +257,8 @@
     else{
         idxBrand=idx;
     }
-    if(!self.tableViewMain.pullTableIsRefreshing) {
-        self.tableViewMain.pullTableIsRefreshing = YES;
         [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
-    }
+    
     self.tableViewMain.pullLastRefreshDate=nil;
     
 

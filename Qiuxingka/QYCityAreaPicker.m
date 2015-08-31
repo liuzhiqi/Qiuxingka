@@ -41,7 +41,7 @@
         districtStr = @"";
     }
     
-    NSString *showMsg = [NSString stringWithFormat: @"%@ %@ %@.", provinceStr, cityStr, districtStr];
+    NSString *showMsg = [NSString stringWithFormat: @"%@,%@,%@", provinceStr, cityStr, districtStr];
 
     [self.delegate QYCityAreaPicker:self selectArea:showMsg];
 }

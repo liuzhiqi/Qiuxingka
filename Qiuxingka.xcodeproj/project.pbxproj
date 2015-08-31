@@ -175,6 +175,8 @@
 		F2FF60321B91C3710068E733 /* QXKMessageCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF60301B91C3710068E733 /* QXKMessageCommentTableViewCell.xib */; };
 		F2FF60361B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF60341B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.m */; };
 		F2FF60371B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF60351B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.xib */; };
+		F2FF603E1B9434380068E733 /* QXKIdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF603C1B9434380068E733 /* QXKIdentifyViewController.m */; };
+		F2FF603F1B9434380068E733 /* QXKIdentifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF603D1B9434380068E733 /* QXKIdentifyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -460,6 +462,9 @@
 		F2FF60331B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKMessageCommentCardInfoTableViewCell.h; sourceTree = "<group>"; };
 		F2FF60341B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKMessageCommentCardInfoTableViewCell.m; sourceTree = "<group>"; };
 		F2FF60351B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKMessageCommentCardInfoTableViewCell.xib; sourceTree = "<group>"; };
+		F2FF603B1B9434380068E733 /* QXKIdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKIdentifyViewController.h; sourceTree = "<group>"; };
+		F2FF603C1B9434380068E733 /* QXKIdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKIdentifyViewController.m; sourceTree = "<group>"; };
+		F2FF603D1B9434380068E733 /* QXKIdentifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKIdentifyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,6 +553,9 @@
 				F23ABCE11B91AFCF00D1DDF4 /* QXKExpressInfoSelectViewController.h */,
 				F23ABCE21B91AFCF00D1DDF4 /* QXKExpressInfoSelectViewController.m */,
 				F23ABCE31B91AFCF00D1DDF4 /* QXKExpressInfoSelectViewController.xib */,
+				F2FF603B1B9434380068E733 /* QXKIdentifyViewController.h */,
+				F2FF603C1B9434380068E733 /* QXKIdentifyViewController.m */,
+				F2FF603D1B9434380068E733 /* QXKIdentifyViewController.xib */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -1084,6 +1092,7 @@
 				F26049281B2E19C600F8A71B /* QXKRegister2ViewController.xib in Resources */,
 				F2FF602D1B91C00F0068E733 /* QXKMessageCommentViewController.xib in Resources */,
 				F2A6A7871B70ED8300FEC793 /* QXKMyCollectionTabView.xib in Resources */,
+				F2FF603F1B9434380068E733 /* QXKIdentifyViewController.xib in Resources */,
 				F2A4A0B41B81E2E500F6B72C /* QXKWillExchangeViewController.xib in Resources */,
 				F29221A91B4C246D00F51522 /* QXKSellCardInfoViewController.xib in Resources */,
 				F29221941B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.xib in Resources */,
@@ -1226,6 +1235,7 @@
 				F2A4A0B31B81E2E500F6B72C /* QXKWillExchangeViewController.m in Sources */,
 				F236504C1B6BEC6B005BF194 /* QXKEditOrderViewController.m in Sources */,
 				F2A4A0A41B81B9CD00F6B72C /* QXKMessageButton.m in Sources */,
+				F2FF603E1B9434380068E733 /* QXKIdentifyViewController.m in Sources */,
 				F23650741B6C06BA005BF194 /* QXKAddressSelectTableViewCell.m in Sources */,
 				F23650561B6BF081005BF194 /* QXKOrderSellerInfoTableViewCell.m in Sources */,
 				F2A6A77C1B70D65700FEC793 /* QXKMyScoreViewController.m in Sources */,

@@ -14,6 +14,7 @@
 #import "QXKMyCardBuyViewController.h"
 #import "QXKWillExchangeViewController.h"
 #import "QXKMyCardSellViewController.h"
+#import "QXKIdentifyViewController.h"
 @interface QXKMyPageViewController ()
 
 @end
@@ -171,6 +172,13 @@
     
 }
 
+- (IBAction)btnPushIdentify:(id)sender {
+    QXKIdentifyViewController*pushView=[[QXKIdentifyViewController alloc]init];
+    
+    [self.navigationController pushViewController:pushView animated:YES];
+    
+    
+}
 
 - (IBAction)btnPushConnectService:(id)sender {
 }
