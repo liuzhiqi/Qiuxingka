@@ -27,7 +27,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKp-xK-opF">
-                    <rect key="frame" x="203" y="578" width="137" height="44"/>
+                    <rect key="frame" x="203" y="588" width="138" height="44"/>
                     <color key="backgroundColor" red="0.18039215689999999" green="0.42745098040000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="发  布">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxp-aG-xyC">
-                    <rect key="frame" x="35" y="578" width="138" height="44"/>
+                    <rect key="frame" x="35" y="588" width="138" height="44"/>
                     <color key="backgroundColor" red="0.18039215689999999" green="0.42745098040000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="QR5-h5-toB"/>
@@ -52,15 +52,15 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOJ-Zo-8K0">
-                    <rect key="frame" x="228" y="538" width="30" height="10"/>
+                    <rect key="frame" x="228" y="553" width="30" height="10"/>
                     <color key="backgroundColor" red="0.1843137255" green="0.42745098040000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-MN-4RL">
-                    <rect key="frame" x="173" y="538" width="30" height="10"/>
+                    <rect key="frame" x="173" y="553" width="30" height="10"/>
                     <color key="backgroundColor" red="0.1843137255" green="0.42745098040000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fl-2z-dbT">
-                    <rect key="frame" x="118" y="538" width="30" height="10"/>
+                    <rect key="frame" x="118" y="553" width="30" height="10"/>
                     <color key="backgroundColor" red="0.18039215689999999" green="0.42745098040000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="aH7-o9-iOO"/>
@@ -83,13 +83,13 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVj-zY-KK0">
-                    <rect key="frame" x="35" y="131" width="305" height="176"/>
+                    <rect key="frame" x="35" y="131" width="305" height="184"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Jm-xw-V5z">
-                    <rect key="frame" x="35" y="332" width="305" height="176"/>
+                    <rect key="frame" x="35" y="340" width="305" height="184"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -108,7 +108,7 @@
                 <constraint firstAttribute="trailing" secondItem="NqA-mt-xPm" secondAttribute="trailing" id="8z3-lw-Rgr"/>
                 <constraint firstItem="wKp-xK-opF" firstAttribute="centerY" secondItem="mxp-aG-xyC" secondAttribute="centerY" id="E8k-he-E8R"/>
                 <constraint firstItem="bOJ-Zo-8K0" firstAttribute="height" secondItem="RyE-MN-4RL" secondAttribute="height" id="HBX-ko-vum"/>
-                <constraint firstAttribute="bottom" secondItem="mxp-aG-xyC" secondAttribute="bottom" constant="45" id="Ivn-bg-eVk"/>
+                <constraint firstAttribute="bottom" secondItem="mxp-aG-xyC" secondAttribute="bottom" constant="35" id="Ivn-bg-eVk"/>
                 <constraint firstItem="0Jm-xw-V5z" firstAttribute="top" secondItem="gVj-zY-KK0" secondAttribute="bottom" constant="25" id="JTq-VR-GSt"/>
                 <constraint firstItem="0Jm-xw-V5z" firstAttribute="height" secondItem="gVj-zY-KK0" secondAttribute="height" id="M8e-Za-tv0"/>
                 <constraint firstItem="bOJ-Zo-8K0" firstAttribute="centerY" secondItem="9fl-2z-dbT" secondAttribute="centerY" id="MG3-F6-dNB"/>
@@ -122,7 +122,7 @@
                 <constraint firstItem="0Jm-xw-V5z" firstAttribute="width" secondItem="gVj-zY-KK0" secondAttribute="width" id="a2a-OZ-Ljs"/>
                 <constraint firstItem="RyE-MN-4RL" firstAttribute="leading" secondItem="9fl-2z-dbT" secondAttribute="trailing" constant="25" id="cGY-zn-FyT"/>
                 <constraint firstItem="M13-SH-cby" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cHp-6x-x50"/>
-                <constraint firstItem="mxp-aG-xyC" firstAttribute="top" secondItem="RyE-MN-4RL" secondAttribute="bottom" constant="30" id="dSW-oF-nKv"/>
+                <constraint firstItem="mxp-aG-xyC" firstAttribute="top" secondItem="RyE-MN-4RL" secondAttribute="bottom" constant="25" id="dSW-oF-nKv"/>
                 <constraint firstItem="bOJ-Zo-8K0" firstAttribute="width" secondItem="9fl-2z-dbT" secondAttribute="width" id="eCt-cB-62K"/>
                 <constraint firstItem="M13-SH-cby" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fmL-WN-xqL"/>
                 <constraint firstAttribute="trailing" secondItem="wKp-xK-opF" secondAttribute="trailing" constant="35" id="ibh-To-RNq"/>
@@ -138,6 +138,13 @@
                 <constraint firstItem="bOJ-Zo-8K0" firstAttribute="leading" secondItem="RyE-MN-4RL" secondAttribute="trailing" constant="25" id="zGW-3E-4ru"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7a0-f4-mfs"/>
+                    <exclude reference="QoM-0c-e9h"/>
+                    <exclude reference="yZm-QX-8nU"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

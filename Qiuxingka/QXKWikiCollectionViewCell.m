@@ -19,14 +19,15 @@
     // Initialization code
 }
 
--(void)setCellDataWithTitle:(NSString*)title subtitle:(NSString*)subtitle url:(NSString*)url{
+-(void)setCellDataWithTitle:(NSString*)title subtitle:(NSString*)subtitle url:(NSString*)url  cardId:(NSString*)cardId targetVC:(UIViewController*) vc{
     
     self.labelTitle.text=title;
     self.labelSubtitle.text=subtitle;
     url=[NSString stringWithFormat:@"%@/%@",QXKURL,url];
     [self.imageViewProfile sd_setImageWithURL:[NSURL URLWithString:url]];
-    
-    
+
+    self.btnCollection.viewControllerfather =vc;
+    self.btnCollection.idCard=cardId;
     
     
 }

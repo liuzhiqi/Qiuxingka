@@ -21,15 +21,18 @@
     // Configure the view for the selected state
 }
 
--(void)setCellDataWithTitle:(NSString*)title description:(NSString*)description series:(NSString*)series brand:(NSString*)brand cardNum:(NSString*)cardNum imageViewUrl:(NSString*)imageViewUrl{
+-(void)setCellDataWithTitle:(NSString*)title description:(NSString*)description series:(NSString*)series brand:(NSString*)brand cardNum:(NSString*)cardNum imageViewUrl:(NSString*)imageViewUrl cardId:(NSString*)cardId targetVC:(UIViewController*) vc{
     
     self.labelCardName.text=title;
     self.labelCardDescripTion.text=description;
     self.labelCardSeries.text=series;
     self.labelBrand.text=brand;
-    self.labelCardNum.text=cardNum;
+    self.labelCardNum.text=[NSString stringWithFormat:@"%@",cardNum];
     imageViewUrl=[NSString stringWithFormat:@"%@/%@",QXKURL,imageViewUrl];
     [self.imageViewCardImg sd_setImageWithURL:[NSURL URLWithString:imageViewUrl]];
+    
+    self.buttonCollection.viewControllerfather =vc;
+    self.buttonCollection.idCard=cardId;
     
     
     

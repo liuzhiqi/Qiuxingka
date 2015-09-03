@@ -76,6 +76,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(void)done{
     for (UITextField*textField in arrayTextField) {
 

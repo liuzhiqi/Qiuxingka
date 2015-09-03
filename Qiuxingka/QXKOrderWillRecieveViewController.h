@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PullTableView.h"
 @interface QXKOrderWillRecieveViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
+@property (weak, nonatomic) IBOutlet PullTableView *tableViewMain;
 @property(assign,nonatomic)NSInteger typeController;
 @property(strong,nonatomic)NSString*strState;
 

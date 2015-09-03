@@ -104,11 +104,10 @@
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     actionSheet.tag=-1;
     [actionSheet showInView:self.view];
-    
 
-    
-    
 }
+
+
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     IdxCurrentBtn=actionSheet.tag;
@@ -221,7 +220,7 @@
 }
 
 
-- (void)imagePickerController:(MSImagePickerController *)picker didFinishPickingImage:(NSArray *)images; {
+- (void)imagePickerController:(MSImagePickerController *)picker didFinishPickingImage:(NSArray *)images{
     
     
     if (IdxCurrentBtn==-1) {
@@ -249,7 +248,7 @@
 }
 
 
-- (void)imagePickerControllerDidCancel:(MSImagePickerController *)picker; {
+- (void)imagePickerControllerDidCancel:(MSImagePickerController *)picker {
     [picker dismissViewControllerAnimated:true completion:nil];
     NSLog(@"do cancel");
 }

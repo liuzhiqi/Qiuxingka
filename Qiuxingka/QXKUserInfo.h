@@ -8,21 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface QXKUserInfo : NSObject
+#import <CoreLocation/CoreLocation.h>
+
+@interface QXKUserInfo : NSObject<CLLocationManagerDelegate>
 
 +(instancetype )shareUserInfo;
 
 @property (nonatomic,strong)NSString *userId;
 @property (nonatomic,strong)NSString *userName;
 @property (nonatomic,strong)NSString *profileUrl;
-@property (nonatomic,strong)NSString *phoneNumber;@property (nonatomic,strong)NSString *email;
+@property (nonatomic,strong)NSString *phoneNumber;
+@property (nonatomic,strong)NSString *email;
 
+@property (nonatomic,strong)NSNumber *identificated;
 @property (nonatomic,assign)NSNumber* score;
 @property (nonatomic,assign)CGPoint loaction;//!< X = latitude, Y = longitude) ;
-@property (nonatomic,assign)NSInteger numBuy;
-@property (nonatomic,assign)NSInteger numSell;
+@property (nonatomic,assign)NSNumber* numBuy;
+@property (nonatomic,assign)NSNumber* numSell;
 @property (nonatomic,assign)NSInteger isLogin;
-
+@property (nonatomic,strong)NSString *idCardNum;
 @property (nonatomic,assign)NSInteger gender;
 //-(void)setupUserInfo:(NSDictionary *)indoDic;
 //-(void)setImagePrefix:(NSDictionary *)dic;
@@ -35,5 +39,17 @@
 @property (nonatomic,strong)NSString *selfDescription;
 @property (nonatomic,strong)NSString *qqNumber;
 @property (nonatomic,assign)NSUInteger userLevel;
+
+
+
+@property (nonatomic, retain) CLLocationManager* locationMgr;
+@property (nonatomic, retain) CLGeocoder* clGeocoder;// iso 5.0及5.0以上SDK版本使
+
+
+
+
+
+
+
 -(void)loadUserInfo;
 @end

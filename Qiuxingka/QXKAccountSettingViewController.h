@@ -10,4 +10,5 @@
 @interface QXKAccountSettingViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewProfile;
 @end

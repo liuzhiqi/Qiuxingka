@@ -11,5 +11,6 @@
 @interface QXKWillExchangeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 @property(strong,nonatomic)NSMutableArray*arrayCardInfo;
+@property (weak, nonatomic) IBOutlet UIView *viewHead;
 
 @end

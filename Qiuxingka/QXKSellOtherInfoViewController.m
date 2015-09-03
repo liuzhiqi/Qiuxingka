@@ -12,6 +12,8 @@
 {
     BOOL needChange;
     BOOL isInitCombox;
+    NSString* strType;
+    NSString* strBrand;
 }
 @end
 
@@ -26,10 +28,11 @@
     
     isInitCombox=NO;
     
-    NSArray * arrayCBType=[NSArray arrayWithObjects:@"足球卡",@"篮球卡卡",@"其他卡",nil];
-    NSArray * arrayCBBrand=[NSArray arrayWithObjects:@"Topps",@"Panini",@"Futera",nil];
+    NSArray * arrayCBType=[NSArray arrayWithObjects:@"足球卡",@"篮球卡",@"其他卡",nil];
+    NSArray * arrayCBBrand=[NSArray arrayWithObjects:@"Topps",@"Panini",@"Futera",@"其他卡",nil];
     
-    
+    strBrand=@"Topps";
+    strType=@"足球卡";
     
     
     self.comBoxCadBrand.backgroundColor = [UIColor whiteColor];
@@ -38,6 +41,8 @@
     self.comBoxCadBrand.titlesList =[NSMutableArray arrayWithArray:arrayCBBrand] ;
     self.comBoxCadBrand.delegate = self;
     self.comBoxCadBrand.supView = self.view;
+    self.comBoxCadBrand.tag=1;
+    self.comBoxCardTyoe.tag=0;
     
     
     self.comBoxCardTyoe.backgroundColor = [UIColor whiteColor];
@@ -55,6 +60,13 @@
     self.textFieldCardNum.delegate=self;
     self.textFieldPrice.delegate=self;
     
+    self.textFieldCardNum.layer.borderColor=[kBorderColor CGColor];
+    self.textFieldCardNum.layer.borderWidth=1;
+    self.textFieldCardNum.delegate=self;
+    
+    self.textFieldLogisticPrice.layer.borderColor=[kBorderColor CGColor];
+    self.textFieldLogisticPrice.layer.borderWidth=1;
+    self.textFieldLogisticPrice.delegate=self;
     
     
     
@@ -140,6 +152,12 @@
     QXKSellCardInfoViewController *pushView=[[QXKSellCardInfoViewController alloc]init];
     pushView.needChange=needChange;
     pushView.arrayImages= self.arrayImages;
+    NSMutableDictionary*mdic=[[NSMutableDictionary alloc]init];
+    [mdic setValuesForKeysWithDictionary:@{@"price":self.textFieldPrice.text,@"card_no":self.textFieldCardNum.text,@"category":strType,@"brand":strBrand,@"exchange":[NSNumber numberWithBool:needChange],@"amount":self.textFieldNum.text,@"freight":self.textFieldLogisticPrice.text}];
+    
+    
+    pushView.dicPara=mdic;
+    
     [self.navigationController pushViewController:pushView animated:YES  ];
     
 }
@@ -176,6 +194,15 @@
 
 -(void)selectAtIndex:(int)index inCombox:(LMComBoxView *)_combox{
     
+    if (_combox.tag==0) {
+        NSArray*arr=@[@"足球卡",@"篮球卡",@"其他卡"];
+        strType=arr[index];
+    }else{
+        
+        NSArray*arr=@[@"Topps",@"Panini",@"Futera",@"其他卡"];
+        strBrand=arr[index];
+        
+    }
     
 }
 
@@ -183,6 +210,8 @@
     
     [self.textFieldCardNum resignFirstResponder];
     [self.textFieldPrice resignFirstResponder];
+    [self.textFieldNum resignFirstResponder];
+    [self.textFieldLogisticPrice resignFirstResponder];
     
     
 }

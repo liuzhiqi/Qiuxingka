@@ -198,9 +198,9 @@ const NSInteger myCardBuyCap=10;
     [postUrl appendString:@"/order/queryOrderList"];
     QXKUserInfo* userInfo=[QXKUserInfo shareUserInfo];
     
-//    NSString*userid=userInfo.userId;
+    NSString*userid=userInfo.userId;
     
-    NSString*userid=@"787348d0-126b-11e5-a5da-0959cd299e41";
+//    NSString*userid=@"787348d0-126b-11e5-a5da-0959cd299e41";
     NSNumber*tag=[NSNumber numberWithInteger:(tableType-1)];
     
     
@@ -364,7 +364,7 @@ const NSInteger myCardBuyCap=10;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     QXKOrderInfoChangeViewController*pushView=[[QXKOrderInfoChangeViewController alloc]init];
-    
+    pushView.dicPreInfo=self.arrayDealInfo[indexPath.row];
     
     if (tableType==0) {
         pushView.strState=@"待付款";

@@ -10,7 +10,7 @@
 #import "LMComBoxView.h"
 //const NSString* placeHolderChange=@"我想要换什么样的卡";
 //const NSString* placeHolderMyCard=@"描述我的卡片";
-
+#import "QXKGeneral.h"
 #define placeHolderMyCard @"描述我的卡片"
 
 #define placeHolderChange @"我想要换什么样的卡"
@@ -74,7 +74,71 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)btnPushNext:(id)sender {
+    
+    
+    
+    
+    QXKUserInfo* userInfo= [QXKUserInfo shareUserInfo];
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/publish"];
+   
+    NSDictionary *parameters = @{@"owner":userInfo.userId,@"ownername":userInfo.userName,@"title":self.textFieldTitle.text,@"logistic":@"0",@"longitude":[NSNumber numberWithFloat:userInfo.loaction.y],@"latitude":[NSNumber numberWithFloat:userInfo.loaction.x],@"describes":self.textViewMycard.text,@"exchange_desc":self.textViewChange.text};
+    [self.dicPara setValuesForKeysWithDictionary:parameters];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:postUrl parameters:self.dicPara constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        for (int i = 0; i<_arrayImages.count; i++) {
+            UIImage *uploadImage = _arrayImages[i];
+            
+            NSData *imageData = UIImageJPEGRepresentation(uploadImage,0.5);
+            
+            [formData appendPartWithFileData:imageData name:@"imgs" fileName:[NSString stringWithFormat:@"img%d.jpg",i+1]  mimeType:@"image/jpg"];
+        }
+        
+        
+        
+        
+        
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                            options:kNilOptions
+                                                              error:&error];
+        if([dic objectForKey:@"success"]!=nil){
+            
+             [MBProgressHUD showHubWithTitle:@"头像上传成功" type:1 deleController:self];
+            [self performSelector:@selector(finishSellCard) withObject:nil afterDelay:2];
+        }
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        [MBProgressHUD showHubWithTitle:@"头像上传失败" type:0 deleController:self];
+        
+        NSLog ( @"operation: %@" , operation. responseString );
+        
+        NSLog(@"Error: %@", error);
+        
+    }];
+    
+    
+    
+    
 }
+-(void)finishSellCard{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
 
 - (IBAction)btnPushHideKeyBoard:(id)sender {
     [self.textViewMycard resignFirstResponder];
@@ -131,6 +195,7 @@
     
     
 }
+
 -(void)textViewDidEndEditing:(UITextView *)textView{
     
 

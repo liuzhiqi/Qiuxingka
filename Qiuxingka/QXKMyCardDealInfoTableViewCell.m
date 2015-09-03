@@ -7,7 +7,7 @@
 //
 
 #import "QXKMyCardDealInfoTableViewCell.h"
-
+#import "QXKGeneral.h"
 @implementation QXKMyCardDealInfoTableViewCell
 
 - (void)awakeFromNib {
@@ -29,8 +29,12 @@
     self.labelPrice.text=[NSString stringWithFormat:@"¥%@",Price];
     self.labelTotalPrice.text=[NSString stringWithFormat:@"¥%@",TotalPrice];
     self.labelCardState.text=CardState;
-    
-    
+    NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
+    if (ProfileURL==nil) {
+        ProfileURL=@"";
+    }
+    imgUrl=[imgUrl stringByAppendingString:ProfileURL];
+    [self.imageViewCardProfile sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
     
 }
 

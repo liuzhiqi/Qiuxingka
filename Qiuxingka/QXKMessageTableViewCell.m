@@ -7,7 +7,7 @@
 //
 
 #import "QXKMessageTableViewCell.h"
-
+#import "QXKGeneral.h"
 @implementation QXKMessageTableViewCell
 
 - (void)awakeFromNib {
@@ -25,12 +25,20 @@
     // Configure the view for the selected state
 }
 
--(void)setCellDataWithTitle:(NSString*)Title Subtitle:(NSString*)Subtitle Description:(NSString*)Description ImgUrl:(NSString*)ImgUrl {
+-(void)setCellDataWithTitle:(NSString*)Title Subtitle:(NSString*)Subtitle Description:(NSString*)Description ImgUrl:(NSString*)ImgUrl IsRead:(BOOL)isRead{
     self.labelTitle.text=Title;
     self.labelSubtitle.text=Subtitle;
     self.labelDescription.text=Description;
     
     
+    NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
+    if (ImgUrl!=nil) {
+        imgUrl=[imgUrl stringByAppendingString:ImgUrl];
+        
+    }
+    [self.imageViewMessageImg sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
+    
+    self.viewMaskView.hidden=isRead;
     
     
     

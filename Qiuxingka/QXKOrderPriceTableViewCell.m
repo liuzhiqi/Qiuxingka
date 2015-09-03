@@ -25,13 +25,13 @@
     if (TotalPrice!=nil) {
         self.labelTotalPrice.hidden=NO;
         self.constraintVTTransCell.constant=40;
-        self.labelTotalPrice.text=[NSString stringWithFormat:@"¥%@",TotalPrice];
+        self.labelTotalPrice.text=[NSString stringWithFormat:@"合计：¥%@",TotalPrice];
     }else{
         self.labelTotalPrice.hidden=YES;
         self.constraintVTTransCell.constant=15;
     }
     
-    self.labelTransExpense.text=[NSString stringWithFormat:@"¥%@",TransExpense];
+    self.labelTransExpense.text=[NSString stringWithFormat:@"运费：¥%@",TransExpense];
     
         
 }

@@ -55,13 +55,13 @@
     [uc.navigationController.view addSubview:HUD];
     
     if (type==0) {
-        UIImageView * imageView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"哭脸"]] ;
+        UIImageView * imageView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hubWrongNormal0"]] ;
         imageView.frame=CGRectMake(0 , 0, 60, 60);
         HUD.customView = imageView;
         
     }
     else if (type==1){
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]] ;
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hubRightNormal0"]] ;
     }
     //    //
     // Set custom view mode

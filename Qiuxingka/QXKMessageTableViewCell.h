@@ -16,9 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelSubtitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescription;
 @property (weak, nonatomic) IBOutlet UIView *viewBG;
+@property (weak, nonatomic) IBOutlet UIView *viewMaskView;
 
 
--(void)setCellDataWithTitle:(NSString*)Title Subtitle:(NSString*)Subtitle Description:(NSString*)Description ImgUrl:(NSString*)ImgUrl ;
+-(void)setCellDataWithTitle:(NSString*)Title Subtitle:(NSString*)Subtitle Description:(NSString*)Description ImgUrl:(NSString*)ImgUrl IsRead:(BOOL)isRead;
 
 
 

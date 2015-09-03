@@ -23,7 +23,7 @@
     // Configure the view for the selected state
 }
 
--(void)setCellDataWithCardName:(NSString*)CardName DescripTion:(NSString*)DescripTion Price:(NSString*)Price Seller:(NSString*)Seller CardImgUrl:(NSString*)CardImgUrl IsChangeable:(NSInteger)IsChangeable{
+-(void)setCellDataWithCardName:(NSString*)CardName DescripTion:(NSString*)DescripTion Price:(NSString*)Price Seller:(NSString*)Seller CardImgUrl:(NSString*)CardImgUrl IsChangeable:(NSInteger)IsChangeable cardId:(NSString*)cardId targetVC:(UIViewController*) vc{
     
     self.labelCardName.text=CardName;
     self.labelCardDescripTion.text=DescripTion;
@@ -31,9 +31,14 @@
     self.labelCardSeller.text=Seller;
     self.labelCanChange.hidden=IsChangeable==1;
     NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
+    
+    if (CardImgUrl==nil) {
+        CardImgUrl=@"";
+    }
     imgUrl=[imgUrl stringByAppendingString:CardImgUrl];
     [self.imageViewCardImg sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
-    
+    self.buttonCollection.viewControllerfather =vc;
+    self.buttonCollection.idCard=cardId;
     
     
 }

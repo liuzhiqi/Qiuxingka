@@ -102,8 +102,9 @@
     NSString *title=[self.arrayCardInfo[indexPath.row] objectForKey:@"wikiname"];
     NSString *subtitle=[self.arrayCardInfo[indexPath.row] objectForKey:@"english_name"];
     NSString *url=[self.arrayCardInfo[indexPath.row] objectForKey:@"picture"];
+    NSString *wikiid=[self.arrayCardInfo[indexPath.row] objectForKey:@"wikiid"];
 
-    [cell setCellDataWithTitle:title subtitle:subtitle url:url];
+    [cell setCellDataWithTitle:title subtitle:subtitle url:url cardId:wikiid targetVC:self];
     return cell;
     
     

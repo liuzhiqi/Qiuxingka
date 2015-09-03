@@ -312,6 +312,12 @@ static char attachSelfKey;
         if (self.images.count>=self.maxPicNum)
         {
             [MBProgressHUD showHubWithTitle:[NSString stringWithFormat:@"最多上传%ld张哦",(long)self.maxPicNum] type:0 deleController:self];
+            if (self.images.count == 1) {
+                picker.topViewController.navigationItem.rightBarButtonItem = self.doneButton;
+            } else if (self.images.count == 0) {
+                picker.topViewController.navigationItem.rightBarButtonItem = self.lastDoneButton;
+            }
+
             return;
         }
         

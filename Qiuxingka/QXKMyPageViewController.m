@@ -56,71 +56,10 @@
 }
 
 -(void)loadData{
-    
-    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
-    [postUrl appendString:@"/home/showTradeInfo"];
-    
     QXKUserInfo*userInfo=[QXKUserInfo shareUserInfo];
     
-    NSDictionary *parameters;
-   // parameters = @{@"userid": userInfo.userId};
-    parameters = @{@"userid": @"787348d0-126b-11e5-a5da-0959cd299e41"};
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+    self.labelDealInfo.text=[NSString stringWithFormat:@"已购买%@张，已出售%@张",userInfo.numBuy,userInfo.numSell];
         
-        NSError* error;
-        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                            options:kNilOptions
-                                                              error:&error];
-        
-        if ([dic objectForKey:@"error"]!=nil) {
-            [MBProgressHUD showHubWithTitle:@"拉取交易信息失败" type:0 deleController:self];
-        }else{
-
-            QXKUserInfo*userInfo=[QXKUserInfo shareUserInfo];
-            userInfo.numBuy=[[dic objectForKey:@"in_num"] integerValue];
-            userInfo.numSell=[[dic objectForKey:@"out_num"] integerValue];
-            self.labelDealInfo.text=[NSString stringWithFormat:@"已购买%ld张，已出售%ld张",(long)userInfo.numBuy,(long)userInfo.numSell];
-            
-
-        }
-        
-        
-        
-        
-       //        if ([dic objectForKey:@"userid"]!=nil)
-//        {
-//            
-//            QXKUserInfo* userInfo=  [QXKUserInfo shareUserInfo];
-//            userInfo.userId=[dic objectForKey:@"userId"];
-//            
-//            
-//            [MBProgressHUD showHubWithTitle:@"登陆成功" type:1 target:self];
-//            
-//            [self.navigationController popToRootViewControllerAnimated:YES];
-//        }
-//        else{
-//            
-//            [MBProgressHUD showHubWithTitle:[dic objectForKey:@"error"] type:0 target:self];
-//            
-//            
-//        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        NSLog ( @"operation: %@" , operation. responseString );
-        
-        NSLog(@"Error: %@", error);
-    }];
-    //
-    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
-    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
-    //    [self.navigationController pushViewController:pushVuew animated:YES];
-    //
-
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

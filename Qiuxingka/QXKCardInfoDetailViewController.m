@@ -10,6 +10,7 @@
 #import "QXKCardInfoTableViewCell.h"
 #import "QXKCardCommentTableViewCell.h"
 #import "QXKEditOrderViewController.h"
+#import "QXKCardExchangeViewController.h"
 #import "QXKGeneral.h"
 @interface QXKCardInfoDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 {
@@ -59,6 +60,8 @@
     [viewTextBG addSubview:textFieldComment];
     [self.view addSubview:viewTextBG];
     
+    self.buttonCollection.idCard=[self.dicPreInfo objectForKey:@"cardid"];
+    self.buttonCollection.viewControllerfather=self;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -151,6 +154,9 @@
             [MBProgressHUD showHubWithTitle:@"评论成功" type:1 deleController:self];
             [self loadData];
             
+        }
+        else{
+             [MBProgressHUD showHubWithTitle:@"评论失败,可能您已经被禁言" type:0 deleController:self];
         }
         //        else{
         //
@@ -484,7 +490,14 @@
 }
 
 - (IBAction)btnPushExchange:(id)sender {
+    QXKCardExchangeViewController*pushView=[[QXKCardExchangeViewController alloc]init];
+    pushView.dicPreInfo=self.dicPreInfo;
     
+    
+    
+    
+    
+    [self.navigationController pushViewController:pushView animated:YES];
     
     
 }

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PullTableView.h"
 @interface QXKMessageViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
+@property (weak, nonatomic) IBOutlet PullTableView *tableViewMain;
 @property(strong,nonatomic)NSMutableArray* arrayMessage;
 @end

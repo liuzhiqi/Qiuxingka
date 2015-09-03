@@ -27,7 +27,7 @@
                         <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmO-Ks-50A">
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmO-Ks-50A" customClass="QXKCollectionButton">
                         <rect key="frame" x="136" y="165" width="26" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="AmO-Ks-50A" secondAttribute="height" multiplier="26:25" id="HmM-ye-Uuq"/>
@@ -63,6 +63,7 @@
             </constraints>
             <size key="customSize" width="-38" height="177"/>
             <connections>
+                <outlet property="btnCollection" destination="AmO-Ks-50A" id="5Tp-aP-Bks"/>
                 <outlet property="imageViewProfile" destination="OL2-sh-xU4" id="fqn-9K-18c"/>
                 <outlet property="labelSubtitle" destination="sjA-3B-pzN" id="bRC-Qh-SxB"/>
                 <outlet property="labelTitle" destination="Rzb-DS-fRU" id="bvU-eI-EdL"/>

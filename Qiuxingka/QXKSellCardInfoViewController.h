@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *textViewChange;
 @property(assign,nonatomic) BOOL needChange;
 @property(strong,nonatomic) NSArray* arrayImages;
-
+@property(strong,nonatomic)NSDictionary* dicPara;
 @end

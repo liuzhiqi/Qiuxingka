@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QXKCardListAfterSearchViewController.h"
 #import "QXKMessageButton.h"
+#import "QXKGeneral.h"
 @interface ViewController ()<UITabBarControllerDelegate,UISearchBarDelegate>
 {
     UISearchBar* searchBar;
@@ -30,8 +31,14 @@
     labelTitle.textColor=[UIColor whiteColor];
     
     
-    searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(20, 20, 180, 44)];
+    searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(50, 20, 170, 44)];
     searchBar.delegate=self;
+    searchBar.placeholder=@"Search";
+    
+    UIColor *color = [UIColor redColor];
+//    searchBar.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName: [UIColor QXKGreenLight]}];
+    
+    
     self.navigationController.navigationBar.tintColor=[UIColor whiteColor];
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -45,11 +52,26 @@
     self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:97.0/255 green:147.0/255.0 blue:52.0/255.0 alpha:100];
     
     
-    QXKMessageButton *btn=[[QXKMessageButton alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
+    QXKMessageButton *btn=[[QXKMessageButton alloc] initWithFrame:CGRectMake(15, 0, 22, 22)];
     [btn setImage:[UIImage imageNamed:@"消息图标"] forState:UIControlStateNormal];
     //    [btn setImage:[UIImage imageNamed:@"收藏 有阴影按下"] forState:UIControlStateHighlighted];
-    UIBarButtonItem *btnItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
+    UIView*viewR=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 37, 22)];
+    [viewR addSubview:btn];
+    UIBarButtonItem *btnItem=[[UIBarButtonItem alloc] initWithCustomView:viewR];
+    
+    
+    
     self.navigationItem.rightBarButtonItem=btnItem;
+    
+    QXKMessageButton *btnF=[[QXKMessageButton alloc] initWithFrame:CGRectMake(0, 0, 37, 22)];
+  
+    UIBarButtonItem *btnItemF=[[UIBarButtonItem alloc] initWithCustomView:btnF];
+    self.navigationItem.leftBarButtonItem=btnItemF;
+
+    
+    
+    
+    
     self.navigationItem.titleView=searchBar;
 
     

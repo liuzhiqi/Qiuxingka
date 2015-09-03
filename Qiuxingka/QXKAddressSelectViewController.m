@@ -49,6 +49,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)viewWillAppear:(BOOL)animated{
+    
     [self loadAddressList];
 }
 
@@ -75,7 +76,7 @@
     
     BOOL isSelect=indexPath.row==selectId;
     NSDictionary*dic=self.arrayAddress[indexPath.row];
-    [cell setCellDataWithName:[dic objectForKey:@"consigee"] Number:[dic objectForKey:@"telephone"] Address:[NSString stringWithFormat:@"%@%@%@ %@",[dic objectForKey:@"province"],[dic objectForKey:@"city"],[dic objectForKey:@"district"],[dic objectForKey:@"address"]] isSelected:isSelect];
+    [cell setCellDataWithName:[dic objectForKey:@"consignee"] Number:[dic objectForKey:@"telephone"] Address:[NSString stringWithFormat:@"%@%@%@ %@",[dic objectForKey:@"province"],[dic objectForKey:@"city"],[dic objectForKey:@"district"],[dic objectForKey:@"address"]] isSelected:isSelect];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
     
@@ -94,7 +95,7 @@
     
 }
 -(void)loadAddressList{
-    
+    [self.arrayAddress  removeAllObjects];
     QXKUserInfo* usrInfo=[QXKUserInfo shareUserInfo];
     
     NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
@@ -156,7 +157,7 @@
     NSDictionary* dic= self.arrayAddress[selectId];
     
     
-    [self.delegate addressSelectWithName:[dic objectForKey:@"consigee"] phone:[dic objectForKey:@"telephone"] address:[NSString stringWithFormat:@"%@%@%@ %@",[dic objectForKey:@"province"],[dic objectForKey:@"city"],[dic objectForKey:@"district"],[dic objectForKey:@"address"]] addressId:[dic objectForKey:@"addr_id"]];
+    [self.delegate addressSelectWithName:[dic objectForKey:@"consignee"] phone:[dic objectForKey:@"telephone"] address:[NSString stringWithFormat:@"%@%@%@ %@",[dic objectForKey:@"province"],[dic objectForKey:@"city"],[dic objectForKey:@"district"],[dic objectForKey:@"address"]] addressId:[dic objectForKey:@"addr_id"]];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -177,6 +177,16 @@
 		F2FF60371B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF60351B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.xib */; };
 		F2FF603E1B9434380068E733 /* QXKIdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF603C1B9434380068E733 /* QXKIdentifyViewController.m */; };
 		F2FF603F1B9434380068E733 /* QXKIdentifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF603D1B9434380068E733 /* QXKIdentifyViewController.xib */; };
+		F2FF60501B9598460068E733 /* QXKCardExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF604E1B9598460068E733 /* QXKCardExchangeViewController.m */; };
+		F2FF60511B9598460068E733 /* QXKCardExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF604F1B9598460068E733 /* QXKCardExchangeViewController.xib */; };
+		F2FF60531B96CFBC0068E733 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FF60521B96CFBC0068E733 /* CoreLocation.framework */; };
+		F2FF60571B96EF8E0068E733 /* QXKEMessageExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF60551B96EF8E0068E733 /* QXKEMessageExchangeViewController.m */; };
+		F2FF60581B96EF8E0068E733 /* QXKEMessageExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF60561B96EF8E0068E733 /* QXKEMessageExchangeViewController.xib */; };
+		F2FF605E1B9757580068E733 /* JZAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF605B1B9757580068E733 /* JZAlbumViewController.m */; };
+		F2FF605F1B9757580068E733 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF605D1B9757580068E733 /* PhotoView.m */; };
+		F2FF60631B9760E30068E733 /* QXKMessageExchangeRefuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF60611B9760E30068E733 /* QXKMessageExchangeRefuseViewController.m */; };
+		F2FF60641B9760E30068E733 /* QXKMessageExchangeRefuseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FF60621B9760E30068E733 /* QXKMessageExchangeRefuseViewController.xib */; };
+		F2FF60671B977B5F0068E733 /* QXKCollectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF60661B977B5F0068E733 /* QXKCollectionButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -465,6 +475,22 @@
 		F2FF603B1B9434380068E733 /* QXKIdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKIdentifyViewController.h; sourceTree = "<group>"; };
 		F2FF603C1B9434380068E733 /* QXKIdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKIdentifyViewController.m; sourceTree = "<group>"; };
 		F2FF603D1B9434380068E733 /* QXKIdentifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKIdentifyViewController.xib; sourceTree = "<group>"; };
+		F2FF604D1B9598460068E733 /* QXKCardExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKCardExchangeViewController.h; sourceTree = "<group>"; };
+		F2FF604E1B9598460068E733 /* QXKCardExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKCardExchangeViewController.m; sourceTree = "<group>"; };
+		F2FF604F1B9598460068E733 /* QXKCardExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKCardExchangeViewController.xib; sourceTree = "<group>"; };
+		F2FF60521B96CFBC0068E733 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F2FF60541B96EF8E0068E733 /* QXKEMessageExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKEMessageExchangeViewController.h; sourceTree = "<group>"; };
+		F2FF60551B96EF8E0068E733 /* QXKEMessageExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKEMessageExchangeViewController.m; sourceTree = "<group>"; };
+		F2FF60561B96EF8E0068E733 /* QXKEMessageExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKEMessageExchangeViewController.xib; sourceTree = "<group>"; };
+		F2FF605A1B9757580068E733 /* JZAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZAlbumViewController.h; sourceTree = "<group>"; };
+		F2FF605B1B9757580068E733 /* JZAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZAlbumViewController.m; sourceTree = "<group>"; };
+		F2FF605C1B9757580068E733 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		F2FF605D1B9757580068E733 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
+		F2FF60601B9760E30068E733 /* QXKMessageExchangeRefuseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKMessageExchangeRefuseViewController.h; sourceTree = "<group>"; };
+		F2FF60611B9760E30068E733 /* QXKMessageExchangeRefuseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKMessageExchangeRefuseViewController.m; sourceTree = "<group>"; };
+		F2FF60621B9760E30068E733 /* QXKMessageExchangeRefuseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXKMessageExchangeRefuseViewController.xib; sourceTree = "<group>"; };
+		F2FF60651B977B5F0068E733 /* QXKCollectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXKCollectionButton.h; sourceTree = "<group>"; };
+		F2FF60661B977B5F0068E733 /* QXKCollectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXKCollectionButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +498,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FF60531B96CFBC0068E733 /* CoreLocation.framework in Frameworks */,
 				8BB2CDCC189AD22001B786B2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +516,7 @@
 		A4CFE4D63AFD7766A0BF9E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2FF60521B96CFBC0068E733 /* CoreLocation.framework */,
 				3C2AB34187E28EAC4BD2C53B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -610,6 +638,7 @@
 		F26049471B2E1F7300F8A71B /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2FF60591B9757440068E733 /* ImageViewer */,
 				F2009BEC1B8C40BB009B68DA /* MJRefresh */,
 				F2A6A78B1B70FEC700FEC793 /* EGORefreshTable */,
 				F29221B21B4C483700F51522 /* AGImagePickerController */,
@@ -770,6 +799,9 @@
 				F23650761B6C0E3E005BF194 /* QXKAddNewAddressViewController.h */,
 				F23650771B6C0E3E005BF194 /* QXKAddNewAddressViewController.m */,
 				F23650781B6C0E3E005BF194 /* QXKAddNewAddressViewController.xib */,
+				F2FF604D1B9598460068E733 /* QXKCardExchangeViewController.h */,
+				F2FF604E1B9598460068E733 /* QXKCardExchangeViewController.m */,
+				F2FF604F1B9598460068E733 /* QXKCardExchangeViewController.xib */,
 			);
 			name = BuyCard;
 			sourceTree = "<group>";
@@ -823,6 +855,8 @@
 		F2A4A0A11B81B99A00F6B72C /* other */ = {
 			isa = PBXGroup;
 			children = (
+				F2FF60651B977B5F0068E733 /* QXKCollectionButton.h */,
+				F2FF60661B977B5F0068E733 /* QXKCollectionButton.m */,
 			);
 			name = other;
 			sourceTree = "<group>";
@@ -972,8 +1006,25 @@
 				F2FF60291B91C00F0068E733 /* QXKMessageCommentViewController.h */,
 				F2FF602A1B91C00F0068E733 /* QXKMessageCommentViewController.m */,
 				F2FF602B1B91C00F0068E733 /* QXKMessageCommentViewController.xib */,
+				F2FF60541B96EF8E0068E733 /* QXKEMessageExchangeViewController.h */,
+				F2FF60551B96EF8E0068E733 /* QXKEMessageExchangeViewController.m */,
+				F2FF60561B96EF8E0068E733 /* QXKEMessageExchangeViewController.xib */,
+				F2FF60601B9760E30068E733 /* QXKMessageExchangeRefuseViewController.h */,
+				F2FF60611B9760E30068E733 /* QXKMessageExchangeRefuseViewController.m */,
+				F2FF60621B9760E30068E733 /* QXKMessageExchangeRefuseViewController.xib */,
 			);
 			name = message;
+			sourceTree = "<group>";
+		};
+		F2FF60591B9757440068E733 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				F2FF605A1B9757580068E733 /* JZAlbumViewController.h */,
+				F2FF605B1B9757580068E733 /* JZAlbumViewController.m */,
+				F2FF605C1B9757580068E733 /* PhotoView.h */,
+				F2FF605D1B9757580068E733 /* PhotoView.m */,
+			);
+			name = ImageViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1064,6 +1115,7 @@
 				F236507A1B6C0E3E005BF194 /* QXKAddNewAddressViewController.xib in Resources */,
 				F2B2208F1B2D224900ED737F /* Main.storyboard in Resources */,
 				F29221E11B4DA1CD00F51522 /* QXKWikiCollectionViewCell.xib in Resources */,
+				F2FF60511B9598460068E733 /* QXKCardExchangeViewController.xib in Resources */,
 				F23ABCDB1B8F81B200D1DDF4 /* QXKWikiSearchViewController.xib in Resources */,
 				F260492D1B2E19DA00F8A71B /* QXKRegister3ViewController.xib in Resources */,
 				F2A6A7781B6FB06000FEC793 /* QYCityAreaPicker.xib in Resources */,
@@ -1117,8 +1169,10 @@
 				F236506B1B6BF8AC005BF194 /* QXKOrderSelectCardNumTableViewCell.xib in Resources */,
 				F2A6A7821B70EA7100FEC793 /* QXKMyCollectionViewController.xib in Resources */,
 				F26049321B2E1A0C00F8A71B /* QXKResetPassword1ViewController.xib in Resources */,
+				F2FF60641B9760E30068E733 /* QXKMessageExchangeRefuseViewController.xib in Resources */,
 				F292219E1B4B0E8D00F51522 /* QXKHomePageNewsTableViewCell.xib in Resources */,
 				F23650751B6C06BA005BF194 /* QXKAddressSelectTableViewCell.xib in Resources */,
+				F2FF60581B96EF8E0068E733 /* QXKEMessageExchangeViewController.xib in Resources */,
 				F29222041B4EE03000F51522 /* QXKWikiDetailPriceTableViewCell.xib in Resources */,
 				F2A6A7BA1B72044D00FEC793 /* QXKOrderInfoChangeViewController.xib in Resources */,
 				F297DE6D1B6A9B5300B5F72F /* QXKCardInfoDetailViewController.xib in Resources */,
@@ -1184,6 +1238,7 @@
 				F29221E01B4DA1CD00F51522 /* QXKWikiCollectionViewCell.m in Sources */,
 				F29221DA1B4D9FE900F51522 /* QXKWikiMainViewController.m in Sources */,
 				F26049401B2E1B7800F8A71B /* QXKHomePageViewController.m in Sources */,
+				F2FF60671B977B5F0068E733 /* QXKCollectionButton.m in Sources */,
 				F2F3C7C31B6A1D2F008845FF /* QXKCardListViewController.m in Sources */,
 				F260494B1B2E1F8600F8A71B /* LMComBoxView.m in Sources */,
 				F29221C91B4C483700F51522 /* AGImagePickerController.m in Sources */,
@@ -1202,6 +1257,7 @@
 				F29221931B4B061E00F51522 /* QXKMHomePageCardTypeTableViewCell.m in Sources */,
 				F2009BF91B8C40BB009B68DA /* MJRefreshConst.m in Sources */,
 				F297DE671B6A89FB00B5F72F /* QXKCardListAfterSearchViewController.m in Sources */,
+				F2FF60571B96EF8E0068E733 /* QXKEMessageExchangeViewController.m in Sources */,
 				F29221CC1B4C483700F51522 /* AGIPCAssetsController.m in Sources */,
 				F2FF60361B91C6170068E733 /* QXKMessageCommentCardInfoTableViewCell.m in Sources */,
 				F2B220891B2D224900ED737F /* AppDelegate.m in Sources */,
@@ -1214,6 +1270,7 @@
 				F29221D01B4C483700F51522 /* ALAsset+AGIPC.m in Sources */,
 				F2A6A7961B70FEC700FEC793 /* MessageInterceptor.m in Sources */,
 				F23650511B6BEEA4005BF194 /* QXKAddressInfoTableViewCell.m in Sources */,
+				F2FF605F1B9757580068E733 /* PhotoView.m in Sources */,
 				F2B53D011B306B760031C654 /* MBProgressHUD.m in Sources */,
 				F2A6A7761B6FB05100FEC793 /* QYCityAreaPicker.m in Sources */,
 				F2A4A0AE1B81BC2800F6B72C /* QXKMessageTableViewCell.m in Sources */,
@@ -1243,6 +1300,7 @@
 				F23650831B6CF030005BF194 /* QXKAccountSettingViewController.m in Sources */,
 				F2009BFE1B8DACD9009B68DA /* QXKSearchFilterBar.m in Sources */,
 				F29221CD1B4C483700F51522 /* AGIPCGridCell.m in Sources */,
+				F2FF60631B9760E30068E733 /* QXKMessageExchangeRefuseViewController.m in Sources */,
 				F2A6A7811B70EA7100FEC793 /* QXKMyCollectionViewController.m in Sources */,
 				F297DE711B6AB12300B5F72F /* QXKCardInfoTableViewCell.m in Sources */,
 				F29221D61B4C6D4B00F51522 /* MSImagePickerController.m in Sources */,
@@ -1256,7 +1314,9 @@
 				F23650601B6BF30A005BF194 /* QXKOrderPriceTableViewCell.m in Sources */,
 				F23ABCDA1B8F81B200D1DDF4 /* QXKWikiSearchViewController.m in Sources */,
 				F292218E1B4AFE6B00F51522 /* NSData+GIF.m in Sources */,
+				F2FF605E1B9757580068E733 /* JZAlbumViewController.m in Sources */,
 				F29221981B4B080E00F51522 /* QXKHomePageBrandTableViewCell.m in Sources */,
+				F2FF60501B9598460068E733 /* QXKCardExchangeViewController.m in Sources */,
 				F29221F91B4EDB9100F51522 /* QXKWikiDetailCardInfoTableViewCell.m in Sources */,
 				F29221FE1B4EDF3C00F51522 /* QXKWikiDetailCardDescriptionTableViewCell.m in Sources */,
 				F2009BF81B8C40BB009B68DA /* MJRefreshBaseView.m in Sources */,

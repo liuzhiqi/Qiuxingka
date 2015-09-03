@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QXKCollectionButton.h"
 @interface QXKCardInfoDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
+@property (weak, nonatomic) IBOutlet QXKCollectionButton *buttonCollection;
 
 @property(strong,nonatomic)NSMutableArray *arrayCommand;
 @property(strong,nonatomic)NSDictionary *dicPreInfo;

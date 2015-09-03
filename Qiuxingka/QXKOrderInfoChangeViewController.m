@@ -21,7 +21,7 @@
 
 
 #import "QXKGeneral.h"
-@interface QXKOrderInfoChangeViewController ()
+@interface QXKOrderInfoChangeViewController ()<UIAlertViewDelegate>
 {
     UILabel* labelHead;
     QXKOrderInfoTableViewCell *tableFootView;
@@ -81,7 +81,7 @@
         
     }
     
-
+    [self loadSellerData];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -118,7 +118,7 @@
         case 3:
         {
             
-            return 44;
+            return 70;
             
         }
             break;
@@ -150,6 +150,103 @@
 }
 
 
+-(void)loadSellerData{
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/mycard/findUserById"];
+    
+    
+    QXKUserInfo* usrInfo=[QXKUserInfo shareUserInfo];
+    
+#warning WRIONG
+    NSString*cardid=usrInfo.userId ;
+    
+    //    NSString*cardid=[self.dicPreInfo objectForKey:@"owner"] ;
+    
+    
+    
+    NSDictionary *parameters;
+    
+    parameters = @{@"userid":cardid };
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    
+    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                       options:kNilOptions
+                                                         error:&error];
+        if ([dic count]!=0)
+        {
+            NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                           options:kNilOptions
+                                                             error:&error];
+            
+            self.dicSellerInfo=dic;
+            //        }
+            //        else{
+            //
+            //            [MBProgressHUD showHubWithTitle:@"拉取信息出错" type:0 target:self];
+            
+            
+        }
+        //        else{
+        //
+        //            countCurrentPage--;
+        //        }
+        //
+        //        self.tableViewMain.pullLastRefreshDate = [NSDate date];
+        //        self.tableViewMain.pullTableIsRefreshing = NO;
+        //        self.tableViewMain.pullTableIsLoadingMore = NO;
+        //
+        //
+        [self.tableViewMain reloadData];
+        
+        
+        
+        
+        
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        //        countCurrentPage--;
+        //        self.tableViewMain.pullLastRefreshDate = [NSDate date];
+        //        self.tableViewMain.pullTableIsRefreshing = NO;
+        //        self.tableViewMain.pullTableIsLoadingMore = NO;
+        NSLog ( @"operation: %@" , operation. responseString );
+        
+        NSLog(@"Error: %@", error);
+    }];
+    //
+    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
+    //    [self.navigationController pushViewController:pushVuew animated:YES];
+    //
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.1f;
 }
@@ -178,7 +275,7 @@
         case 1:
         {
             QXKOrderSellerInfoTableViewCell* cell =[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKOrderSellerInfoTableViewCell"];
-            [cell setCellDataWithName:@"刘致奇" Number:@"13291878888"];
+            [cell setCellDataWithName:[self.dicSellerInfo objectForKey:@"username"] Number:[self.dicSellerInfo objectForKey:@"telephone"]];
             cell.selectionStyle=UITableViewCellSelectionStyleNone;
             return cell;
         }
@@ -186,16 +283,19 @@
         case 2:
         {
             QXKOrderGoodsInfoTableViewCell* cell =[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKOrderGoodsInfoTableViewCell"];
-            [cell setCellDataWithName:@"欧洲杯皇马限量卡" Number:@"1" Description:@"欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版，欧洲杯皇家马德里白金版" Price:@"123" ProfileURL:nil];
+           
+            NSString* pictures=[self.dicPreInfo objectForKey:@"card_pic"];
+            NSArray *array = [pictures componentsSeparatedByString:@","];
+            [cell setCellDataWithName:[self.dicPreInfo objectForKey:@"card_name"]  Number:[self.dicPreInfo objectForKey:@"card_num"] Description:[self.dicPreInfo objectForKey:@"card_desc"] Price:[self.dicPreInfo objectForKey:@"card_price"] ProfileURL:[array objectAtIndex:0]];
             cell.selectionStyle=UITableViewCellSelectionStyleNone;
             return cell;
-            
+    
         }
             break;
         case 3:
         {
             QXKOrderPriceTableViewCell* cell =[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKOrderPriceTableViewCell"];
-            [cell setCellDataWithTotalPrice:nil TransExpense:@"12"];
+            [cell setCellDataWithTotalPrice:[self.dicPreInfo objectForKey:@"card_price"]  TransExpense:[self.dicPreInfo objectForKey:@"logistic_price"] ];
             cell.selectionStyle=UITableViewCellSelectionStyleNone;
             return cell;
             
@@ -242,7 +342,7 @@
     if (self.typeController==11) {
 
         UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"取消订单" message:@"确认取消订单后将无法更改，是否确认取消" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        alertView.tag=1;
+        alertView.tag=2;
 //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
         [alertView show];
 
@@ -259,14 +359,14 @@
     
     if (self.typeController==11) {
         UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认付款" message:[NSString stringWithFormat:@"您的订单总价为%@元，是否确认付款\n如需修改运费请与卖家联系", [NSNumber numberWithInt:14]] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        alertView.tag=1;
+        alertView.tag=3;
         //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
         [alertView show];
     }
     
     if (self.typeController==12) {
         UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"申请退款" message: @"是否确认申请退款？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        alertView.tag=1;
+        alertView.tag=3;
         //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
         [alertView show];
     }
@@ -274,17 +374,135 @@
     if (self.typeController==13) {
         
         UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认收货" message:@"确认收货后，您的付款将被打到卖家账户中\n是否确认？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        alertView.tag=1;
+        alertView.tag=3;
         [alertView show];
-        
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    
+    switch (alertView.tag) {
+        case 1:
+        {
+            if (self.typeController==13) {
+                
+                if (buttonIndex==1) {
+                    [self loadDelayTime];
+                }
+            }
+        }
+            break;
+        case 2:
+        {
+            if (self.typeController==11) {
+                
+                [self loadDeleteOrder];
+                
+            }
+
+        }
+            break;
+        case 3:
+        {
+//                if (self.typeController==11) {
+//                UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认付款" message:[NSString stringWithFormat:@"您的订单总价为%@元，是否确认付款\n如需修改运费请与卖家联系", [NSNumber numberWithInt:14]] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//                alertView.tag=3;
+//                //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
+//                [alertView show];
+//            }
+            
+//            if (self.typeController==12) {
+//                UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"申请退款" message: @"是否确认申请退款？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//                alertView.tag=3;
+//                //        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
+//                [alertView show];
+//            }
+            
+//            if (self.typeController==13) {
+//                
+//                UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认收货" message:@"确认收货后，您的付款将被打到卖家账户中\n是否确认？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//                alertView.tag=3;
+//                [alertView show];
+//            }
+
+        }
+            break;
+            
+        default:
+            break;
     }
     
     
     
 }
 
+-(void)loadDelayTime{
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/order/receiveOrder"];
+//    QXKUserInfo* userInfo=[QXKUserInfo shareUserInfo];
+//    NSString*userid=userInfo.userId;
+    NSDictionary *parameters;
+    parameters = @{@"orderid":[self.dicPreInfo objectForKey:@"orderid"]};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                       options:kNilOptions
+                                                         error:&error];
 
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog ( @"operation: %@" , operation. responseString );
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
+}
 
+-(void)loadDeleteOrder{
+    
+    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [postUrl appendString:@"/order/cancleOrder"];
+    //    QXKUserInfo* userInfo=[QXKUserInfo shareUserInfo];
+    //    NSString*userid=userInfo.userId;
+    NSDictionary *parameters;
+    parameters = @{@"orderid":[self.dicPreInfo objectForKey:@"orderid"]};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+        NSError* error;
+        NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                       options:kNilOptions
+                                                         error:&error];
+        
+        [MBProgressHUD showHubWithTitle:@"取消订单成功" type:1 deleController:self];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog ( @"operation: %@" , operation. responseString );
+        NSLog(@"Error: %@", error);
+    }];
+    
+    
+}
 
 /*
 #pragma mark - Navigation

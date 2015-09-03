@@ -11,4 +11,5 @@
 @interface QXKMessageCommentViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 
+@property(strong,nonatomic)NSDictionary *dicPreInfo;
 @end

@@ -245,7 +245,7 @@
     QXKCardListTableViewCell* cell=[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKCardListTableViewCell"];
     NSString* pictures=[self.arrayCardInfo[indexPath.row] objectForKey:@"pictures"];
     NSArray *array = [pictures componentsSeparatedByString:@","];
-    [cell setCellDataWithCardName:[self.arrayCardInfo[indexPath.row] objectForKey:@"title"] DescripTion:[self.arrayCardInfo[indexPath.row] objectForKey:@"describes"] Price:[self.arrayCardInfo[indexPath.row] objectForKey:@"price"] Seller:[self.arrayCardInfo[indexPath.row] objectForKey:@"owner"] CardImgUrl:[array objectAtIndex:0] IsChangeable:[[self.arrayCardInfo[indexPath.row] objectForKey:@"exchange"] intValue]];
+    [cell setCellDataWithCardName:[self.arrayCardInfo[indexPath.row] objectForKey:@"title"] DescripTion:[self.arrayCardInfo[indexPath.row] objectForKey:@"describes"] Price:[self.arrayCardInfo[indexPath.row] objectForKey:@"price"] Seller:[self.arrayCardInfo[indexPath.row] objectForKey:@"ownername"] CardImgUrl:[array objectAtIndex:0] IsChangeable:[[self.arrayCardInfo[indexPath.row] objectForKey:@"exchange"] intValue] cardId:[self.arrayCardInfo[indexPath.row] objectForKey:@"cardid"]  targetVC:self];
     return cell;
     
 }

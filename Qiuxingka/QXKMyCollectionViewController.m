@@ -9,6 +9,8 @@
 #import "QXKMyCollectionViewController.h"
 #import "QXKCollectionCardTableViewCell.h"
 #import "QXKCollectionWikiTableViewCell.h"
+#import "QXKCardInfoDetailViewController.h"
+#import "QXKWikiDetailViewController.h"
 #import "QYTabView.h"
 #import "QXKGeneral.h"
 @interface QXKMyCollectionViewController ()<UITableViewDataSource,UITableViewDelegate,QYTabViewDelegate,PullTableViewDelegate>
@@ -16,6 +18,7 @@
     QYTabView* headView;
     NSInteger tableType;
     NSInteger countCurrentPage;
+    NSInteger capacity;
 }
 @end
 
@@ -23,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    capacity=10;
     
     CGRect frameScreen=[UIScreen mainScreen].applicationFrame;
    
@@ -54,10 +58,9 @@
     self.tableViewMain.pullBackgroundColor = [UIColor clearColor];
     self.tableViewMain.pullTextColor = [UIColor grayColor];
     
-    if(!self.tableViewMain.pullTableIsRefreshing) {
-        self.tableViewMain.pullTableIsRefreshing = YES;
-        [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
-    }
+    self.tableViewMain.pullTableIsRefreshing = YES;
+    [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
+    
     self.tableViewMain.pullLastRefreshDate=nil;
     self.tableViewMain.pullDelegate=self;
     
@@ -69,8 +72,7 @@
     //data init
     self.arrayCollectionInfo=[[NSMutableArray alloc]init];
     
-    [self loadCardData];
-
+    
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -87,9 +89,13 @@
     [self.arrayCollectionInfo removeAllObjects];
     
     if (tableType==0) {
-        [self loadCardData];
+        [self performSelector:@selector(loadCardData) withObject:nil afterDelay:1];
+        
+//        [self loadCardData];
     }else{
-        [self loadWikiData];
+//        [self loadWikiData];
+        [self performSelector:@selector(loadWikiData) withObject:nil afterDelay:1];
+        
     }
     
    
@@ -111,6 +117,7 @@
 
 - (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView
 {
+    
     [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
 }
 
@@ -124,14 +131,13 @@
 
 
 -(void)loadCardData{
-    
-    
+
     NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
     [postUrl appendString:@"/mycard/queryCollect"];
     QXKUserInfo*userInfo=[QXKUserInfo shareUserInfo];
     NSDictionary *parameters;
     // parameters = @{@"userid": userInfo.userId};
-    parameters = @{@"userid": @"787348d0-126b-11e5-a5da-0959cd299e41"};
+    parameters = @{@"userid": userInfo.userId,@"capacity": [NSNumber numberWithInteger:capacity],@"offset": [NSNumber numberWithInteger:countCurrentPage]};
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -143,7 +149,7 @@
                                                             options:kNilOptions
                                                               error:&error];
         ;
-        if ([dic objectForKey:@"error"]!=nil||[dic count]==0) {
+        if ([dic count]==0) {
             
             
             countCurrentPage--;
@@ -190,21 +196,17 @@
 
 
 
-
-
-
-
 -(void)loadWikiData{
     
     
     NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
-    [postUrl appendString:@"/mycard/queryCollect"];
+    [postUrl appendString:@"/mycard/queryWikiCollect"];
     
     QXKUserInfo*userInfo=[QXKUserInfo shareUserInfo];
     
     NSDictionary *parameters;
     // parameters = @{@"userid": userInfo.userId};
-    parameters = @{@"userid": @"787348d0-126b-11e5-a5da-0959cd299e41"};
+    parameters = @{@"userid": userInfo.userId,@"capacity": [NSNumber numberWithInteger:capacity],@"offset": [NSNumber numberWithInteger:countCurrentPage]};
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -215,7 +217,7 @@
         NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject
                                                             options:kNilOptions
                                                               error:&error];
-        if ([dic objectForKey:@"error"]!=nil||[dic count]==0) {
+        if ([dic count]==0) {
             
             
             countCurrentPage--;
@@ -297,11 +299,12 @@
         QXKCollectionCardTableViewCell* cell=[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKCollectionCardTableViewCell"];
         
         [cell setCellDataWithName:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"title"] DescripTion:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"describes"] Price:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"price"] Seller:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"owner"] CardImg:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"pictures"] CanChange:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"exchange"]];
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
         return cell;
     }
     QXKCollectionWikiTableViewCell* cell=[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKCollectionWikiTableViewCell"];
-    
-    
+    [cell setCellDataWithTitle:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"wikiname"] description:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"describes"]  series:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"series"]  brand:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"brand"]  cardNum:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"serial_number"]  imageViewUrl:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"picture"]  cardId:[self.arrayCollectionInfo[indexPath.row] objectForKey:@"wikiid"]  targetVC:self];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
     
     
@@ -316,22 +319,30 @@
     
     tableType=idx;
     
-    if (idx==0) {
-        [self loadCardData];
-    }else{
-        [self loadWikiData];
-
-    }
-    
-    if(!self.tableViewMain.pullTableIsRefreshing) {
+//    if(!self.tableViewMain.pullTableIsRefreshing) {
         self.tableViewMain.pullTableIsRefreshing = YES;
         [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
-    }
+//    }
+    
+
+    
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ;
+    NSDictionary* dic=self.arrayCollectionInfo[indexPath.row];
+    if (tableType==0) {
+        QXKCardInfoDetailViewController*pushView=[[QXKCardInfoDetailViewController alloc]init];
+        pushView.dicPreInfo=dic;
+        
+        [self.navigationController pushViewController:pushView animated:YES];
+        
+        return;
+    }
+    QXKWikiDetailViewController*pushView=[[QXKWikiDetailViewController alloc]init];
+    pushView.dicInfo=dic;
     
+    [self.navigationController pushViewController:pushView animated:YES];
     
 }
 

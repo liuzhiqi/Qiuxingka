@@ -25,9 +25,6 @@
 -(void)setCellDataWithName:(NSString*)Name DescripTion:(NSString*)DescripTion Price:(NSString*)Price Seller:(NSString*)Seller CardImg:(NSString*)CardImgUrl CanChange:(NSNumber*)CanChange {
     
     
-    NSMutableString  *imgUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
-    [imgUrl appendString:@"/" ];
-    [imgUrl appendString:CardImgUrl ];
     
 
     self.labelCardName.text=Name;
@@ -37,7 +34,15 @@
     
     self.labelCardSeller.text=Seller;
     
+    NSMutableString  *imgUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+    [imgUrl appendString:@"/" ];
+    if (CardImgUrl!=[NSNull null]) {
+        if (CardImgUrl!=nil) {
+            [imgUrl appendString:CardImgUrl ];
+        }
+    }
     
+
     [self.imageViewCardImg sd_setImageWithURL:[NSURL URLWithString:imgUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         ;
     }];

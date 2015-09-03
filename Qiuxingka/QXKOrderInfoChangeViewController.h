@@ -13,6 +13,9 @@
 @property(assign,nonatomic)NSInteger typeController;
 @property(strong,nonatomic)NSString*strState;
 
+@property(strong,nonatomic)NSDictionary *dicPreInfo;
+@property(strong,nonatomic)NSDictionary *dicDetail;
+@property(strong,nonatomic)NSDictionary *dicSellerInfo;
 
 @property (weak, nonatomic) IBOutlet UIButton *btn1;
 @property (weak, nonatomic) IBOutlet UIButton *btn2;

@@ -197,8 +197,8 @@ const NSInteger pageCap=10;
     
     
     
-    
-    [cell setCellDataWithTitle:title description:description series:series brand:brand cardNum:cardNum imageViewUrl:imageViewUrl];
+    cell.buttonCollection.tag=1;
+    [cell setCellDataWithTitle:title description:description series:series brand:brand cardNum:cardNum imageViewUrl:imageViewUrl  cardId:[self.arrayCardInfo[indexPath.row] objectForKey:@"wikiid"]  targetVC:self];
     
     return cell;
     

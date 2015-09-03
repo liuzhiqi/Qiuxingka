@@ -80,8 +80,7 @@ const NSInteger myCardSellCap=10;
     
     countCurrentPage=0;
     [self.arrayDealInfo removeAllObjects];
-    
-    
+     
 #ifdef NO_NETWORK_CONNECTION
     NSDictionary* dic=[[NSDictionary alloc]init];
     [self.arrayDealInfo addObject:dic];
@@ -190,9 +189,9 @@ const NSInteger myCardSellCap=10;
     [postUrl appendString:@"/order/queryOrderList"];
     QXKUserInfo* userInfo=[QXKUserInfo shareUserInfo];
     
-//    NSString*userid=userInfo.userId;
+    NSString*userid=userInfo.userId;
     
-    NSString*userid=@"787348d0-126b-11e5-a5da-0959cd299e41";
+//    NSString*userid=@"787348d0-126b-11e5-a5da-0959cd299e41";
     
     
     
@@ -216,10 +215,7 @@ const NSInteger myCardSellCap=10;
                                                          error:&error];
         if ([dic count]!=0)
         {
-            NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                           options:kNilOptions
-                                                             error:&error];
-            [self.arrayDealInfo addObjectsFromArray:dic];
+                       [self.arrayDealInfo addObjectsFromArray:dic];
             
             
         }
@@ -321,9 +317,14 @@ const NSInteger myCardSellCap=10;
     
     QXKMyCardDealInfoTableViewCell* cell=[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKMyCardDealInfoTableViewCell"];
     
+    
+    NSDictionary* dic=self.arrayDealInfo[indexPath.row];
+    
+    
+    
     switch (tableType) {
         case 0:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"等待付款"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])] CardState:@"等待付款"];
             break;
         case 1:
             [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"买家已付款，等待发货"];
@@ -347,6 +348,7 @@ const NSInteger myCardSellCap=10;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     QXKOrderInfoChangeViewController*pushView=[[QXKOrderInfoChangeViewController alloc]init];
+    pushView.dicPreInfo=self.arrayDealInfo[indexPath.row];
     
     
     if (tableType==0) {
@@ -374,14 +376,6 @@ const NSInteger myCardSellCap=10;
         pushView.typeController=14;
         [pushView setBtnT1:@"" BtnT2:@"" BtnT3:@""];
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     [self.navigationController pushViewController:pushView animated:YES];
 }

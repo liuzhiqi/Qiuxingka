@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QXKCollectionButton.h"
 @interface QXKCollectionWikiTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *labelCardName;
@@ -16,10 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelBrand;
 @property (weak, nonatomic) IBOutlet UILabel *labelCardNum;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonCollection;
+@property (weak, nonatomic) IBOutlet QXKCollectionButton *buttonCollection;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewCardImg;
 
--(void)setCellDataWithTitle:(NSString*)title description:(NSString*)description series:(NSString*)series brand:(NSString*)brand cardNum:(NSString*)cardNum imageViewUrl:(NSString*)imageViewUrl;
+-(void)setCellDataWithTitle:(NSString*)title description:(NSString*)description series:(NSString*)series brand:(NSString*)brand cardNum:(NSString*)cardNum imageViewUrl:(NSString*)imageViewUrl cardId:(NSString*)cardId targetVC:(UIViewController*) vc;
 
 
 

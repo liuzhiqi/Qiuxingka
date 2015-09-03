@@ -121,13 +121,13 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
     // The sample image is based on the work by http://www.pixelpressicons.com, http://creativecommons.org/licenses/by/2.5/ca/
     // Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
     if (type==0) {
-        UIImageView * imageView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HUB-No"]] ;
+        UIImageView * imageView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hubWrongNormal0"]] ;
         imageView.frame=CGRectMake(0 , 0, 60, 60);
         HUD.customView = imageView;
         
     }
     else if (type==1){
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HUB-Yes"]] ;
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hubRightNormal0"]] ;
     }
     //    //
     // Set custom view mode

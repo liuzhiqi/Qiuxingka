@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QXKCardInfoDetailViewController">
             <connections>
+                <outlet property="buttonCollection" destination="RM3-cl-uP7" id="XeY-Y1-0Va"/>
                 <outlet property="tableViewMain" destination="kQU-fc-OEG" id="BMb-l4-kh1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -114,7 +115,7 @@
                                         <constraint firstAttribute="width" constant="25" id="aha-sh-0Fs"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-cl-uP7">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-cl-uP7" customClass="QXKCollectionButton">
                                     <rect key="frame" x="0.0" y="0.0" width="104" height="44"/>
                                     <state key="normal">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

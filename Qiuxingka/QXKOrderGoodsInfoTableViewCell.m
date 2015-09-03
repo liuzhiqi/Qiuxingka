@@ -30,7 +30,9 @@
     self.labelPrice.text=[NSString stringWithFormat:@"¥%@",Number];
    
     NSString* imgUrl=[QXKURL stringByAppendingString:@"/"];
-    imgUrl=[imgUrl stringByAppendingString:ProfileURL];
+    if(ProfileURL!=nil){
+        imgUrl=[imgUrl stringByAppendingString:ProfileURL];
+    }
     [self.imageViewCardProfile sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
     
     

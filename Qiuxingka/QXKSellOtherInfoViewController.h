@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPrice;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCardNum;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldNum;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldLogisticPrice;
 
 @property (weak, nonatomic) IBOutlet LMComBoxView *comBoxCardTyoe;
 

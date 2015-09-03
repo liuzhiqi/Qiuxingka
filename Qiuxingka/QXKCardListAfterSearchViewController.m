@@ -62,8 +62,7 @@
     
     //data init
     self.arrayCardInfo=[[NSMutableArray alloc]init];
-    NSDictionary* dic=[[NSDictionary alloc]init];
-    [self.arrayCardInfo addObject:dic];
+    
 
     
     nib = [[NSBundle mainBundle]loadNibNamed:@"QXKSearchFilterView"owner:self options:nil];

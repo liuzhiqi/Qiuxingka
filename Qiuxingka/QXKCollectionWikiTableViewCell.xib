@@ -32,7 +32,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-0b-o0O">
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-0b-o0O" customClass="QXKCollectionButton">
                         <rect key="frame" x="285" y="10" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="8Nu-Ao-B33"/>

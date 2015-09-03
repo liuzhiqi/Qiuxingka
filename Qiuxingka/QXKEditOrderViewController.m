@@ -14,6 +14,7 @@
 #import "QXKOrderPriceTableViewCell.h"
 #import "QXKGeneral.h"
 #import "QXKAddressSelectViewController.h"
+
 @interface QXKEditOrderViewController ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,QXKAddressSelectDelegate,QXKOrderSelectCardNumTableViewCellDelegate>{
     NSMutableDictionary*mdicAddress;
     NSInteger numOfBuy;
@@ -38,7 +39,7 @@
     [self.tableViewMain registerNib:[UINib nibWithNibName:@"QXKAddressInfoTableViewCell" bundle:nil] forCellReuseIdentifier:@"QXKAddressInfoTableViewCell"];
     [self.tableViewMain registerNib:[UINib nibWithNibName:@"QXKOrderSellerInfoTableViewCell" bundle:nil] forCellReuseIdentifier:@"QXKOrderSellerInfoTableViewCell"];
     [self.tableViewMain registerNib:[UINib nibWithNibName:@"QXKOrderPriceTableViewCell" bundle:nil] forCellReuseIdentifier:@"QXKOrderPriceTableViewCell"];
-    
+    numOfBuy=1;
     
     self.buttonPay.layer.cornerRadius=6;
     self.labelTotalPrice.text=[NSString stringWithFormat:@"合计：¥%@",@"132"];
@@ -207,75 +208,6 @@
 - (IBAction)btnPushPay:(id)sender {
     
     
-    
-    
-    
-    QXKUserInfo* usrInfo=[QXKUserInfo shareUserInfo];
-    
-    NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
-    [postUrl appendString:@"/order/checkOrder"];
-    
-    NSString*userid=usrInfo.userId ;
-    NSDictionary *parameters;
-    if (mdicAddress==nil) {
-        [MBProgressHUD showHubWithTitle:@"缺少默认地址接口请进入进行选择" type:0 deleController:self];
-        return;
-    }
-    parameters = @{@"cardid":[self.dicPreInfo objectForKey:@"cardid"],@"cardnum":[NSNumber numberWithInt:numOfBuy],@"seller":[self.dicSellerInfo objectForKey:@"userid"],@"buyer":userid,@"card_price":@"12",@"logistic_price":@"20",@"addrid":[mdicAddress objectForKey:@"addressId"]};
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        
-        NSError* error;
-        NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                       options:kNilOptions
-                                                         error:&error];
-        
-        [self.tableViewMain reloadData];
-        
-        
-        
-        
-        
-        
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        //        countCurrentPage--;
-        //        self.tableViewMain.pullLastRefreshDate = [NSDate date];
-        //        self.tableViewMain.pullTableIsRefreshing = NO;
-        //        self.tableViewMain.pullTableIsLoadingMore = NO;
-        NSLog ( @"operation: %@" , operation. responseString );
-        
-        NSLog(@"Error: %@", error);
-    }];
-    //
-    //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
-    //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
-    //    [self.navigationController pushViewController:pushVuew animated:YES];
-    //
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"确认支付" message:@"您的总价为%ld\n是否确认支付?\n将跳转到支付宝进行付款" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     alertView.tag=1;
     alertView.delegate=self;
@@ -285,7 +217,76 @@
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
+    if (buttonIndex==1) {
+        
+        
+        QXKUserInfo* usrInfo=[QXKUserInfo shareUserInfo];
+        
+        NSMutableString  *postUrl = [[NSMutableString alloc] initWithString:QXKURL] ;
+        [postUrl appendString:@"/order/checkOrder"];
+        
+        NSString*userid=usrInfo.userId ;
+        NSDictionary *parameters;
+        if (mdicAddress==nil) {
+            [MBProgressHUD showHubWithTitle:@"缺少默认地址接口请进入进行选择" type:0 deleController:self];
+            return;
+        }
+        
+        NSString* pictures=[self.dicPreInfo objectForKey:@"pictures"];
+        NSArray *array = [pictures componentsSeparatedByString:@","];
+        
+        
+        
+        parameters = @{@"card_pic":array[0],@"card_name":[self.dicPreInfo objectForKey:@"title"],@"card_desc":[self.dicPreInfo objectForKey:@"describes"],@"cardid":[self.dicPreInfo objectForKey:@"cardid"],@"cardnum":[NSNumber numberWithInt:numOfBuy],@"seller":[self.dicSellerInfo objectForKey:@"userid"],@"buyer":userid,@"card_price":@"12",@"logistic_price":@"20",@"addrid":[mdicAddress objectForKey:@"addressId"]};
+        
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        
+        [manager POST:postUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"JSON: %@", responseObject);
+            
+            NSError* error;
+            NSArray* dic = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                           options:kNilOptions
+                                                             error:&error];
+            
+            
+            [MBProgressHUD showHubWithTitle:@"下单成功,即将跳转到支付宝页面" type:1 deleController:self];
+            
+            
+            [self.tableViewMain reloadData];
+            
+            
+            
+            
+            
+            
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+            //        countCurrentPage--;
+            //        self.tableViewMain.pullLastRefreshDate = [NSDate date];
+            //        self.tableViewMain.pullTableIsRefreshing = NO;
+            //        self.tableViewMain.pullTableIsLoadingMore = NO;
+            NSLog ( @"operation: %@" , operation. responseString );
+            
+            NSLog(@"Error: %@", error);
+        }];
+        //
+        //    [MBProgressHUD showHubWithTitle:@"注册成功" type:1 target:self];
+        //    QXKRegister3ViewController* pushVuew=[[QXKRegister3ViewController alloc]init];
+        //    [self.navigationController pushViewController:pushVuew animated:YES];
+        //
+        
+        
+        
+        
+        
+        
+        
+    }
     
     
 }
