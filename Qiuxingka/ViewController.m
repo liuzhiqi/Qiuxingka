@@ -67,13 +67,37 @@
   
     UIBarButtonItem *btnItemF=[[UIBarButtonItem alloc] initWithCustomView:btnF];
     self.navigationItem.leftBarButtonItem=btnItemF;
-
-    
-    
-    
-    
     self.navigationItem.titleView=searchBar;
 
+    UITabBar *tabbar = self.tabBar;
+    
+    UITabBarItem *item1 = [tabbar.items objectAtIndex:0];
+    
+    UITabBarItem *item2 = [tabbar.items objectAtIndex:1];
+    
+    UITabBarItem *item3 = [tabbar.items objectAtIndex:2];
+    
+    UITabBarItem *item4 = [tabbar.items objectAtIndex:3];
+    
+    NSArray*arr= tabbar.items;
+    
+    
+    item1.selectedImage = [[UIImage imageNamed:@"首页icon green"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item1.image = [[UIImage imageNamed:@"首页icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item2.selectedImage = [[UIImage imageNamed:@"出卡icon-green"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item2.image = [[UIImage imageNamed:@"出卡icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item3.selectedImage = [[UIImage imageNamed:@"资料icon-green"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item3.image = [[UIImage imageNamed:@"资料icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item4.selectedImage = [[UIImage imageNamed:@"我的icon green"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item4.image = [[UIImage imageNamed:@"我的icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+   
     
     // Do any additional setup after loading the view, typically from a nib.
 }

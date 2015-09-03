@@ -27,6 +27,8 @@
         btn.layer.cornerRadius=6;
     }
     
+    
+    
     self.buttonNotFinished.layer.borderWidth=1;
     self.buttonNotFinished.layer.borderColor=[[UIColor QXKGreenLight]CGColor];
     self.buttonNotFinished.layer.cornerRadius=6;

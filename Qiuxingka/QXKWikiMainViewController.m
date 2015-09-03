@@ -78,6 +78,10 @@
     idxBrand=-1;
     idxCategory=-1;
     
+    
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 

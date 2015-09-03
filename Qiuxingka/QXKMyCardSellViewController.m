@@ -86,18 +86,9 @@ const NSInteger myCardBuyCap=10;
     countCurrentPage=0;
     [self.arrayDealInfo removeAllObjects];
     
+    [self performSelector:@selector(loadPartData) withObject:nil afterDelay:1];
     
-#ifdef NO_NETWORK_CONNECTION
-    self.arrayDealInfo=[[NSMutableArray alloc]init];
-    NSDictionary* dic=[[NSDictionary alloc]init];
-    [self.arrayDealInfo addObject:dic];
-    self.tableViewMain.pullTableIsRefreshing = NO;
-    self.tableViewMain.pullTableIsLoadingMore = NO;
-    [self.tableViewMain reloadData];
-#else
-    [self loadPartData];
-    
-#endif
+
     
     
 }
@@ -105,18 +96,13 @@ const NSInteger myCardBuyCap=10;
 - (void) loadMoreDataToTable
 {
     
-    
-#ifdef NO_NETWORK_CONNECTION
-    
-#else
+
     
     if((countCurrentPage+1)*myCardBuyCap<self.arrayDealInfo.count)
     {
         countCurrentPage++;
     }
     
-    
-#endif
     self.tableViewMain.pullTableIsRefreshing = NO;
     self.tableViewMain.pullTableIsLoadingMore = NO;
     [self.tableViewMain reloadData];
@@ -276,7 +262,9 @@ const NSInteger myCardBuyCap=10;
 
 -(void)tabView:(QYTabView *)tabView changeIdx:(NSInteger)idx{
     tableType=idx;
-    [self.tableViewMain reloadData];
+    self.tableViewMain.pullTableIsRefreshing = YES;
+    [self performSelector:@selector(refreshTable) withObject:nil afterDelay:0];
+
     
     
 }
@@ -327,21 +315,22 @@ const NSInteger myCardBuyCap=10;
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
- 
+    NSDictionary* dic=self.arrayDealInfo[indexPath.row];
+    
     QXKMyCardDealInfoTableViewCell* cell=[self.tableViewMain dequeueReusableCellWithIdentifier:@"QXKMyCardDealInfoTableViewCell"];
    
     switch (tableType) {
         case 0:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"等待付款"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])]  CardState:@"等待付款"];
             break;
         case 1:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"买家已付款，等待发货"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])]  CardState:@"买家已付款，等待发货"];
             break;
         case 2:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"卖家已发货"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])] CardState:@"卖家已发货"];
             break;
         case 3:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"交易关闭"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])] CardState:@"交易关闭"];
             break;
         default:
             break;

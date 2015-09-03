@@ -88,7 +88,8 @@ const NSInteger myCardSellCap=10;
     self.tableViewMain.pullTableIsLoadingMore = NO;
     [self.tableViewMain reloadData];
 #else
-    [self loadPartData];
+    [self performSelector:@selector(loadPartData) withObject:nil afterDelay:1];
+//    [self loadPartData];
     
 #endif
     
@@ -327,13 +328,13 @@ const NSInteger myCardSellCap=10;
             [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])] CardState:@"等待付款"];
             break;
         case 1:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"买家已付款，等待发货"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])]  CardState:@"买家已付款，等待发货"];
             break;
         case 2:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"卖家已发货"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])]  CardState:@"卖家已发货"];
             break;
         case 3:
-            [cell setCellDataWithName:@"欧洲杯 皇马 限量" Number:@"1" Description:@"欧洲杯皇家马德里队白金版，延续首款到设计风格，限量版珍藏延续首款到设计风格，限量版珍藏" Price:@"22.00" ProfileURL:nil TotalPrice:@"222.00" CardState:@"交易已关闭"];
+            [cell setCellDataWithName:[dic objectForKey:@"card_name"] Number:[dic objectForKey:@"card_num"] Description:[dic objectForKey:@"card_desc"]  Price:  [dic objectForKey:@"card_price"]  ProfileURL:[dic objectForKey:@"card_pic"] TotalPrice:[NSNumber numberWithInteger:([[dic objectForKey:@"card_price"] intValue] +[[dic objectForKey:@"logistic_price"] intValue])]  CardState:@"交易已关闭"];
             break;
         default:
             break;

@@ -381,19 +381,26 @@
                                                              options:kNilOptions
                                                                error:&error];
          
-         
          [HUD hide:YES];
          NSString*TT=[dic objectForKey:@"error"];
          if ( (TT==nil)&&(dic!=nil) )
          {
              if ([[dic objectForKey:@"status"] integerValue]==0)
              {
-                 QXKEMessageExchangeViewController*pushView=[[QXKEMessageExchangeViewController alloc]init];
-                 pushView.dicDetailInfo=[NSMutableDictionary dictionaryWithDictionary:dic];
-                 pushView.dicPreInfo=dicTempSelect;
-                 [self.navigationController pushViewController:pushView animated:YES];
                  
                  
+                 
+                 
+                 
+                 
+                 
+                 
+//                 QXKEMessageExchangeViewController*pushView=[[QXKEMessageExchangeViewController alloc]init];
+//                 pushView.dicDetailInfo=[NSMutableDictionary dictionaryWithDictionary:dic];
+//                 pushView.dicPreInfo=dicTempSelect;
+//                 [self.navigationController pushViewController:pushView animated:YES];
+//                 
+//                 
              }
          }
          else{

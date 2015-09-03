@@ -30,6 +30,8 @@ const float ratioCellSection0=0.36667;
     [super viewDidLoad];
     QXKLoginViewController *pushView=[[QXKLoginViewController alloc]init];
     [self.navigationController pushViewController:pushView animated:YES];
+   
+    
     
     if (self.bannerView != nil)
     {
